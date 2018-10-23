@@ -1,0 +1,20 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1206px;
+  margin: 0 auto;
+  padding-top: 88px;
+  display: flex;
+  align-items: center;
+
+  .navbar {
+    margin-left: auto;
+  }
+  
+  .header-btn {
+    margin-left: 40px;
+  }
+}

@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="section-container">
+    <div class="logo footer-logo">
+      <a href="{{ .Site.BaseURL }}">
+        <img src="../img/logo.svg" alt="">
+      </a>
+    </div>
+    <div class="footer-nav">
+      {{ range .Site.Params.footer.navlist }}
+      <div class="footer-nav-column">
+        <div class="footer-nav-title">{{ .title }}</div>
+        <ul class="footer-nav-list">
+          {{ range .quicklinks }}
+          <li class="footer-nav-item">
+            <a href="{{ .link }}" class="footer-nav-link">{{ .text }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    <div class="socials footer-socials">
+      <ul class="socials-list">
+        {{ range .Site.Params.social }}
+        <li class="socials-item">
+          <a href="{{ .url }}" class="socials-link">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-{{ .title }} fa-stack-1x"></i>
+            </span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- ScrollMagic -->
+<script src="{{ .Site.BaseURL }}/js/ScrollMagic.js"></script>
+
+<!-- ScrollMagic -->
+<script src="{{ .Site.BaseURL }}/js/TweenMax.min.js"></script>
+
+<!-- ScrollMagic -->
+<script src="{{ .Site.BaseURL }}/js/animation.gsap.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ .Site.BaseURL }}/js/main.js"></script>
+
+</body>
+
+</html>

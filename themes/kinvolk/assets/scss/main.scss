@@ -1,0 +1,31 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/reboot";
+
+@import "./partials/navbar/navbar.scss";
+@import "./partials/header/header.scss";
+@import "./partials/footer/footer.scss";
+@import "./pages/pages.scss";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main:not(.home-main) {
+  padding: 216px 58px 0px;
+}
+

@@ -1,0 +1,26 @@
+.section-hero {
+  min-height: 30vw;
+  display: flex;
+  background: #353535;
+  padding-bottom: 56px;
+}
+
+.section-hero-content {
+  margin-top: auto;
+  color: #fff;
+  max-width: 580px;
+  width: 100%;
+}
+
+.section-hero-title {
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.section-hero-text {
+  width: 100%;
+  max-width: 424px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 400;
+}

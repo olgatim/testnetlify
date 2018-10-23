@@ -1,0 +1,22 @@
+.navbar-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar-item + .navbar-item {
+  margin-left: 50px;
+}
+
+.nav-link {
+  padding: 0;
+  color: #fff;
+  text-transform: capitalize;
+}
+.page-single .nav-link {
+  color: $black;
+}
+
+.nav-link.active {
+  color: $blue;
+}

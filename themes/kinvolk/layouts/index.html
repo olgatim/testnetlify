@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" }}
+<body class="home-page">
+  {{ partial "header.html" . }}
+  <main class="main home-main">
+    <section class="section-hero">
+      <div class="section-container">
+          {{ with .Site.GetPage "section-hero" }}
+          <div class="section-hero-content">
+            <h2 class="section-hero-title">{{ .Title }}</h2>
+            <p class="section-hero-text">{{ .Params.text }}</p>
+          </div>
+          {{ end }}
+      </div>
+    </section>
+
+    <section class="section-team">
+        {{ range where $.Site.RegularPages "Section" "team" }}
+          {{ partial "card.html" . }}
+        {{ end }}
+    </section>
+  </main>
+  {{ partial "footer.html" . }}
