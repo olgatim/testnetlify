@@ -9,9 +9,8 @@
 
   <link href="{{ .Site.BaseURL }}css/font-awesome.min.css"    rel="stylesheet" type="text/css">
 
- 
-  {{ $sass := resources.Get "scss/main.scss" }} 
-  {{ $style := $sass | resources.ToCSS (dict "targetPath" " /css/style.css") }} 
+  {{ $sass := resources.Get "scss/main.scss" }}
+  {{ $style := $sass | resources.ToCSS (dict "targetPath" " /css/style.css") }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 <meta name="style" content="{{$style.Permalink }}" >
