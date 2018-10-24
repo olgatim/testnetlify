@@ -4,7 +4,7 @@ title = "The Kinwolk website"
 theme = "kinvolk"
 
 [params]
-
+customCSS = ["css/style.css"]
 
 [params.footer]
   [[params.footer.navlist]]
