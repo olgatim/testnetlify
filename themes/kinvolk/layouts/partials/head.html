@@ -9,8 +9,8 @@
 
   <link href="{{ .Site.BaseURL }}css/font-awesome.min.css"    rel="stylesheet" type="text/css">
 
-  {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
-  {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
-  <link rel="stylesheet" href="css/style.css">
-  {{/*  <link href="style.css" rel="stylesheet">  */}}
+ 
+  {{ $sass := resources.Get "scss/main.scss" }} 
+  {{ $style := $sass | resources.ToCSS (dict "targetPath" "css/style.css") }} 
+  <link rel="stylesheet" href="css/style.css" />
 </head>
