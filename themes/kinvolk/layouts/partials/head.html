@@ -11,6 +11,8 @@
 
  
   {{ $sass := resources.Get "scss/main.scss" }} 
-  {{ $style := $sass | resources.ToCSS (dict "targetPath" "css/style.css") }} 
-  <link rel="stylesheet" href=".{{ $style.Permalink }}" />
+  {{ $style := $sass | resources.ToCSS (dict "targetPath" " /css/style.css") }} 
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+<meta name="style" content="{{$style.Permalink }}" >
 </head>
