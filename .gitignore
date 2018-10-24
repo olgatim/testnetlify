@@ -1,0 +1,5 @@
+.DS_Store
+.*.swp
+public/
+themes/kinvolk/node_modules
+_gen/
