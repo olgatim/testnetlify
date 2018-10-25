@@ -1,5 +1,6 @@
 ## How to start the project
-Precondition: to install hugo follow instructions
+Precondition: to install Hugo follow instructions 
+which is described in official website:
 
 https://gohugo.io/getting-started/installing/
 
