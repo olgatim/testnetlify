@@ -1,5 +1,5 @@
 ---
 title: "Blog"
 type: "blog"
-layout: "blog"
+layout: "index"
 ---
