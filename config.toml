@@ -57,25 +57,31 @@ customCSS = ["/css/style.css"]
     name = "Products"
     url = "/products"
     identifier = "products"
-    weight = -160
+    weight = -20
+
+    [[menu.main]]
+        name = "Products"
+        url = "/products"
+        identifier = "products"
+        weight = -20
 
 [[menu.main]]
     name = "Services"
     url = "/services"
-    weight = -170
+    weight = -15
 
 [[menu.main]]
     name = "Company"
     url = "/company"
-    weight = -175
+    weight = -10
 
 [[menu.main]]
     name = "Case Studies"
     url = "/case-studies"
-    weight = -180
+    weight = -5
 
 [[menu.main]]
   name = "Blog"
   url = "/blog"
-  weight = -185
+  weight = 0
  

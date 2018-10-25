@@ -5,13 +5,15 @@
 }
 
 .navbar-item + .navbar-item {
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 .nav-link {
   padding: 0;
   color: #fff;
   text-transform: capitalize;
+  font-family: "Roboto";
+  font-weight: $font-weight-normal;
 }
 .page-single .nav-link {
   color: $black;

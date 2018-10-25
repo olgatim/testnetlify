@@ -16,7 +16,7 @@
     </section>
 
     <section class="section-team">
-        {{ range where .Site.RegularPages "Section" "team" }}
+        {{ range where .Site.RegularPages "Section" "team" . }}
           {{ partial "card.html" . }}
         {{ end }}
     </section>

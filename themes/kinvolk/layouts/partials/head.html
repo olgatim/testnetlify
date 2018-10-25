@@ -5,12 +5,14 @@
   <title>Document</title>
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cairo:400,700|Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
 
   <link href="{{ .Site.BaseURL }}css/font-awesome.min.css"    rel="stylesheet" type="text/css">
 
-  {{ $sass := resources.Get "scss/main.scss" }}
-  {{ $style := $sass | resources.ToCSS (dict "targetPath" " /css/style.css") }}
+  {{ $options := (dict "targetPath" "/css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+  {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 <meta name="style" content="{{$style.Permalink }}" >

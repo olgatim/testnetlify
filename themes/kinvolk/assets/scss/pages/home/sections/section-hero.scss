@@ -1,26 +1,35 @@
 .section-hero {
-  min-height: 30vw;
+  min-height: 46vw;
   display: flex;
-  background: #353535;
-  padding-bottom: 56px;
+  background: $black;
+  padding: 20px 20px 0;
+  box-sizing: content-box;
+  background-clip: content-box;
+  // padding-bottom: 56px;
 }
 
 .section-hero-content {
   margin-top: auto;
   color: #fff;
-  max-width: 580px;
   width: 100%;
+  padding: 0 30px;
+  padding-bottom: 10vw;
 }
 
 .section-hero-title {
-  font-size: 52px;
-  font-weight: bold;
+  font-size: 60px;
+  font-weight: $font-weight-bold;
+  font-family: "Cairo";
+  max-width: 580px;
+  margin-bottom: 20px;
+  line-height: 1;
 }
 
 .section-hero-text {
   width: 100%;
-  max-width: 424px;
+  max-width: 536px;
   margin-top: 40px;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: $font-weight-light;
+  font-family: "Roboto";
 }
