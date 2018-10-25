@@ -59,12 +59,6 @@ customCSS = ["/css/style.css"]
     identifier = "products"
     weight = -20
 
-    [[menu.main]]
-        name = "Products"
-        url = "/products"
-        identifier = "products"
-        weight = -20
-
 [[menu.main]]
     name = "Services"
     url = "/services"
