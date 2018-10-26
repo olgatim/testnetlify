@@ -3,9 +3,8 @@
     {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
       <li class="navbar-item">
-        <a href="{{ .URL }}" class="nav-link {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">{{ .Name }}</a>
+        <a href="#" class="navbar-link">{{ .Name }}</a>
       </li>
     {{ end }}
   </ul>
-    
 </nav>

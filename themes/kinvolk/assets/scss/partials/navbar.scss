@@ -1,0 +1,55 @@
+.navbar-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar-item + .navbar-item {
+  margin-left: 76px;
+
+  @media only screen and (max-width: 1200px) {
+    margin-left: 4vw;
+  }
+  @media only screen and (max-width: 992px) {
+    margin-left: 3vw;
+  }
+}
+
+.navbar-item {
+  &:not(:last-child) {
+    .navbar-link:before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 10px;
+      height: 7px;
+      background: url("/images/navigation-arrow.svg") no-repeat center;
+      background-size: contain;
+    }
+  }
+}
+
+.navbar-link {
+  position: relative;
+  padding: 0;
+  color: $white;
+  text-transform: capitalize;
+  font-family: "Roboto";
+  font-weight: $font-weight-normal;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  padding-right: 16px;
+  white-space: nowrap;
+}
+.page-single .nav-link {
+  color: $black;
+}
+
+.nav-link.active {
+  color: $blue;
+}

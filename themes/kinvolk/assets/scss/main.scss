@@ -1,86 +1,49 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap/scss/reboot";
+@import "./bootstrap/functions";
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins/breakpoints";
+@import "./bootstrap/mixins/hover";
 
+@import "./bootstrap/root";
+@import "./bootstrap/reboot";
 
-@font-face {
-  font-family: FiveByFive;
-  src: url("../../static/fonts/FiveByFive.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
+@import "./fonts";
 
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-Light.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-Regular.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-SemiBold.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-Bold.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-Black.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-ExtraLight.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cairo;
-  src: url("../../static/fonts/Cairo/Cairo-ExtraLight.ttf") format("truetype");
-  //font-weight: normal;
-  font-style: normal;
-}
+@import "./partials/header.scss";
+@import "./partials/navbar.scss";
+@import "./sections/section-hero.scss";
+@import "./sections/section-companies.scss";
 
-
-
-@import "./partials/navbar/navbar.scss";
-@import "./partials/header/header.scss";
-@import "./partials/footer/footer.scss";
-@import "./pages/pages.scss";
-
-
-
-html, body {
-  height: 100%;
-}
-
-body {
+.container {
   display: flex;
-  flex-direction: column;
+  width: 94%;
+  margin: 0 auto;
+  max-width: 1160px;
 }
 
-.footer {
-  margin-top: auto;
+.button {
+  min-height: 50px;
+  background: url("/images/btn-bg.svg") no-repeat center;
+  background-size: contain;
+  border: none;
+  color: $white;
+  font-family: "FiveByFive";
+  font-size: 14px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 ul {
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.main:not(.home-main) {
-  padding: 216px 58px 0px;
+p {
+  margin: 0;
 }
-

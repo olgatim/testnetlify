@@ -1,0 +1,164 @@
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0;
+}
+
+.section-hero-banner {
+  display: flex;
+  height: 46vw;
+  min-height: 400px;
+  max-height: calc(100vh - 90px);
+  background: $black;
+}
+
+.section-hero-content {
+  margin-top: auto;
+  color: $white;
+  width: 100%;
+  padding-bottom: 10vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1200px) {
+    padding-bottom: 8vw;
+  }
+}
+
+.section-hero-description {
+  padding-left: 30px;
+  flex-shrink: 0;
+  margin-right: 30px;
+
+  @media only screen and (max-width: 1200px) {
+    width: 50vw;
+  }
+}
+
+.section-hero-image {
+  width: 31.4vw;
+  padding-right: 110px;
+
+  > img {
+    width: 100%;
+    height: auto;
+    min-width: 120px;
+  }
+}
+
+.section-hero-title {
+  font-size: 60px;
+  font-weight: $font-weight-bold;
+  font-family: "Cairo";
+  max-width: 580px;
+  margin-bottom: 20px;
+  line-height: 1;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 4.6vw;
+  }
+}
+
+.section-hero-text {
+  width: 100%;
+  max-width: 536px;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: $font-weight-light;
+  font-family: "Roboto";
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 16px;
+  }
+}
+
+.section-hero-companies {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  padding-left: 70px;
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  > .container {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-color: #17B838 #17B838 transparent transparent;
+    border-width: 35px;
+    border-style: solid;
+
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}
+
+.section-companies-title {
+  font-family: "Roboto";
+  font-weight: $font-weight-light;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 160px;
+  min-width: 120px;
+
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+}
+
+.section-companies-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: 20px;
+
+  @media only screen and (max-width: 992px) {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .section-companies-item {
+    @media only screen and (max-width: 992px) {
+      width: 30%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  .section-companies-item + .section-companies-item {
+    margin-left: 50px;
+
+    @media only screen and (max-width: 1200px) {
+      margin-left: 20px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      margin-left: 15px;
+    }
+  }
+
+  .section-companies-link {
+    opacity: 0.5;
+  }
+}

@@ -1,24 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head.html" }}
-<body class="home-page">
-  {{ partial "header.html" . }}
-  <main class="main home-main">
-    <section class="section-hero">
-      <div class="section-container">
-          {{ with .Site.GetPage "section-hero" }}
-          <div class="section-hero-content">
-            <h2 class="section-hero-title">{{ .Title }}</h2>
-            <p class="section-hero-text">{{ .Params.text }}</p>
-          </div>
-          {{ end }}
-      </div>
-    </section>
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
 
-    <section class="section-team">
-        {{ range where .Site.RegularPages "Section" "team" . }}
-          {{ partial "card.html" . }}
-        {{ end }}
-    </section>
-  </main>
-  {{ partial "footer.html" . }}
+<main>
+  <section class="section-hero">
+    <div class="section-hero-banner">
+        <div class="container">
+            <div class="section-hero-content">
+              <div class="section-hero-description">
+                  <h2 class="section-hero-title">The deep-stack Kubernetes experts</h2>
+                  <p class="section-hero-text">From cluster to kernel, Kinvolk builds and supports the open-source projects that enterprises depend on…</p>
+              </div>
+              <div class="section-hero-image">
+                  <img src="/images/hero-image.svg" alt="hero image">
+                </div>
+            </div>
+          </div>
+    </div>
+    <div class="section-hero-companies">
+        <div class="container">
+            <p class="section-companies-title">We provide our services to companies like</p>
+            <ul class="section-companies-list">
+                {{ $url := "/images/companies" }}
+                {{ $filesInDir := readDir "themes/kinvolk/static/images/companies" }}
+                {{ range $filesInDir }}
+                <li class="section-companies-item"><a href="#" class="section-companies-link"><img src="{{$url}}/{{.Name | urlize }}" alt="company logo" class="section-companies-image"></a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+  </section>
+</main>
+
+{{ partial "footer.html" . }}
