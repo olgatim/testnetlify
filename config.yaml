@@ -1,0 +1,62 @@
+baseURL: '/'
+languageCode: en-us
+title: Kinvolk website
+theme: kinvolk
+
+menu:
+  main:
+    - name: Products
+      url: /products
+      identifier: products
+      weight: -20
+    - name: Services
+      url: /services
+      weight: -15
+    - name: Company
+      url: /company
+      weight: -10
+    - name: Case Studies
+      url: /case-studies
+      weight: -5
+    - name: Blog
+      url: /blog
+      weight: 0
+
+params:
+  footer:
+    navlist:
+      - title: Products
+        quicklinks:
+          - text: Lokomotive
+            link: /products/lokomotive
+          - text: Flatcar Linux
+            link: /products/flatcar-linux
+      - title: Services
+        quicklinks:
+          - text: Engineering
+            link: /services/engineering
+          - text: Penetration testing
+            link: /services/penetration-testing
+          - text: Training
+            link: /services/training
+      - title: Company
+        quicklinks:
+          - text: About
+            link: /company/about
+          - text: Careers
+            link: /company/careers
+          - text: Imprint
+            link: /company/imprint
+  social:
+  - title: github
+    url: 'https://github.com/kinvolk'
+    image: 'git-ico.svg'
+  - title: facebook
+    url: 'https://www.facebook.com/kinvolk'
+    image: 'fb-ico.svg'
+  - title: twitter
+    url: 'https://twitter.com/kinvolkio'
+    image: 'twitter-ico.svg'
+  - title: linkedin
+    url: 'https://www.linkedin.com/company/kinvolk'
+    image: 'linkedin-ico.svg'

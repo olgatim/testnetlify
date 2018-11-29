@@ -1,0 +1,19 @@
+.button {
+  min-height: 50px;
+  background: url("/images/btn-bg.svg") no-repeat center;
+  background-size: contain;
+  border: none;
+  color: $white;
+  font-family: $font-family-buttons;
+  font-size: 14px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}

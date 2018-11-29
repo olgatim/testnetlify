@@ -1,4 +1,7 @@
 @import "./bootstrap/functions";
+
+@import "./variables";
+
 @import "./bootstrap/variables";
 @import "./bootstrap/mixins/breakpoints";
 @import "./bootstrap/mixins/hover";
@@ -8,42 +11,14 @@
 
 @import "./fonts";
 
+@import "./layouts.scss";
+@import "./common.scss";
+@import "./buttons.scss";
+
 @import "./partials/header.scss";
+@import "./partials/footer.scss";
 @import "./partials/navbar.scss";
+
 @import "./sections/section-hero.scss";
-@import "./sections/section-companies.scss";
-
-.container {
-  display: flex;
-  width: 94%;
-  margin: 0 auto;
-  max-width: 1160px;
-}
-
-.button {
-  min-height: 50px;
-  background: url("/images/btn-bg.svg") no-repeat center;
-  background-size: contain;
-  border: none;
-  color: $white;
-  font-family: "FiveByFive";
-  font-size: 14px;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-}
+@import "./sections/section-services.scss";
+@import "./sections/section-contact-us.scss";

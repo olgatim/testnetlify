@@ -2,8 +2,8 @@
   <ul class="navbar-list">
     {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <li class="navbar-item">
-        <a href="#" class="navbar-link">{{ .Name }}</a>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link">{{ .Name }}</a>
       </li>
     {{ end }}
   </ul>

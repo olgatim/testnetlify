@@ -3,30 +3,97 @@
 
 <main>
   <section class="section-hero">
-    <div class="section-hero-banner">
-        <div class="container">
-            <div class="section-hero-content">
-              <div class="section-hero-description">
-                  <h2 class="section-hero-title">The deep-stack Kubernetes experts</h2>
-                  <p class="section-hero-text">From cluster to kernel, Kinvolk builds and supports the open-source projects that enterprises depend on…</p>
-              </div>
-              <div class="section-hero-image">
-                  <img src="/images/hero-image.svg" alt="hero image">
-                </div>
-            </div>
+    <div class="section-hero__banner">
+      <div class="container">
+        <div class="section-hero__content">
+          <div class="section-hero__description">
+            <h2 class="section-hero__title">The deep-stack Kubernetes experts</h2>
+            <p class="section-hero__text">From cluster to kernel, Kinvolk builds and supports the open-source projects
+              that enterprises depend on…</p>
           </div>
-    </div>
-    <div class="section-hero-companies">
-        <div class="container">
-            <p class="section-companies-title">We provide our services to companies like</p>
-            <ul class="section-companies-list">
-                {{ $url := "/images/companies" }}
-                {{ $filesInDir := readDir "themes/kinvolk/static/images/companies" }}
-                {{ range $filesInDir }}
-                <li class="section-companies-item"><a href="#" class="section-companies-link"><img src="{{$url}}/{{.Name | urlize }}" alt="company logo" class="section-companies-image"></a></li>
-                {{ end }}
-            </ul>
+          <div class="section-hero__image">
+            <img src="/images/hero-image.svg" alt="hero image">
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="section-companies">
+      <div class="container">
+        <p class="section-companies__title">We provide our services to companies like</p>
+        <ul class="section-companies__list">
+          {{ $url := "/images/companies" }}
+          {{ $filesInDir := readDir "themes/kinvolk/static/images/companies" }}
+          {{ range $filesInDir }}
+          <li class="section-companies__item">
+            <a href="#" class="section-companies__link">
+              <img src="{{$url}}/{{.Name | urlize }}" alt="company logo" class="section-companies__image">
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="section-services">
+    <div class="container">
+      <div class="section-header">
+        <h3 class="section-title">Our services</h3>
+        <ul class="tabs-navlist">
+          {{ range where $.Site.RegularPages "Section" "services" }}
+          <li class="tabs-navlist__item {{ .Params.status }}" data-tab-link="{{ .Params.index }}">
+            <a href="#" class="tabs-navlist__link">{{ .Title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="tabs-content">
+        {{ range where $.Site.RegularPages "Section" "services" }}
+        <div class="tab-item {{ .Params.status }}" data-tab="{{ .Params.index }}">
+          <div class="tab-item__description">
+            <h2 class="tab-item__title">{{ .Title }}</h2>
+            <p class="tab-item__text">{{ .Params.text }}</p>
+            <a href="#" class="tab-item__link">learn more</a>
+          </div>
+          <div class="tab-item__image-block">
+            <img src="/images/services/{{ .Params.image }}" alt="service image" class="tab-item__image">
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <section class="section-contact-us">
+    <div class="contact-us-block">
+      <h2 class="contact-us-block__title">Contact us</h2>
+      <form action="#" class="form contact-us-form" autocomplete="off">
+        <div class="form__row">
+          <div class="form__group">
+            <label for="contact-name" class="form__label">Enter your name *</label>
+            <input type="text" id="contact-name" name="contact-name" class="form__input">
+          </div>
+          <div class="form__group">
+            <label for="contact-mail" class="form__label">Enter your email *</label>
+            <input type="text" id="contact-mail" name="contact-mail" class="form__input">
+          </div>
+        </div>
+        <div class="form__row form__textarea-row">
+          <div class="form__group form__group_full">
+            <label for="contact-message" class="form__label">Type your message</label>
+            <textarea name="contact-message" id="contact-message" class="form__input form__textarea"></textarea>
+          </div>
+
+        </div>
+        <div class="form__row form__checkbox-row">
+            <button class="button contact-us-form__button">Send</button>
+
+        
+            <label for="subscribe" class="form__label checkbox-label">
+              <input type="checkbox" class="form__checkbox" id="subscribe" name="subscribe">
+              <div class="checkbox-image"></div>
+              Subscribe to our newsletter?
+            </label>
+        </div>
+      </form>
     </div>
   </section>
 </main>

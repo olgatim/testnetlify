@@ -5,28 +5,43 @@
   right: 0;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   min-height: 70px;
 
   .container {
     align-items: center;
-    padding: 0px 30px; 
   }
 
   .navbar {
     margin-left: auto;
   }
-  
-  .header-button {
-    margin-left: 62px;
-    width: 160px;
+}
 
-    @media only screen and (max-width: 1200px) {
-      margin-left: 3vw;
-    }
-    @media only screen and (max-width: 992px) {
-      display: none;
-    }
+.header__logo {
+  @include media-breakpoint-up(xxl) {
+    width: 2.6vw;
+  }
+}
+
+.header__button {
+  margin-left: 62px;
+  width: 160px;
+  transition: color 0.4s;
+
+  @include media-breakpoint-down(lg) {
+    margin-left: 3vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 0.74vw;
+    width: auto;
+    height: 3em;
+    padding: 0px 35px;
   }
 }

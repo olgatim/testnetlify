@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0 1rem;
+
+  @include media-breakpoint-up(xxl) {
+    width: 60vw;
+    max-width: none;
+  }
+}
+
+.section-title {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-bold;
+  font-size: 32px;
+  color: $black;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 2.6vw;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 1.67vw;
+  }
+}
+
+.logo {
+  > a {
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

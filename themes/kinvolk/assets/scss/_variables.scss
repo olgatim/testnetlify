@@ -1,0 +1,48 @@
+//Fonts
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$font-family-Roboto: "Roboto", sans-serif;
+$font-family-Cairo: "Cairo", sans-serif;
+$font-family-IBMPlexSans: "IBMPlexSans", sans-serif;
+$font-family-FiveByFive: "FiveByFive", sans-serif;
+$font-family-Montserrat: "Montserrat", sans-serif;
+
+$font-family-primary: $font-family-Roboto;
+$font-family-secondary: $font-family-IBMPlexSans;
+$font-family-buttons: $font-family-FiveByFive;
+
+
+// Links
+
+$link-color:                #ffffff;
+$link-decoration:           none;
+$link-hover-color:          #007bff;
+$link-hover-decoration:     none;
+
+// Paragraphs
+
+$paragraph-margin-bottom:   0;
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px
+);
+
+// Colors
+
+$accent-color: #17b838;
+
+// Forms
+
+$label-margin-bottom: 0;

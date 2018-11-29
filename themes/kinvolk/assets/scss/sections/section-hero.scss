@@ -4,41 +4,56 @@
   padding: 20px 20px 0;
 }
 
-.section-hero-banner {
+.section-hero__banner {
   display: flex;
-  height: 46vw;
   min-height: 400px;
   max-height: calc(100vh - 90px);
   background: $black;
+
+  @include media-breakpoint-up(xxl) {
+    height: auto;
+  }
 }
 
-.section-hero-content {
+.section-hero__content {
   margin-top: auto;
   color: $white;
   width: 100%;
-  padding-bottom: 10vw;
+  padding-bottom: 4.7vw;
+  padding-top: 13.4vw;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 
-  @media only screen and (max-width: 1200px) {
+  @include media-breakpoint-down(lg) {
     padding-bottom: 8vw;
   }
-}
 
-.section-hero-description {
-  padding-left: 30px;
-  flex-shrink: 0;
-  margin-right: 30px;
-
-  @media only screen and (max-width: 1200px) {
-    width: 50vw;
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 120px;
+    padding-top: 240px;
   }
 }
 
-.section-hero-image {
-  width: 31.4vw;
-  padding-right: 110px;
+.section-hero__description {
+  flex-shrink: 0;
+  margin-right: 6vw;
+  padding-bottom: 6.2vw;
+
+  @include media-breakpoint-down(lg) {
+    width: 50vw;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 80px;
+    width: 30vw;
+  }
+}
+
+.section-hero__image {
+  width: 32.8vw;
+  margin-right: 2vw;
+  max-width: 600px;
 
   > img {
     width: 100%;
@@ -47,44 +62,49 @@
   }
 }
 
-.section-hero-title {
+.section-hero__title {
   font-size: 60px;
   font-weight: $font-weight-bold;
-  font-family: "Cairo";
+  font-family: $font-family-secondary;
   max-width: 580px;
   margin-bottom: 20px;
   line-height: 1;
 
-  @media only screen and (max-width: 1200px) {
+  @include media-breakpoint-up(xxl) {
+    font-size: 3.13vw;
+    max-width: none;
+  }
+
+  @include media-breakpoint-down(lg) {
     font-size: 4.6vw;
   }
 }
 
-.section-hero-text {
+.section-hero__text {
   width: 100%;
   max-width: 536px;
   margin-bottom: 0;
   font-size: 18px;
   font-weight: $font-weight-light;
-  font-family: "Roboto";
+  font-family: $font-family-primary;
 
-  @media only screen and (max-width: 1200px) {
+  @include media-breakpoint-down(lg) {
     font-size: 16px;
   }
 
-  @media only screen and (max-width: 992px) {
-    font-size: 16px;
+  @include media-breakpoint-up(xxl) {
+    font-size: 0.94vw;
+    max-width: none;
   }
 }
 
-.section-hero-companies {
+.section-companies {
   position: relative;
   display: flex;
   align-items: center;
   min-height: 70px;
-  padding-left: 70px;
 
-  @media only screen and (max-width: 992px) {
+  @include media-breakpoint-down(md) {
     padding-left: 0;
     margin-top: 20px;
   }
@@ -92,6 +112,13 @@
   > .container {
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1340px) {
+      margin-left: 80px;
+    }
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
   }
 
   &:before {
@@ -106,59 +133,87 @@
     border-width: 35px;
     border-style: solid;
 
-    @media only screen and (max-width: 992px) {
+    @include media-breakpoint-down(md) {
       display: none;
     }
   }
 }
 
-.section-companies-title {
-  font-family: "Roboto";
+.section-companies__title {
+  font-family: $font-family-primary;
   font-weight: $font-weight-light;
   font-size: 14px;
   line-height: 1.4;
   max-width: 160px;
   min-width: 120px;
 
-  @media only screen and (max-width: 992px) {
+  @include media-breakpoint-down(md) {
     display: none;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 0.74vw;
+    max-width: 8.3vw;
   }
 }
 
-.section-companies-list {
+.section-companies__list {
   display: flex;
   align-items: center;
   list-style: none;
   margin-left: 20px;
 
-  @media only screen and (max-width: 992px) {
+  @include media-breakpoint-down(md) {
     margin-left: 0;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .section-companies-item {
-    @media only screen and (max-width: 992px) {
-      width: 30%;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+  @include media-breakpoint-up(xxl) {
+    width: 40vw;
+  }
+}
+
+.section-companies__item {
+  @include media-breakpoint-down(md) {
+    width: 33.3333%;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
-  .section-companies-item + .section-companies-item {
-    margin-left: 50px;
+  @include media-breakpoint-up(xxl) {
+    width: 16%;
+  }
+}
 
-    @media only screen and (max-width: 1200px) {
-      margin-left: 20px;
-    }
+.section-companies__link {
+  display: block;
+}
 
-    @media only screen and (max-width: 1024px) {
-      margin-left: 15px;
-    }
+.section-companies__image {
+  @include media-breakpoint-up(xxl) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.section-companies__item + .section-companies__item {
+  margin-left: 50px;
+
+  @include media-breakpoint-down(lg) {
+    margin-left: 20px;
   }
 
-  .section-companies-link {
-    opacity: 0.5;
+  @media only screen and (max-width: 1024px) {
+    margin-left: 15px;
   }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+  }
+}
+
+.section-companies__link {
+  opacity: 0.5;
 }

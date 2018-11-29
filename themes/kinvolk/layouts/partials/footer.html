@@ -1,3 +1,62 @@
+<footer class="footer">
+    <div class="container">
+      <div class="footer-nav">
+        <div class="logo footer__logo">
+          <a href="{{ .Site.BaseURL }}">
+            <img src="/images/logo_black.svg" alt="logo">
+          </a>
+        </div>
+        <div class="footer-menu">
+          {{ range .Site.Params.footer.navlist }}
+          <div class="footer-column">
+            <div class="footer-column__title">{{ .title }}</div>
+            <ul class="footer-menu__list">
+              {{ range .quicklinks }}
+              <li class="footer-menu__item">
+                <a href="#" class="footer-menu__link">{{ .text }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+        </div>
+        <div class="form footer__form">
+          <div class="footer-column__title">Subscribe</div>
+          <form action="" class="subscribe-form" autocomplete="off">
+            <div class="form__group">
+                <input id="mail" name="mail" type="text" class="form__input subscribe-form__input" placeholder="Enter your email">
+                <button type="submit" class="button subscribe-form__button">
+                  <div class="subscribe-form__button__image"></div>
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-socials">
+        <a href="#" class="button footer__button">Impressum</a>
+        <ul class="footer-socials__list">
+          {{ range .Site.Params.social }}
+          <li class="footer-socials__item">
+            <a href="{{ .url }}" class="footer-socials__link">
+              <img src="/images/socials/{{ .image }}" alt="icon" class="socials-ico {{ .title }}">
+              <span class="footer-socials__title">{{ .title }}</span>
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+{{ $tabs := resources.Get "js/tabs.js" }}
+{{ $form := resources.Get "js/form.js" }}
+{{ $global := resources.Get "js/main.js" }}
+
+
+{{ $js := slice $tabs $form  $global | resources.Concat "js/bundle.js" }}
+
+<script src="{{ $js.Permalink }}"></script>
+
 </body>
 
 </html>
