@@ -7,19 +7,23 @@ menu:
   main:
     - name: Products
       url: /products
-      identifier: products
+      identifier: "products"
       weight: -20
     - name: Services
       url: /services
+      identifier: "services"
       weight: -15
     - name: Company
       url: /company
+      identifier: "company"
       weight: -10
     - name: Case Studies
       url: /case-studies
+      identifier: "case studies"
       weight: -5
     - name: Blog
       url: /blog
+      identifier: "blog"
       weight: 0
 
 params:

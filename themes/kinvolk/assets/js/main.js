@@ -1,3 +1,4 @@
 //Tabs 
-
-initTabs(".tabs-navlist__item", ".tab-item");
+if(document.querySelector(".tab-item")) {
+  initTabs(".tabs-navlist__item", ".tab-item");
+}

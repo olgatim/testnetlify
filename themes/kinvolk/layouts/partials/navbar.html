@@ -1,9 +1,10 @@
 <nav class="navbar">
   <ul class="navbar-list">
+    {{- $firstUrlElement := print "/" (index (split .URL "/") 1) "/" -}}
     {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <li class="navbar__item">
-        <a href="#" class="navbar__link">{{ .Name }}</a>
+      <li class="navbar__item {{if or ($.IsMenuCurrent "main" .) (eq ($firstUrlElement|lower) (.URL|lower)) }}active{{end}}">
+        <a href="{{ .URL }}" class="navbar__link">{{ .Name }}</a>
       </li>
     {{ end }}
   </ul>

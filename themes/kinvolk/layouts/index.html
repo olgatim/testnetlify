@@ -39,7 +39,7 @@
       <div class="section-header">
         <h3 class="section-title">Our services</h3>
         <ul class="tabs-navlist">
-          {{ range where $.Site.RegularPages "Section" "services" }}
+          {{ range where $.Site.RegularPages "Section" "services-list" }}
           <li class="tabs-navlist__item {{ .Params.status }}" data-tab-link="{{ .Params.index }}">
             <a href="#" class="tabs-navlist__link">{{ .Title }}</a>
           </li>
@@ -47,7 +47,7 @@
         </ul>
       </div>
       <div class="tabs-content">
-        {{ range where $.Site.RegularPages "Section" "services" }}
+        {{ range where $.Site.RegularPages "Section" "services-list" }}
         <div class="tab-item {{ .Params.status }}" data-tab="{{ .Params.index }}">
           <div class="tab-item__description">
             <h2 class="tab-item__title">{{ .Title }}</h2>
@@ -65,7 +65,7 @@
   <section class="section-contact-us">
     <div class="contact-us-block">
       <h2 class="contact-us-block__title">Contact us</h2>
-      <form action="#" class="form contact-us-form" autocomplete="off">
+      <form action="#" class="form contact-us-form" autocomplete="off" netlify name="contact-us">
         <div class="form__row">
           <div class="form__group">
             <label for="contact-name" class="form__label">Enter your name *</label>

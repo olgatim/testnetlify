@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   min-height: 70px;
+  z-index: 10;
+  background: #000;
 
   .container {
     align-items: center;
