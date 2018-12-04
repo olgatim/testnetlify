@@ -55,7 +55,7 @@ if(document.querySelector(".contact-us-form")) {
     }
   
     if (emailValid && messageValid && nameValid) {
-      this.submit();
+      // this.submit();
     }
   });
 }
