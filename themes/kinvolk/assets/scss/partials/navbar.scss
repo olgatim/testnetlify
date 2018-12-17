@@ -1,36 +1,56 @@
 .navbar-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0;
   list-style: none;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .navbar__item + .navbar__item {
-  margin-left: 76px;
+  margin-left: 56px;
 
   @include media-breakpoint-down(lg) {
     margin-left: 4vw;
   }
 
   @include media-breakpoint-down(md) {
-    margin-left: 3vw;
+    margin-left: 2vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 0;
+    margin-top: 40px;
   }
 }
 
 .navbar__item {
-  &:not(:last-child) {
-    .navbar__link:before {
-      content: "";
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      width: 10px;
-      height: 7px;
-      background: url("/images/navigation-arrow.svg") no-repeat center;
-      background-size: contain;
+  position: relative;
+
+  &:last-child .navbar__link > svg, &:nth-last-child(2) .navbar__link > svg {
+    display: none;
+  }
+
+  &:first-child .navbar__link > svg {
+    fill: #00A9BC;
+  }
+
+  &:nth-child(2) .navbar__link > svg {
+    fill: #1A9B4A;
+  }
+
+  &:nth-child(3) .navbar__link > svg {
+    fill: #FDDF02;
+  }
+
+  &:hover {
+    > .navbar-sub-menu {
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 }
@@ -41,18 +61,52 @@
   color: $white;
   text-transform: capitalize;
   font-family: $font-family-primary;
-  font-weight: $font-weight-regular;
-  font-size: 14px;
+  font-weight: $font-weight-semi-bold;
+  font-size: 16px;
   letter-spacing: 1.1px;
-  padding-right: 16px;
   white-space: nowrap;
   transition: color 0.4s;
+  transition: opacity 0.4s;
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+
+  > svg {
+    width: 10px;
+    height: 6px;
+    margin-left: 8px;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 2px;
+    }
+  }
+
+  &:first-child > svg {
+    fill: red;
+  }
 
   @include media-breakpoint-up(xxl) {
     font-size: 0.74vw;
   }
 }
 
-.nav__link.active {
-  color: $blue;
+span.navbar__link {
+  cursor: pointer;
+}
+
+.navbar__link:hover {
+  opacity: 0.5;
+}
+
+.navbar-sub-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  list-style: none;
+  opacity: 0;
+  pointer-events: none;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }

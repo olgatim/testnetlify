@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="46px" viewBox="0 0 45 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Decktop-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page_v.7" transform="translate(-1058.000000, -6344.000000)">
+            <g id="Feedback" transform="translate(16.000000, 6328.000000)">
+                <g id="arrow" transform="translate(1042.000000, 16.000000)">
+                    <g id="bg">
+                        <rect id="Rectangle" class="inner-rect" fill="#17B838" x="1.97142857" y="1.97142857" width="42.0571429" height="42.0571429"></rect>
+                        <rect id="Rectangle" fill="#000000" x="1" y="0" width="43" height="2"></rect>
+                        <polygon id="Rectangle" fill="#000000" transform="translate(1.000000, 22.500000) rotate(-270.000000) translate(-1.000000, -22.500000) " points="-20.5 21.5 22.5 21.5 22.5 23.5 -20.5 23.5"></polygon>
+                        <rect id="Rectangle" fill="#0B5E1C" x="39" y="39" width="5" height="5"></rect>
+                        <rect id="Rectangle" fill="#0B5E1C" x="41" y="3" width="2" height="36"></rect>
+                        <rect id="Rectangle" fill="#0B5E1C" x="1.97142857" y="42.0571429" width="37.8" height="2"></rect>
+                        <rect id="Rectangle" fill="#1ADB41" x="2" y="2" width="2" height="40.0857143"></rect>
+                        <rect id="Rectangle" fill="#1ADB41" x="2" y="2" width="42.0571429" height="2"></rect>
+                        <rect id="Rectangle-Copy-17" fill="#000000" x="1" y="44" width="43" height="2"></rect>
+                        <polygon id="Rectangle" fill="#000000" transform="translate(44.000000, 22.500000) rotate(-270.000000) translate(-44.000000, -22.500000) " points="22.5 21.5 65.5 21.5 65.5 23.5 22.5 23.5"></polygon>
+                    </g>
+                    <path d="M18,13 L22,13 L22,17 L18,17 L18,13 Z M22,17 L26,17 L26,21 L22,21 L22,17 Z M26,21 L30,21 L30,25 L26,25 L26,21 Z M22,25 L26,25 L26,29 L22,29 L22,25 Z M18,29 L22,29 L22,33 L18,33 L18,29 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

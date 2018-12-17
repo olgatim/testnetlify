@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="135px" viewBox="0 0 96 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Decktop-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="About-page_v.7" transform="translate(-592.000000, -592.000000)" fill="#000000">
+            <g id="Content" transform="translate(32.000000, 497.000000)">
+                <g id="Info" transform="translate(240.000000, 95.000000)">
+                    <g id="Group-2" transform="translate(320.000000, 0.000000)">
+                        <polygon id="Fill-5" points="0 58 19 58 19 0 0 0"></polygon>
+                        <polygon id="Fill-6" points="96 135 77.0042078 135 77.0042078 57.9925598 77.0042078 19.335991 58.0008416 19.335991 58.0008416 57.9925598 39 57.9925598 39 0 96 0 96 54.550255"></polygon>
+                        <path d="M0,135 L57,135 L57,77 L0,77 L0,135 Z M18.9991585,115.662385 L37.998317,115.662385 L37.998317,96.3350461 L18.9991585,96.3350461 L18.9991585,115.662385 Z" id="Fill-10"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -7,23 +7,27 @@ menu:
   main:
     - name: Products
       url: /products
-      identifier: "products"
+      identifier: products
       weight: -20
+      icon: svg
     - name: Services
       url: /services
-      identifier: "services"
       weight: -15
+      icon: svg
     - name: Company
       url: /company
-      identifier: "company"
+      identifier: company
       weight: -10
+      icon: svg
+    - name: About us
+      parent: company
+      url: /about-us
+      weight: 1
     - name: Case Studies
       url: /case-studies
-      identifier: "case studies"
       weight: -5
     - name: Blog
       url: /blog
-      identifier: "blog"
       weight: 0
 
 params:
@@ -52,15 +56,15 @@ params:
           - text: Imprint
             link: /company/imprint
   social:
-  - title: github
+  - title: Github
     url: 'https://github.com/kinvolk'
-    image: 'git-ico.svg'
-  - title: facebook
+    image: 'github-icon'
+  - title: Facebook
     url: 'https://www.facebook.com/kinvolk'
-    image: 'fb-ico.svg'
-  - title: twitter
+    image: "facebook-icon"
+  - title: Twitter
     url: 'https://twitter.com/kinvolkio'
-    image: 'twitter-ico.svg'
-  - title: linkedin
+    image: 'twitter-icon'
+  - title: Linkedin
     url: 'https://www.linkedin.com/company/kinvolk'
-    image: 'linkedin-ico.svg'
+    image: 'linkedin-icon'

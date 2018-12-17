@@ -1,14 +1,50 @@
 .section-hero {
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 0;
+  padding-bottom: 66px;
+  background: url("/images/white-noise-animated.gif");
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @include media-breakpoint-up(xl) {
+    margin-left: calc(-1 * (62.5vw - 1232px * 0.6)/2);
+    margin-right: calc(-1 * (62.5vw - 1232px * 0.6)/2);
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: 46px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("/images/white-noise-shadow-animated.gif") repeat-x bottom;
+    background-size: auto;
+    opacity: 0.9;
+  }
+
 }
 
 .section-hero__banner {
   display: flex;
   min-height: 400px;
-  max-height: calc(100vh - 90px);
-  background: $black;
 
   @include media-breakpoint-up(xxl) {
     height: auto;
@@ -16,44 +52,62 @@
 }
 
 .section-hero__content {
+  position: relative;
   margin-top: auto;
   color: $white;
   width: 100%;
-  padding-bottom: 4.7vw;
-  padding-top: 13.4vw;
+  padding-top: 226px;
+  padding-bottom: 156px;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 8.1vw;
+    padding-top: 11.8vw;
+  }
 
   @include media-breakpoint-down(lg) {
     padding-bottom: 8vw;
   }
 
-  @include media-breakpoint-up(xxl) {
-    padding-bottom: 120px;
-    padding-top: 240px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 154px;
   }
 }
 
 .section-hero__description {
   flex-shrink: 0;
   margin-right: 6vw;
-  padding-bottom: 6.2vw;
+  padding-left: 10px;
+  max-width: 734px;
+ 
+  @include media-breakpoint-up(xxl) {
+    padding-bottom: 80px;
+    width: 30vw;
+  }
 
   @include media-breakpoint-down(lg) {
     width: 50vw;
   }
 
-  @include media-breakpoint-up(xxl) {
-    padding-bottom: 80px;
-    width: 30vw;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
   }
 }
 
 .section-hero__image {
-  width: 32.8vw;
-  margin-right: 2vw;
-  max-width: 600px;
+  opacity: 0;
+  width: 46.8vw;
+  min-width: 600px;
+  position: absolute;
+  right: -2vw;
+  top: 3vw;
+  z-index: -2;
+
+  @include media-breakpoint-down(xs) {
+    right: -150px;
+  }
 
   > img {
     width: 100%;
@@ -63,37 +117,76 @@
 }
 
 .section-hero__title {
-  font-size: 60px;
-  font-weight: $font-weight-bold;
-  font-family: $font-family-secondary;
-  max-width: 580px;
-  margin-bottom: 20px;
-  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 64px;
+  font-weight: $font-weight-extra-bold;
+  font-family: $font-family-title;
+  margin-bottom: 30px;
+  line-height: 1.25;
+  text-transform: uppercase;
 
   @include media-breakpoint-up(xxl) {
-    font-size: 3.13vw;
+    font-size: 3.33vw;
     max-width: none;
   }
 
   @include media-breakpoint-down(lg) {
     font-size: 4.6vw;
   }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 36px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 28px;
+  }
+}
+
+.section-hero__title > span {
+  position: relative;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  line-height: 1;
+  z-index: 2;
+  box-shadow: inset 0px 0px 0px 0.5em black, -10px 0 0 0 #000, 10px 0 0 0 #000;
+
+  &:nth-child(2) {
+    color: $accent-color;
+  }
+
+  @include media-breakpoint-down(xs) {
+    letter-spacing: 0.55px;
+  }
+}
+
+.section-hero__title > span + span  {
+  margin-top: 0.21em;
 }
 
 .section-hero__text {
-  width: 100%;
-  max-width: 536px;
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: $font-weight-light;
-  font-family: $font-family-primary;
-
-  @include media-breakpoint-down(lg) {
-    font-size: 16px;
-  }
+  display: inline;
+  max-width: 706px;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: $font-weight-regular;
+  font-family: $font-family-IBMPlexMono;
+  box-shadow: inset 0px 0px 0px 1em black, 
+              -10px 0 0 0 $black, 
+              10px 0 0 0 $black;
 
   @include media-breakpoint-up(xxl) {
     font-size: 0.94vw;
+    max-width: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-down(xs) {
     max-width: none;
   }
 }
@@ -102,58 +195,84 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 70px;
 
   @include media-breakpoint-down(md) {
     padding-left: 0;
     margin-top: 20px;
   }
 
+  @include media-breakpoint-down(xs) {
+    padding: 0 16px;
+  }
+
   > .container {
     align-items: center;
     justify-content: space-between;
 
-    @media only screen and (max-width: 1340px) {
-      margin-left: 80px;
-    }
     @include media-breakpoint-down(md) {
       margin-left: 0;
+      flex-direction: column;
+      align-items: flex-start;
     }
+
+    @include media-breakpoint-down(xs) {
+      padding: 0;
+    }
+  }
+}
+
+.section-companies__title {
+  position: relative;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-light;
+  font-size: 14px;
+  color: $white;
+  line-height: 1.28;
+  max-width: 272px;
+  min-width: 200px;
+  flex-shrink: 0;
+  padding-left: 76px;
+
+  @include media-breakpoint-down(md) {
+    max-width: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 40px;
+  }
+
+  @include media-breakpoint-down(xs) {
+   font-size: 13px;
   }
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 0;
-    height: 0;
-    border-color: #17B838 #17B838 transparent transparent;
-    border-width: 35px;
-    border-style: solid;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: $accent-color;
+    box-shadow: 24px 0 0 $white;
 
-    @include media-breakpoint-down(md) {
-      display: none;
+    @include media-breakpoint-down(sm) {
+      width: 16px;
+      height: 16px;
+      box-shadow: 12px 0 0 $white;
     }
-  }
-}
-
-.section-companies__title {
-  font-family: $font-family-primary;
-  font-weight: $font-weight-light;
-  font-size: 14px;
-  line-height: 1.4;
-  max-width: 160px;
-  min-width: 120px;
-
-  @include media-breakpoint-down(md) {
-    display: none;
   }
 
   @include media-breakpoint-up(xxl) {
     font-size: 0.74vw;
-    max-width: 8.3vw;
+    max-width: 13.3vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 18px;
   }
 }
 
@@ -161,59 +280,63 @@
   display: flex;
   align-items: center;
   list-style: none;
-  margin-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-breakpoint-down(lg) {
+    margin-left: 3vw;
+  }
 
   @include media-breakpoint-down(md) {
     margin-left: 0;
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   @include media-breakpoint-up(xxl) {
-    width: 40vw;
+    width: 58.4vw;
+    max-width: 1200px;
+    margin-left: 3vw;
   }
 }
 
 .section-companies__item {
-  @include media-breakpoint-down(md) {
-    width: 33.3333%;
-    margin-bottom: 20px;
-    text-align: center;
-  }
 
   @include media-breakpoint-up(xxl) {
-    width: 16%;
+    width: 25%;
   }
-}
 
-.section-companies__link {
-  display: block;
+  @include media-breakpoint-down(xs) {
+    width: 23%;
+   }
+
+  &:last-child {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
 }
 
 .section-companies__image {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+
   @include media-breakpoint-up(xxl) {
-    width: 100%;
+    width: 80%;
     height: auto;
+    max-width: none;
   }
 }
 
 .section-companies__item + .section-companies__item {
-  margin-left: 50px;
+  margin-left: 56px;
 
   @include media-breakpoint-down(lg) {
+    margin-left: 5.5vw;
+  }
+
+  @include media-breakpoint-down(xs) {
     margin-left: 20px;
   }
-
-  @media only screen and (max-width: 1024px) {
-    margin-left: 15px;
-  }
-
-  @include media-breakpoint-down(md) {
-    margin-left: 0;
-  }
-}
-
-.section-companies__link {
-  opacity: 0.5;
 }

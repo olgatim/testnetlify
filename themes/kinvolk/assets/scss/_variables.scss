@@ -3,30 +3,35 @@
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
+$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
+$font-weight-extra-bold: 800;
 $font-weight-black: 900;
 
-$font-family-Roboto: "Roboto", sans-serif;
-$font-family-Cairo: "Cairo", sans-serif;
 $font-family-IBMPlexSans: "IBMPlexSans", sans-serif;
-$font-family-FiveByFive: "FiveByFive", sans-serif;
-$font-family-Montserrat: "Montserrat", sans-serif;
+$font-family-PressStart2P: "PressStart2P", sans-serif;
+$font-family-WorkSans: "WorkSans", sans-serif;
+$font-family-IBMPlexMono: "IBMPlexMono", sans-serif;
 
-$font-family-primary: $font-family-Roboto;
-$font-family-secondary: $font-family-IBMPlexSans;
-$font-family-buttons: $font-family-FiveByFive;
+$font-family-primary: $font-family-IBMPlexSans;
+$font-family-buttons: $font-family-PressStart2P;
+$font-family-title: $font-family-WorkSans;
 
+// Colors
+
+$accent-color: #17B838;
 
 // Links
 
 $link-color:                #ffffff;
 $link-decoration:           none;
-$link-hover-color:          #007bff;
+$link-hover-color:          $accent-color;
 $link-hover-decoration:     none;
 
 // Paragraphs
 
 $paragraph-margin-bottom:   0;
+$headings-margin-bottom:    0;
 
 // Grid breakpoints
 
@@ -35,13 +40,9 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
+  xl: 1280px,
   xxl: 1920px
 );
-
-// Colors
-
-$accent-color: #17b838;
 
 // Forms
 

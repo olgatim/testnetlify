@@ -1,19 +1,57 @@
 .button {
+  position: relative;
   min-height: 50px;
-  background: url("/images/btn-bg.svg") no-repeat center;
-  background-size: contain;
+  width: 192px;
   border: none;
   color: $white;
   font-family: $font-family-buttons;
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   cursor: pointer;
+  text-transform: uppercase;
+  z-index: 2;
+
+  @include media-breakpoint-up(xxl) {
+    width: 10vw;
+    height: 2.6vw;
+    font-size: 0.63vw;
+  }
+}
+
+.button__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("/images/pixel-button-black.svg") no-repeat center;
+  background-size: contain;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.3s;
+  }
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:hover {
+  color: $white;
+  .button__background:before {
+    background-color: rgba(0,0,0,0.1);
+  }
 }

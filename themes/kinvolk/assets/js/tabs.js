@@ -8,10 +8,6 @@ function initTabs(navItem, tabItem) {
   });
 };
 
-function findElement(element) {
-  return document.querySelector(element);
-};
-
 function switchTabs(currentItem, tabItem, navItem) {
   var tabNum;
 

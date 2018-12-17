@@ -1,0 +1,67 @@
+.inner-section-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 192px 16px 120px;
+
+  @include media-breakpoint-up (xl) {
+    padding-top: 15vw;
+    padding-bottom: 9.375vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-bottom: 66px;
+    padding-top: 154px;
+  }
+}
+
+.inner-section-hero__title {
+  font-size: 64px;
+  font-weight: $font-weight-extra-bold;
+  font-family: $font-family-title;
+  margin-bottom: 0.47em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $white;
+  box-shadow: inset 0px 0px 0px 1em $accent-color, -10px 0 0 0 $accent-color, 10px 0 0 0 $accent-color;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 3.33vw;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 4.6vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 36px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 28px;
+  }
+}
+
+.inner-section-hero__description {
+  max-width: 450px;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: $font-weight-regular;
+  font-family: $font-family-IBMPlexMono;
+  color: $white;
+  text-align: center;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 1.05vw;
+    max-width: 23.45vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    max-width: none;
+  }
+}

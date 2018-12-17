@@ -1,44 +1,48 @@
 @font-face {
-  font-family: FiveByFive;
-  src: url("/fonts/FiveByFive/FiveByFive.ttf") format("truetype");
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url("/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: Roboto;
-  src: url("/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: PressStart2P;
+  src: url("/fonts/PressStart2P/PressStart2P-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
-  font-family: Roboto;
-  src: url("/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-family: IBMPlexSans;
+  src: url("/fonts/IBMPlexSans/IBMPlexSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: IBMPlexSans;
+  src: url("/fonts/IBMPlexSans/IBMPlexSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: IBMPlexSans;
+  src: url("/fonts/IBMPlexSans/IBMPlexSans-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
-  font-family: Cairo;
-  src: url("/fonts/Cairo/Cairo-Bold.ttf") format("truetype");
+  font-family: WorkSans;
+  src: url("/fonts/WorkSans/WorkSans-Bold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: IBMPlexSans;
-  src: url("/fonts/IBMPLexSans/IBMPlexSans-Bold.ttf") format("truetype");
+  font-family: WorkSans;
+  src: url("/fonts/WorkSans/WorkSans-ExtraBold.ttf") format("truetype");
   font-style: normal;
+  font-weight: 800;
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url("/fonts/IMontserrat/Montserrat-Bold.ttf") format("truetype");
+  font-family: IBMPlexMono;
+  src: url("/fonts/IBMPlexMono/IBMPlexMono-Regular.ttf") format("truetype");
   font-style: normal;
+  font-weight: 400;
 }

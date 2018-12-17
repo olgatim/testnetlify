@@ -1,101 +1,271 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-<main>
+<main class="main">
   <section class="section-hero">
     <div class="section-hero__banner">
       <div class="container">
         <div class="section-hero__content">
           <div class="section-hero__description">
-            <h2 class="section-hero__title">The deep-stack Kubernetes experts</h2>
+            <h2 class="section-hero__title"><span>The deep-stack</span><span>Kubernetes</span><span>experts</span></h2>
             <p class="section-hero__text">From cluster to kernel, Kinvolk builds and supports the open-source projects
               that enterprises depend on…</p>
-          </div>
-          <div class="section-hero__image">
-            <img src="/images/hero-image.svg" alt="hero image">
           </div>
         </div>
       </div>
     </div>
     <div class="section-companies">
       <div class="container">
-        <p class="section-companies__title">We provide our services to companies like</p>
+        <div class="section-companies__title">We provid our services to companies like</div>
         <ul class="section-companies__list">
-          {{ $url := "/images/companies" }}
-          {{ $filesInDir := readDir "themes/kinvolk/static/images/companies" }}
-          {{ range $filesInDir }}
-          <li class="section-companies__item">
-            <a href="#" class="section-companies__link">
-              <img src="{{$url}}/{{.Name | urlize }}" alt="company logo" class="section-companies__image">
-            </a>
-          </li>
-          {{ end }}
+          <li class="section-companies__item"><img src="/images/companies/coreOS-logo.svg" class="section-companies__image" alt=""></li>
+          <li class="section-companies__item"><img src="/images/companies/chef-logo.svg" class="section-companies__image" alt=""></li>
+          <li class="section-companies__item"><img src="/images/companies/nasdaq-logo.svg" class="section-companies__image" alt=""></li>
+          <li class="section-companies__item"><img src="/images/companies/weaveworks-logo.svg" class="section-companies__image" alt=""></li>
         </ul>
       </div>
+    </div>
+    <div class="section-hero__image">
+      <img src="/images/hero-tower.png" alt="hero image">
     </div>
   </section>
   <section class="section-services">
+    <div class="section-header__icon"></div>
     <div class="container">
       <div class="section-header">
-        <h3 class="section-title">Our services</h3>
-        <ul class="tabs-navlist">
-          {{ range where $.Site.RegularPages "Section" "services-list" }}
-          <li class="tabs-navlist__item {{ .Params.status }}" data-tab-link="{{ .Params.index }}">
-            <a href="#" class="tabs-navlist__link">{{ .Title }}</a>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      <div class="tabs-content">
-        {{ range where $.Site.RegularPages "Section" "services-list" }}
-        <div class="tab-item {{ .Params.status }}" data-tab="{{ .Params.index }}">
-          <div class="tab-item__description">
-            <h2 class="tab-item__title">{{ .Title }}</h2>
-            <p class="tab-item__text">{{ .Params.text }}</p>
-            <a href="#" class="tab-item__link">learn more</a>
-          </div>
-          <div class="tab-item__image-block">
-            <img src="/images/services/{{ .Params.image }}" alt="service image" class="tab-item__image">
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-  <section class="section-contact-us">
-    <div class="contact-us-block">
-      <h2 class="contact-us-block__title">Contact us</h2>
-      <form action="{{ .Site.BaseURL }}" class="form contact-us-form" autocomplete="off" netlify name="contact-us">
-        <div class="form__row">
-          <div class="form__group">
-            <label for="contact-name" class="form__label">Enter your name *</label>
-            <input type="text" id="contact-name" name="contact-name" class="form__input">
-          </div>
-          <div class="form__group">
-            <label for="contact-mail" class="form__label">Enter your email *</label>
-            <input type="text" id="contact-mail" name="contact-mail" class="form__input">
-          </div>
-        </div>
-        <div class="form__row form__textarea-row">
-          <div class="form__group form__group_full">
-            <label for="contact-message" class="form__label">Type your message</label>
-            <textarea name="contact-message" id="contact-message" class="form__input form__textarea"></textarea>
-          </div>
-
-        </div>
-        <div class="form__row form__checkbox-row">
-            <button class="button contact-us-form__button">Send</button>
-
+        <h3 class="section-header__title">Services</h3>
+        <p class="section-header__description">A composable Kubernetes distribution for on-premise, cloud, and hybrid environments.</p>
         
-            <label for="subscribe" class="form__label checkbox-label">
-              <input type="checkbox" class="form__checkbox" id="subscribe" name="subscribe">
-              <div class="checkbox-image"></div>
-              Subscribe to our newsletter?
-            </label>
-        </div>
-      </form>
+      </div>
+
+      <ul class="section-services__list">
+        {{ range where $.Site.RegularPages "Section" "services" }}
+        <li class="section-services__item">
+          <div class="section-services__image-block">
+            <img src="/images/services/{{ .Params.image }}" alt="service image" class="section-services__image">
+          </div>
+          <div class="section-services__description">
+            <h2 class="section-services__title">{{ .Title }}</h2>
+            <p class="section-services__text">{{ .Params.text }}</p>
+          </div>
+        </li>
+        {{ end }}
+      </ul>
+
+      <div class="section-footer">
+        <p class="section-footer__title">WANT TO KNOW MORE? DROP US A LINE</p>
+        <a href="#section-contact-us" class="button section-footer__button contact-us-link">
+            <span>Contact us</span>
+            <div class="button__background"></div>
+        </a>
+      </div>
     </div>
   </section>
+
+  <section class="section-products">
+      <div class="section-header__icon"></div>
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-header__title">Products</h3>
+          <p class="section-header__description">A composable Kubernetes distribution for on-premise, cloud, and hybrid environments.</p>
+          
+        </div>
+  
+        <div class="products-flatcar">
+          <div class="products-flatcar__info">
+            <div class="products-flatcar__image">
+                <img src="/images/flatcar-image.jpg" srcset="/images/flatcar-image.jpg, /images/flatcar-image-x2.jpg 2x"  alt="flatcar linux">
+            </div>
+            <div class="products-flatcar__description">
+              <div class="products-flatcar__note">100% Open Source</div>
+              <div class="products-flatcar__title">Flatcar Linux</div>
+              <p class="products-flatcar__text">The world's leading engineering teams consistently turn to Kinvolk to tackle their most difficult technology challenges…</p>
+            </div>
+          </div>
+  
+          <div class="products-flatcar-features">
+            <ul class="products-flatcar-features__list">
+              {{ range where $.Site.RegularPages "Section" "flatcar-features" }}
+              <li class="products-flatcar-features__item">
+                <div class="products-flatcar-features__icon">
+                  <img src="/images/products/{{ .Params.image }}" alt="icon">
+                </div>
+                <div class="products-flatcar-features__title">{{ .Title }}</div>
+                <div class="products-flatcar-features__description">{{ .Params.description }}</div>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+  
+          <div class="products-flatcar-linux-call">
+            <div class="products-flatcar__image">
+              <img src="/images/linux-call-image.jpg" srcset="/images/linux-call-image.jpg, /images/linux-call-image-x2.jpg 2x"  alt="linux call">
+              <div class="play-button"></div>
+            </div>
+            <div class="products-flatcar__description">
+                <div class="products-flatcar__note">100% Open Source</div>
+                <div class="products-flatcar__title">Linux Call</div>
+                <p class="products-flatcar__text">The world's leading engineering teams consistently turn to Kinvolk to tackle their most difficult technology challenges…</p>
+            </div>
+          </div>
+  
+  
+        </div>
+        <div class="products-flatcar-lokomotive">
+          <div class="products-flatcar-lokomotive__content">
+            <div class="products-flatcar-lokomotive__image">
+              <div class="products-flatcar__note">Coming Soon</div>
+              <img src="/images/lokomotive-image.jpg" alt="">
+            </div>
+            <div class="products-flatcar-lokomotive__description">
+              <div class="products-flatcar-lokomotive__title">Lokomotive k8s</div>
+              <p class="products-flatcar-lokomotive__text">The world's leading engineering teams consistently turn to Kinvolk to tackle their most difficult technology challenges…</p>
+            </div>
+          </div>
+          </div>
+  
+          <div class="section-footer">
+            <p class="section-footer__title">WANT TO KNOW MORE? DROP US A LINE</p>
+            <a href="#section-contact-us" class="button section-footer__button contact-us-link">
+                <span>Contact us</span>
+                <div class="button__background"></div>
+            </a>
+          </div>
+      </div>
+    </section>
+
+    <section class="section-events">
+      <div class="section-events__board">
+        <img src="/images/events-bg.jpg" srcset="/images/events-bg.jpg, /images/events-bg-x2.jpg 2x"  alt="" class="section-events__image">
+
+      </div>
+      <div class="section-events__board-inner">
+          <div class="section-events__header">
+            <div class="section-events__icon">
+              <img src="/images/events.svg" alt="">
+            </div>
+            <h4 class="section-events__title">Our Events</h4>
+          </div>
+          <div class="section-events__board-block">
+            <div class="section-events__event-main">
+
+            {{ range where $.Site.RegularPages "Section" "events" }}
+              {{ if isset .Params "primary" }} 
+                <div class="section-events__event-main-media">
+                  <img src="/images/events/{{ .Params.eventLogo }}" alt="">
+                  {{ range .Params.eventSpeakers }}
+                    <img src="/images/events/{{ .image }}" alt="">
+                  {{ end }}
+                </div>
+                <div class="section-events__event-main-speakers">
+                  {{ range .Params.eventSpeakers }}
+                    <span class="section-events__event-speaker">{{ .speaker }}</span>
+                  {{ end }}
+                  <span class="section-events__event-main-title">{{ .Title }}</span>
+                </div>
+                
+                <div class="section-events__event-main-info">
+                  {{ .Params.eventDate }}, {{ .Params.eventPlace }}
+                </div>
+                <div class="section-events__event-main-description">{{ .Params.eventDescription }}</div>
+
+                <a href="#" class="events-link">
+                    <div class="events-link__image">
+                        <svg width="100%" height="100%" viewBox="0 0 195 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <g id="Decktop-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="Main-Page_v.7" transform="translate(-248.000000, -6101.000000)">
+                                  <g id="Events" transform="translate(24.000000, 5152.000000)">
+                                      <g id="Text" transform="translate(224.000000, 576.000000)">
+                                          <g id="Button" transform="translate(1.000000, 374.000000)">
+                                              <g id="btn" stroke="#17B838" stroke-width="2" class="filled">
+                                                  <polyline id="Path-5" points="157.411133 30 166 30 166 10 10 10 10 51 171 51 171 5 5 5 5 56 176 56 176 -9.09494702e-13 1.36673171e-15 -9.09494702e-13 0 61 181 61 181 30"></polyline>
+                                              </g>
+                                              
+                                          </g>
+                                      </g>
+                                  </g>
+                              </g>
+                          </g>
+                      </svg>
+                    </div>
+                    <span class="events-link__title">More Events</span>
+                </a>
+              {{ end }}
+            {{ end }}
+            </div>
+
+            <ul class="section-events__list">
+              <div class="section-events__list-header">Next events</div>
+              {{ range where $.Site.RegularPages "Section" "events" }}
+              {{ if not (isset .Params "primary") }}
+              <li class="section-events__list-item">
+                  <div class="section-events__list-item-title">{{ .Title }}</div>
+                  <div class="section-events__list-item-info">
+                    {{ .Params.eventDate }}, {{ .Params.eventPlace }}
+                  </div>
+
+                  <a href="#" class="section-events__list-item-link link">Learn More</a>
+                </li>
+                {{ end }}
+              {{ end }}
+
+              </ul>
+          </div>
+        </div>
+
+        <div class="section-events__bottom"></div>
+    </section>
+
+    <section class="section-feedback">
+      <div class="section-feddback__content">
+        <div class="section-feedback__header">
+            <div class="section-feedback__icon">
+              <img src="/images/feedbacks.svg" alt="">
+            </div>
+            <h4 class="section-feedback__title">What others say about Kinvolk</h4>
+          </div>
+          <div class="feedback-slider">
+            <div id="feedback-slider" class="swiper-container feedback-slider__container">
+              <div class="swiper-wrapper feedback-slider__wrapper">
+                {{ range where $.Site.RegularPages "Section" "feedback" }}
+                <div class="swiper-slide feedback-slider__item">
+                  <div class="feedback-slider__text">{{ .Params.text }}</div>
+                  <div class="feedback-slider__author">{{ .Params.author }}</div>
+                  <div class="feedback-slider__author-position">{{ .Params.position }}</div>
+                </div>
+                {{ end }}
+              </div>
+
+              <div id="feedback-slider__pagination" class="swiper-pagination feedback-slider__pagination"></div>
+
+              <div id="feedback-slider__button-prev" class="swiper-button-prev feedback-slider__button-prev">
+                <div class="button__background"></div>
+              </div>
+              <div id="feedback-slider__button-next" class="swiper-button-next feedback-slider__button-next">
+                <div class="button__background"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    {{ partial "contact-us-form.html" . }}
 </main>
 
 {{ partial "footer.html" . }}
+
+<script src="/js/swiper.min.js"></script>
+
+{{ $common := resources.Get "js/common.js" }}
+{{ $form := resources.Get "js/form.js" }}
+{{ $feedbackSlider := resources.Get "js/feedback-slider.js" }}
+{{ $global := resources.Get "js/main.js" }}
+
+
+{{ $js := slice $common $form $feedbackSlider $global | resources.Concat "js/bundle.js" }}
+
+<script src="{{ $js.Permalink }}"></script>
+
+</body>
+
+</html>
