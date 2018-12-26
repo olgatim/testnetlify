@@ -11,6 +11,8 @@
   @include media-breakpoint-up(xxl) {
     margin-top: 9.4vw;
     padding-top: 2.8vw;
+    margin-bottom: 5.83vw;
+    box-shadow: 0.83vw 0 0 0 #00A9BC;
   }
 
   @include media-breakpoint-down(sm) {
@@ -73,7 +75,7 @@
       width: 6vw;
       height: 5.85vw;
       left: 8vw;
-      transform: translateY(calc(-2.8vw - 80px));
+      transform: translateY(-6.8vw);
     }
 
     @include media-breakpoint-down(xl) {
@@ -92,8 +94,8 @@
   background-color: inherit;
   z-index: -1;
   backface-visibility: hidden;
-  
 }
+
 .section-products:before {
   top: 0;
   transform: skewY(-2deg);
@@ -101,16 +103,28 @@
   box-shadow: 16px -32px 0px 0px #00A9BC;
   height: calc(2.8vw + 40px);
 
+  @include media-breakpoint-up(xxl) {
+    height: calc(5.8vw);
+    box-shadow: 0.83vw -1.67vw 0 0 #00A9BC;
+    right: -0.05vw;
+  }
+
   @include media-breakpoint-down(sm) {
     box-shadow: 0px -32px 0px 0px #00A9BC;
   }
 }
+
 .section-products:after {
   bottom: 0;
   transform: skewY(2deg);
   transform-origin: 0 0;
   box-shadow: 16px -32px 0px 0px #00A9BC;
   background: #F6F7FF;
+
+  @include media-breakpoint-up(xxl) {
+    box-shadow: 0.83vw -1.67vw 0 0 #00A9BC;
+    right: -0.05vw;
+  }
 
   @include media-breakpoint-down(sm) {
     box-shadow: none;

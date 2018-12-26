@@ -13,6 +13,9 @@
 
   @include media-breakpoint-up (xxl) {
     padding-top: 2.8vw;
+    margin-top: 4.69vw;
+    margin-bottom: 3.02vw;
+    box-shadow: -0.83vw 0 0 0 #FDDF02;
   }
 
   @include media-breakpoint-down(sm) {
@@ -22,7 +25,6 @@
     padding-left: 0px;
     padding-right: 0px;
   }
-
 
   > .container {
     flex-direction: column;
@@ -88,7 +90,9 @@
 
   @include media-breakpoint-up (xxl) {
     top: -2.8vw;
-    height: calc(2.8vw + 40px);
+    height: calc(5.8vw);
+    box-shadow: -0.83vw -1.67vw 0 0 #FDDF02;
+    right: -0.05vw;
   }
 
   @include media-breakpoint-down(sm) {
@@ -102,6 +106,12 @@
   box-shadow: -16px -32px 0px 0px #FDDF02;
   background: #F6F7FF;
   z-index: -1;
+
+  @include media-breakpoint-up (xxl) {
+    bottom: -3.02vw;
+    box-shadow: -0.83vw -1.67vw 0 0 #FDDF02;
+    right: -0.05vw;
+  }
 
   @include media-breakpoint-down(sm) {
     box-shadow: none;

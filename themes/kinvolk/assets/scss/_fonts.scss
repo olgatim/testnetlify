@@ -21,6 +21,13 @@
 
 @font-face {
   font-family: IBMPlexSans;
+  src: url("/fonts/IBMPlexSans/IBMPlexSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: IBMPlexSans;
   src: url("/fonts/IBMPlexSans/IBMPlexSans-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;

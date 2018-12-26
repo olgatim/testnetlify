@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 66px;
-  background: url("/images/white-noise-animated.gif");
+  background: url("/images/noise-static.png");
   margin-left: -24px;
   margin-right: -24px;
   padding-left: 24px;
@@ -35,9 +35,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("/images/white-noise-shadow-animated.gif") repeat-x bottom;
-    background-size: auto;
-    opacity: 0.9;
+    background: linear-gradient(to bottom, rgba($black, 0.9) 10%, rgba($black, 0) 30%,70%, rgba($black, 0.9) 90%);
+    background-size: auto, auto;
   }
 
 }
@@ -85,6 +84,7 @@
   @include media-breakpoint-up(xxl) {
     padding-bottom: 80px;
     width: 30vw;
+    max-width: none;
   }
 
   @include media-breakpoint-down(lg) {
@@ -130,6 +130,7 @@
   @include media-breakpoint-up(xxl) {
     font-size: 3.33vw;
     max-width: none;
+    margin-bottom: 0.5em;
   }
 
   @include media-breakpoint-down(lg) {
@@ -233,8 +234,15 @@
   flex-shrink: 0;
   padding-left: 76px;
 
+  @include media-breakpoint-up(xxl) {
+    font-size: 0.74vw;
+    max-width: 13.3vw;
+    padding-left: 5.43em;
+  }
+
   @include media-breakpoint-down(md) {
     max-width: none;
+    margin-bottom: 18px;
   }
 
   @include media-breakpoint-down(sm) {
@@ -259,20 +267,17 @@
     background: $accent-color;
     box-shadow: 24px 0 0 $white;
 
+    @include media-breakpoint-up(xxl) {
+      width: 2.28em;
+      height: 2.28em;
+      box-shadow: 1.75em 0 0 $white;
+    }
+
     @include media-breakpoint-down(sm) {
       width: 16px;
       height: 16px;
       box-shadow: 12px 0 0 $white;
     }
-  }
-
-  @include media-breakpoint-up(xxl) {
-    font-size: 0.74vw;
-    max-width: 13.3vw;
-  }
-
-  @include media-breakpoint-down(md) {
-    margin-bottom: 18px;
   }
 }
 
@@ -283,6 +288,11 @@
   margin-right: auto;
   margin-left: auto;
 
+  @include media-breakpoint-up(xxl) {
+    width: 58.4vw;
+    margin-left: 3vw;
+  }
+
   @include media-breakpoint-down(lg) {
     margin-left: 3vw;
   }
@@ -292,18 +302,13 @@
     width: 100%;
     justify-content: flex-start;
   }
-
-  @include media-breakpoint-up(xxl) {
-    width: 58.4vw;
-    max-width: 1200px;
-    margin-left: 3vw;
-  }
 }
 
 .section-companies__item {
 
   @include media-breakpoint-up(xxl) {
     width: 25%;
+    max-width: 600px;
   }
 
   @include media-breakpoint-down(xs) {

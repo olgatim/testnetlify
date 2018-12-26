@@ -1,0 +1,107 @@
+.select-dropdown {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  color: $black;
+  font-size: 14px;
+  max-width: 256px;
+
+  .ss-single-selected {
+    padding: 16px;
+    height: auto;
+    border-radius: 0;
+    border: 1px solid #B0AAE6;
+  }
+
+  .ss-content .ss-list .ss-option.ss-disabled {
+    display: none;
+  }
+
+  .ss-single-selected .ss-arrow span.arrow-down {
+    width: 10px;
+    height: 6px;
+    background: url("/images/dropdown-arrow.svg") no-repeat center;
+    background-size: contain;
+    border: none;
+    transform: none;
+    margin: 0;
+  }
+
+  .ss-single-selected .ss-arrow span.arrow-up {
+    width: 10px;
+    height: 6px;
+    background: url("/images/dropdown-arrow.svg") no-repeat center;
+    background-size: contain;
+    transform: rotate(180deg);
+    border: none;
+    margin: 0;
+  }
+
+  .ss-content {
+    border: 1px solid #B0AAE6;
+  }
+
+  .ss-content .ss-list .ss-option {
+    padding: 16px;
+  }
+
+  .ss-content .ss-list .ss-option:not(:first-child) + .ss-option {
+    border-top: 1px solid #B0AAE6;
+  }
+}
+
+.technical-posts-option {
+  position: relative;
+  padding-left: 25px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url("/images/wheel-icon.svg") no-repeat center;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.all-posts-option {
+  position: relative;
+  padding-left: 25px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 14px;
+    background: url("/images/star-icon.svg") no-repeat center;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.announcements-posts-option {
+  position: relative;
+  padding-left: 25px;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    background: url("/images/horn-icon.svg") no-repeat center;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}

@@ -21,7 +21,18 @@ menu:
       icon: svg
     - name: About us
       parent: company
+      title: Mg Shadow Computer Monitoring Software A Watchdog Protecting Your Interests
       url: /about-us
+      weight: 1
+    - name: Careers
+      parent: company
+      title: Will The Democrats Be Able To Reverse The Online Gambling Ban
+      url: /
+      weight: 1
+    - name: Impressum
+      parent: company
+      title: Airport Hotels The Right Way To Start A Short Break Holiday
+      url: /
       weight: 1
     - name: Case Studies
       url: /case-studies

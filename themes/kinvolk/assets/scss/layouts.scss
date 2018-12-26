@@ -4,7 +4,7 @@ html, body {
 
 .home-page {
   height: auto;
-  background: url("/images/white-noise-animated.gif");
+  background: url("/images/noise-static.png");
 
   &:before {
     content: "";
@@ -15,7 +15,7 @@ html, body {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 82%;
+    height: 92%;
     background: rgba(0,0,0,0.9);
     z-index: -1;
   }
@@ -27,40 +27,76 @@ html, body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 18%;
+    height: 8%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 50%);
-    background: url("/images/white-noise-shadow-animated-down.gif") repeat-x top;
+    background: linear-gradient(to bottom, rgba($black, 0.9) 20%, rgba(0,0,0,0) 60%);
     background-size: auto;
-    opacity: 0.9;
     z-index: -1;
   }
 }
 
 .about-us {
-  background: linear-gradient(to bottom, #1C1B1B 0%, #000000 40%);
+  background: linear-gradient(to bottom, #1C1B1B 0%, #000 300px, #000 90%, #161616 100%);
 
   &:before {
     content: "";
     display: block;
     position: absolute;
-    top: 3%;
+    top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 48px);
     height: 18%;
-    background: url(/images/looper-group.png) repeat top;
+    background: url("/images/pattern-circles-top.png") no-repeat top;
     background-size: contain;
     z-index: -1;
+
+    @include media-breakpoint-up(xl) {
+      width: calc(1232px * 0.6 + 38.5vw);
+      max-width: 1440px;
+      background-size: cover;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 76vw;
+      max-width: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      background-size: cover;
+    }
   }
 
   &:after {
     content: "";
     position: absolute;
-    top: 68%;
-    width: 100%;
-    height: 29%;
-    background: url("/images/looper-group.png") repeat top;
-    background-size: contain;
+    top: 73%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 48px);
+    height: 25%;
+    background: url("/images/pattern-circles-bottom.png") no-repeat top;
+    background-size: cover;
     z-index: -1;
+
+    @include media-breakpoint-up(xl) {
+      width: calc(1232px * 0.6 + 38.5vw);
+      max-width: 1440px;
+      background-size: cover;
+      height: 24.5%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 76vw;
+      max-width: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }
 
@@ -256,10 +292,11 @@ body {
   font-size: 10px;
   color: $accent-color;
   text-transform: uppercase;
-  padding-right: 24px;
+  padding-right: 16px;
 
   @include media-breakpoint-up(xxl) {
     font-size: 0.53vw;
+    padding-right: 1.6em;
   }
 
   &:before {
@@ -269,18 +306,92 @@ body {
     top: -1px;
     bottom: 0;
     right: 0;
-    width: 9px;
-    height: 15px;
+    width: 6px;
+    height: 10px;
     background: url("/images/link-arrow-right.svg") no-repeat center;
     background-size: contain;
     margin-top: auto;
     margin-bottom: auto;
     transition: transform 0.4s;
+
+    @include media-breakpoint-up(xxl) {
+      width: 0.6em;
+      height: 1em;
+    }
   }
 }
 
 .link:hover {
   &:before {
-    transform: translateX(6px);
+    transform: translateX(0.6em);
+  }
+}
+
+.blog {
+  background: linear-gradient(to bottom, #1C1B1B 0%, #000 300px, #000 90%, #161616 100%);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 48px);
+    height: 25%;
+    background: url("/images/pattern-lines-top.png") no-repeat top;
+    background-size: cover;
+    z-index: -1;
+
+    @include media-breakpoint-up(xl) {
+      width: calc(1232px * 0.6 + 38.5vw);
+      max-width: 1440px;
+      background-size: cover;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 76vw;
+      max-width: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      background-size: cover;
+    }
+
+    @include media-breakpoint-down(xs) {
+      height: 800px;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 73%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: calc(100% - 48px);
+    height: 25%;
+    background: url("/images/pattern-lines-bottom.png") no-repeat bottom;
+    background-size: cover;
+    z-index: -1;
+
+    @include media-breakpoint-up(xl) {
+      width: calc(1232px * 0.6 + 38.5vw);
+      max-width: 1440px;
+      background-size: cover;
+      height: 24.5%;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      width: 76vw;
+      max-width: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 }

@@ -21,7 +21,13 @@
   max-height: 800px;
   transform: skewY(2deg);
   overflow: hidden;
+  margin-right: -1px;
+  margin-left: -1px;
   z-index: 0;
+
+  @include media-breakpoint-up(xxl) {
+    max-height: 41.7vw;
+  }
 
   @include media-breakpoint-down(sm) {
     height: 82.5vw;
@@ -37,7 +43,7 @@
 .section-events__image {
   transform: skewY(-2deg);
   position: absolute;
-  top: -10%;
+  top: -2vw;
   bottom: 0;
   left: 0;
   right: 0;
@@ -61,6 +67,11 @@
   width: 54px;
   margin-right: 22px;
 
+  @include media-breakpoint-up(xxl) {
+    width: 2.81vw;
+    margin-right: 1.15vw;
+  }
+
   > img {
     width: 100%;
     height: auto;
@@ -82,7 +93,6 @@
   @include media-breakpoint-up(xxl) {
     font-size: 2.1vw;
   }
-
 
   @include media-breakpoint-down(md) {
     font-size: 36px;
@@ -170,6 +180,11 @@
   > img {
     width: 80px;
     height: auto;
+
+    @include media-breakpoint-up(xxl) {
+      width: 4.17vw;
+      max-width: 240px;
+    }
   }
 
   @include media-breakpoint-down(xs) {
@@ -304,7 +319,7 @@
 .events-link:hover {
   .events-link__image {
     &:before {
-      transform: translateX(6px);
+      transform: translateX(0.6em);
     }
     &:after {
       transform: scaleX(1.46);
@@ -314,6 +329,7 @@
 
 .events-link__image {
   position: relative;
+  width: 100%;
 
   &:before {
     content: "";
@@ -329,6 +345,11 @@
     margin: auto;
     transform: translateX(0px);
     transition: transform 0.4s;
+
+    @include media-breakpoint-up(xxl) {
+      width: 0.6em;
+      height: 1.6em;
+    }
   }
 
   &:after {
@@ -345,6 +366,11 @@
     transform: scaleX(1);
     transform-origin: left;
     transition: transform 0.4s;
+
+    @include media-breakpoint-up(xxl) {
+      width: 1.4em;
+      height: 0.2em;
+    }
   }
 }
 
@@ -403,6 +429,7 @@
 
   @include media-breakpoint-up(xxl) {
     font-size: 1.05vw;
+    margin-bottom: 0.1em;
   }
 }
 
@@ -411,11 +438,11 @@
   font-weight: $font-weight-regular;
   font-size: 16px;
   color: rgba($black, 0.5);
-  margin-bottom: 20px;
   margin-bottom: 10px;
 
   @include media-breakpoint-up(xxl) {
     font-size: 0.84vw;
+    margin-bottom: 0.625em;
   }
 }
 

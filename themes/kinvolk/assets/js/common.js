@@ -11,3 +11,16 @@ findElement(".mobile-menu").addEventListener("click", function(event) {
     }
   }, false);
 });
+
+document.querySelectorAll("div.navbar__link").forEach(function(item) {
+  item.addEventListener("click", function(e) {
+    if(!this.classList.contains("navbar__link_selected")) {
+      document.querySelectorAll("div.navbar__link").forEach(function(elem) {
+        elem.classList.remove("navbar__link_selected");
+      });
+      this.classList.add("navbar__link_selected");
+    } else {
+      this.classList.remove("navbar__link_selected");
+    }
+  })
+});

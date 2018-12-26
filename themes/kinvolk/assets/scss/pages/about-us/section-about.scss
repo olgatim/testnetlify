@@ -13,7 +13,7 @@
 
   @include media-breakpoint-down(sm) {
     padding: 0;
-    margin-bottom: 16px;
+    margin-bottom:0;
   }
 
   > .container {
@@ -332,6 +332,7 @@
   height: 32px;
   border-radius: 50%;
   background: $accent-color;
+  transition: background-color 0.3s;
 
   @include media-breakpoint-up(xxl) {
     width: 1.67vw;
@@ -339,16 +340,20 @@
   }
 }
 
+@include media-breakpoint-up(md) {
+  .socials__link:hover {
+    background: $black;
+  }
+}
+
 .team-join {
   position: relative;
-  margin-top: 7.5vw;
+  margin: 7.5vw auto 0;
   background: $white;
-  width: 100%;
+  width: calc(100% - 7.5vw);
 
   @include media-breakpoint-down (sm) {
-    margin-left: -16px;
-    margin-right: -16px;
-    width: calc(100% + 32px);
+    width: 100%;
   }
 
   &:before {
