@@ -1,0 +1,19 @@
+<div class="article-aside">
+  <div class="article-aside__title">Other news</div>
+    {{ $filteredPosts := where .Site.RegularPages "Type" "blog-posts"}}  
+    {{ $relatedPosts := shuffle $filteredPosts | first 3 }}  
+    <ul class="other-post__list">
+      {{ range $relatedPosts }} 
+        <li class="other-post__item">
+          <div class="other-post__image">
+            <img src="/images/posts/{{ .Params.image }}" alt="">
+          </div>
+          <div class="other-post__info">
+            <a href="{{ .Permalink }}" class="other-post__title">{{ .Title }}</a>
+            <div class="other-post__author">by {{ .Params.author }}</div>
+          </div>
+        </li>
+      {{ end }}  
+    </ul>
+</div>
+

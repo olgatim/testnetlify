@@ -222,6 +222,12 @@
   .socials__icon {
     fill: $white;
   }
+
+  .socials__list {
+    @include media-breakpoint-down (xs) {
+      display: none;
+    }
+  }
 }
 
 .team-card:not(:nth-child(2)) + .team-card {
@@ -309,10 +315,6 @@
 
   @include media-breakpoint-up(xxl) {
     margin-left: 0.52vw;
-  }
-
-  @include media-breakpoint-down (xs) {
-    display: none;
   }
 }
 

@@ -321,9 +321,11 @@ body {
   }
 }
 
-.link:hover {
-  &:before {
-    transform: translateX(0.6em);
+@include media-breakpoint-up(md) {
+  .link:hover {
+    &:before {
+      transform: translateX(0.6em);
+    }
   }
 }
 

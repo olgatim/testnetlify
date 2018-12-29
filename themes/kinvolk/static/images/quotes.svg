@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="29px" viewBox="0 0 40 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 15.9997 0 15.9997 29 0 29"></polygon>
+    </defs>
+    <g id="Decktop-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Article_v.7" transform="translate(-619.000000, -2692.000000)">
+            <g id="content" transform="translate(79.000000, 811.000000)">
+                <g id="Group-2" transform="translate(192.000000, 1847.000000)">
+                    <g id="Group-6" transform="translate(348.000000, 34.000000)">
+                        <g id="Group-3">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M13.5937,0 C6.0597,0 -0.0003,6.101 -0.0003,13.688 L-0.0003,29 L15.9997,29 L15.9997,13 L6.9997,13 L6.9997,11.531 C6.9997,9.804 9.4837,7 12.2497,7 L15.9997,7 L15.9997,0 L13.5937,0 Z" id="Fill-1" fill="#1A9B4A" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M37.5938,0 C30.0598,0 23.9998,6.101 23.9998,13.688 L23.9998,29 L39.9998,29 L39.9998,13 L30.9998,13 L30.9998,11.531 C30.9998,9.804 33.4838,7 36.2498,7 L39.9998,7 L39.9998,0 L37.5938,0 Z" id="Fill-4" fill="#1A9B4A"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

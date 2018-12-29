@@ -60,15 +60,15 @@
           {{ range where $.Site.RegularPages "Section" "blog-posts" }}
           {{ if isset .Params "primary" }}
           <div class="post__icon">
-            {{ if eq .Params.type "technical" }}
+            {{ if eq .Params.filterType "technical" }}
             <svg class="post-type-icon technical-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wheel-icon"></use>
             </svg>
-            {{ else if eq .Params.type "all" }}
+            {{ else if eq .Params.filterType "all" }}
             <svg class="post-type-icon star-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star-icon"></use>
             </svg>
-            {{ else if eq .Params.type "announcements" }}
+            {{ else if eq .Params.filterType "announcements" }}
             <svg class="post-type-icon horn-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#horn-icon"></use>
             </svg>
@@ -99,15 +99,13 @@
 
           <li class="post-item">
             
-            <a href="#" class="post__title">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="post__title">{{ .Title }}</a>
             <div class="post__info">
               <div class="post__author">by {{ .Params.author }}</div>
               <div class="post__date">{{ .Date.Format "Jan 2, 2006" }}</div>
             </div>
-            <a href="#" class="link post__link">learn more</a>
+            <a href="{{ .Permalink }}" class="link post__link">learn more</a>
           </li>
-
-
 
           {{ end }}
           {{ end }}
@@ -119,24 +117,25 @@
         {{ if and (not (isset .Params "primary")) (gt $index 3) (lt $index 10) }}
         <li class="post__item">
           <div class="post__icon">
-            {{ if eq .Params.type "technical" }}
+            {{ if eq .Params.filterType "technical" }}
             <svg class="post-type-icon technical-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#wheel-icon"></use>
             </svg>
-            {{ else if eq .Params.type "all" }}
+            {{ else if eq .Params.filterType "all" }}
             <svg class="post-type-icon star-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#star-icon"></use>
             </svg>
-            {{ else if eq .Params.type "announcements" }}
+            {{ else if eq .Params.filterType "announcements" }}
             <svg class="post-type-icon horn-icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#horn-icon"></use>
             </svg>
             {{ end }}
-          </div>
+          </div> 
+
           <div class="post__image">
-            <img src="/images/posts/{{ .Params.image }}" alt="">
+            <img src="/images/posts/{{ .Params.image }}" alt="{{ .Title }}">
           </div>
-          <a href="#" class="post__title">{{ .Title }}</a>
+          <a href="{{ .Permalink }}" class="post__title">{{ .Title }}</a>
           <div class="post__info">
             <div class="post__author">by {{ .Params.author }}</div>
             <div class="post__date">{{ .Date.Format "Jan 2, 2006" }}</div>
