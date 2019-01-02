@@ -30,7 +30,7 @@
         <div class="team__title">Kinvolk Team</div>
         {{ range where $.Site.RegularPages "Section" "team" }}
         <div class="team-card">
-          <img src="{{ $.Site.BaseURL }}images/team/{{ .Params.photo }}" class="team-card__image" alt="{{ .Title }}">
+          <img src="/images/team/{{ .Params.photo }}" class="team-card__image" alt="{{ .Title }}">
           <div class="team-card__block">
             <div class="team-card__header">
               <h4 class="team-card__title">{{ .Title }}</h4>
