@@ -119,6 +119,7 @@
   .post__info {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .post__author-image {
@@ -138,6 +139,7 @@
 
   .post__date {
     opacity: 1;
+    margin: 6px 0;
   }
 }
 
