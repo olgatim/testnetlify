@@ -1,4 +1,4 @@
-.blog-posts {
+.blog.page {
   background: $white;
 }
 
@@ -238,7 +238,8 @@
     }
   }
 
-  p + p {
+  p + p, 
+  > * + p {
     margin-top: 40px;
 
     @include media-breakpoint-up (xxl) {
@@ -250,7 +251,8 @@
     }
   }
 
-  h3 + p {
+  h3 + p,
+  > * + p {
     margin-top: 16px;
 
     @include media-breakpoint-up (xxl) {
@@ -262,7 +264,8 @@
     }
   }
 
-  p + h3 {
+  p + h3,
+  > * + h3 {
     margin-top: 72px;
 
     @include media-breakpoint-up (xxl) {
@@ -375,11 +378,6 @@
 
   @include media-breakpoint-up (xxl) {
     width: 100%;
-  }
-
-  @include media-breakpoint-down (sm) {
-    // margin-top: 24px;
-    // margin-bottom: 32px;
   }
 
   > img {
@@ -724,6 +722,7 @@
     height: 5vw;
     max-width: 7vw;
     max-height: 7vw;
+    margin-right: 0.82vw;
   }
 
   > img {

@@ -1,11 +1,11 @@
 ---
-title: "Flatcar Linux is now open to the public 2"
+title: "Flatcar Linux is now open to the public 4"
 subtitle: A composable Kubernetes distribution for on-premise, cloud, and hybrid environments.
-date: 2018-12-18T12:14:18+02:00
+date: 2018-12-20T12:14:18+02:00
 draft: false
 description: Just before the All Systems Go! conference, we had a BPF Hackfest at the Kinvolk office and one of the topics of discussion was to document different BPF ELF loaders. This blog post is the result of it.
 filterType: announcements
-image: post-1.jpg
+image: post-4.jpg
 author: Chris Kühl
 authorPosition: "CEO & co-founder"
 socials: [
@@ -56,3 +56,4 @@ The different loaders offer different features and for that reason use slightly 
 ### Conclusion
 
 BPF is actively developed in the Linux kernel and whenever a new feature is implemented, BPF ELF loader might need an update as well to support it. The different BPF ELF loaders have different focuses and might not add support of all BPF kernel new features at the same speed. There are efforts underway to standardise on libbpf as the canonical implementation. The plan is to ship libbpf with the kernel, which means it will set the de-facto standard for user space BPF support.
+

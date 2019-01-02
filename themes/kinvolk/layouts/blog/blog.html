@@ -1,10 +1,9 @@
 {{ define "main" }}
 <main class="main">
-  {{ with .Site.GetPage "/blog" }}
   <section class="inner-section-hero blog-section-hero">
     <div class="inner-section-hero__content">
-      <h1 class="inner-section-hero__title"><span>{{ .Params.header }}</span></h1>
-      <p class="inner-section-hero__description">{{ .Params.heroText }}</p>
+      <h1 class="inner-section-hero__title"><span>Our Blog</span></h1>
+      <p class="inner-section-hero__description">A composable Kubernetes distribution for on-premise, cloud, and hybrid environments.</p>
     </div>
 
     <div class="tags-group">
@@ -40,7 +39,6 @@
       </div>
     </div>
   </section>
-  {{ end }}
 
   <section class="section-blog">
     <div class="container">
@@ -57,7 +55,7 @@
 
       <div class="blog-header">
         <div class="post-main">
-          {{ range where $.Site.RegularPages "Section" "blog-posts" }}
+          {{ range where $.Site.RegularPages "Section" "blog" }}
           {{ if isset .Params "primary" }}
           <div class="post__icon">
             {{ if eq .Params.filterType "technical" }}
@@ -78,7 +76,7 @@
             <img src="/images/posts/{{ .Params.image }}" alt="">
           </div>
           <div class="post__content">
-            <a href="#" class="post__title">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="post__title">{{ .Title }}</a>
             <p class="post__description">{{ .Params.description }}</p>
           </div>
           <div class="post__info">
@@ -93,7 +91,7 @@
         </div>
         <ul class="post-list">
 
-          {{ range $index, $value := (where $.Site.RegularPages "Section" "blog-posts").ByDate }}
+          {{ range $index, $value := (where $.Site.RegularPages "Section" "blog").ByDate }}
           {{ if and (not (isset .Params "primary")) (lt $index 4) }}
 
 
@@ -113,7 +111,7 @@
       </div>
 
       <ul class="blog-list">
-        {{ range $index, $value := (where $.Site.RegularPages "Section" "blog-posts").ByDate }}
+        {{ range $index, $value := (where $.Site.RegularPages "Section" "blog").ByDate }}
         {{ if and (not (isset .Params "primary")) (gt $index 3) (lt $index 10) }}
         <li class="post__item">
           <div class="post__icon">

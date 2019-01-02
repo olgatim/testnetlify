@@ -131,6 +131,7 @@
 
   @include media-breakpoint-up(xxl) {
     padding: 0.417vw 0.83vw;
+    height: 2.08vw;
   }
 
   @include media-breakpoint-down(sm) {
@@ -240,6 +241,7 @@
 
   @include media-breakpoint-up(xxl) {
     font-size: 0.47vw;
+    margin-left: 1em;
   }
 
   @include media-breakpoint-down(sm) {
