@@ -18,8 +18,10 @@
 }
 
 .header--open .menu {
-  display: block;
-  height: 100vh;
+  @include media-breakpoint-down(md) {
+    display: block;
+    height: 100vh;
+  }
 }
 
 
@@ -27,6 +29,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 20vh;
+  white-space: nowrap;
 
   text-align: center;
 
@@ -34,13 +37,16 @@
     padding: 0;
     flex-direction: row;
   }
+
+  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+    padding-top: 8vh;
+  }
 }
 
 .menu__item {
   margin-bottom: 30px;
 
   font-weight: $fontBlack;
-  font-size: 2rem;  
 
 
   @include media-breakpoint-up(lg) {
@@ -54,6 +60,10 @@
 
   @include media-breakpoint-up(xl){
     margin-right: 60px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+    margin-bottom: 8px;
   }
 }
 

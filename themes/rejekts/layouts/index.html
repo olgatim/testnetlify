@@ -35,15 +35,19 @@
     </header>
     <main>
       <section class="hero">
-        {{ with .Site.GetPage "hero-event" }}
-          <p class="hero__data">{{ .Params.eventDate }}</p>
-          <h1 class="hero__title">{{ .Title }}</h1>
-          <p class="hero__hashtag">{{ .Params.hashtag }}</p>
-          <div class="hero__image-wrapper">
-            <img class="hero__image" src="/images/{{ .Params.image }}" width="430" height="422" alt="photo Barcelona">
+          <div class="hero__wrapper">
+          {{ with .Site.GetPage "hero-event" }}
+            <div>
+              <p class="hero__data">{{ .Params.eventDate }}</p>
+              <h1 class="hero__title">{{ .Title }}</h1>
+              <p class="hero__hashtag">#{{ .Params.hashtag }}</p>
+              <p class="hero__adress hero__adress--desktop">{{ .Params.eventPlace }}</p>
+            </div>
+            <div class="hero__image-wrapper">
+              <img class="hero__image" src="/images/{{ .Params.image }}" width="430" height="422" alt="photo Barcelona">
+            </div>
           </div>
-          <p class="hero__adress">{{ .Params.eventPlace }}</p>
-
+          <p class="hero__adress hero__adress--mobile">{{ .Params.eventPlace }}</p>
         {{ end }}
       </section>
       <section class="timer">
@@ -76,11 +80,6 @@
           </ul>
           <a class="timer__button button button--black" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Get your ticket</a>
         </div>
-      </section>
-      <section class="about">
-        <p class="about__description">
-            Cloud Native Rejekts offers attendees a weekend of ‘unaccepted’ talks at the heels of KubeCon. We will provide a stage for those who were in the 85% of rejected talks at KubeCon.
-        </p>
       </section>
     </main>
 

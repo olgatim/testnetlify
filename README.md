@@ -38,7 +38,7 @@ You should always test your changes locally before creating a pull request. Once
 
 To test locally run the following command.
 
-`hugo server --theme=kinvolk --watch --disableFastRender`
+`hugo server --theme=rejekts --watch --disableFastRender`
 
 The above command will run a server with the the site available at `http://localhost:1313`. It will also watch for any changes made to the site and regenerate and reload the site when changes are detected. In addition, it disables some caching that can sometimes have confusing results.
 
