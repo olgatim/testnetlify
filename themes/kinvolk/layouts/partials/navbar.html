@@ -1,0 +1,65 @@
+<nav class="navbar">
+  <ul class="navbar-list">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+            <li class="navbar__item">
+                <div class="navbar__link">{{ .Name }}
+                  <div class="navbar__link-icon">
+                      <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                          <g id="Header/without-bg" transform="translate(-597.000000, -30.000000)" fill-rule="nonzero">
+                            <g id="Header">
+                              <g id="Menu" transform="translate(370.000000, 23.000000)">
+                                <g id="Services" transform="translate(160.000000, 0.000000)">
+                                  <g id="arrow" transform="translate(67.000000, 7.000000)">
+                                    <polygon id="Shape" transform="translate(1.000000, 1.041322) rotate(-270.000000) translate(-1.000000, -1.041322) "
+                                      points="-0.041322314 0.041322314 -0.041322314 2.04132231 2.04132231 2.04132231 2.04132231 0.041322314"></polygon>
+                                    <polygon id="Shape" transform="translate(3.000000, 3.041322) rotate(-270.000000) translate(-3.000000, -3.041322) "
+                                      points="1.95867769 2.04132231 1.95867769 4.04132231 4.04132231 4.04132231 4.04132231 2.04132231"></polygon>
+                                    <polygon id="Shape" transform="translate(5.000000, 5.041322) rotate(-270.000000) translate(-5.000000, -5.041322) "
+                                      points="3.95867769 4.04132231 3.95867769 6.04132231 6.04132231 6.04132231 6.04132231 4.04132231"></polygon>
+                                    <polygon id="Shape" transform="translate(7.000000, 3.041322) rotate(-270.000000) translate(-7.000000, -3.041322) "
+                                      points="5.95867769 2.04132231 5.95867769 4.04132231 8.04132231 4.04132231 8.04132231 2.04132231"></polygon>
+                                    <polygon id="Shape" transform="translate(9.000000, 1.041322) rotate(-270.000000) translate(-9.000000, -1.041322) "
+                                      points="7.95867769 0.041322314 7.95867769 2.04132231 10.0413223 2.04132231 10.0413223 0.041322314"></polygon>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                  </div>
+                  </div>
+
+                <div class="navbar-sub-menu-container">
+                  <ul class="navbar-sub-menu">
+                    {{ range .Children }}
+                        <li class="navbar-sub-menu__item">
+                            <a href="{{ .URL }}" class="navbar__link navbar-sub-menu__link">{{ .Name }}
+                                <p class="navbar-sub-menu__text">{{ .Title }}</p>
+                            </a>
+                        </li>
+                    {{ end }}
+                  </ul>
+                  <div class="navbar-sub-menu-info">
+                    <div class="navbar-sub-menu-info__image">
+                      <img src="/images/services/software-engineering.svg" alt="">
+                    </div>
+                    <div class="navbar-sub-menu-info__title">Become part of the team?</div>
+                    <div class="navbar-sub-menu-info__text">Learn more about job openings</div>
+                    <a href="#" class="link navbar-sub-menu-info__link">Learn more</a>
+                  </div>
+                </div>
+            </li>
+        {{ else }}
+            <li class="navbar__item">
+                <a href="{{ .URL }}" class="navbar__link">{{ .Name }}</a>
+            </li>
+        {{ end }}
+    {{ end }}
+  </ul>
+
+  <a href="#section-contact-us" class="header__link contact-us-link"><span class="header__link-icon"></span> Contact us</a>
+</nav>

@@ -1,0 +1,339 @@
+.section-contact-us {
+  padding: 0px 16px 60px;
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+}
+
+.contact-us-block {
+  position: relative;
+  max-width: 1120px;
+  margin: auto;
+  background: $black;
+  padding: 60px;
+  padding: 24px 64px 62px;
+  border: 4px solid $white;
+
+  @include media-breakpoint-up(xxl) {
+    max-width: none;
+    width: 58.3vw;
+    padding: 1.25vw 3.34vw 3.24vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 24px 16px 40px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 64px;
+    top: 31px;
+    width: 66px;
+    height: 14px;
+    background: url("/images/control-icons.svg") no-repeat center;
+    background-size: contain;
+
+    @include media-breakpoint-up(xxl) {
+      right: 3.33vw;
+      top: 1.61vw;
+      width: 3.44vw;
+      height: 0.73vw;
+    }
+
+    @include media-breakpoint-down(lg) {
+      right: 58px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      right: 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      top: 26px;
+    }
+  } 
+}
+
+.contact-us-block__title {
+  font-family: $font-family-buttons;
+  font-size: 20px;
+  color: $white;
+  margin-bottom: 48px;
+  padding-bottom: 22px;
+  box-shadow: 0px 2px 0px 0px $white;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 1.05vw;
+    padding-bottom: 1.1em;
+    margin-bottom: 2.39em;
+  }  
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form__group + .form__group {
+  margin-left: 30px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-left: 1.56vw;
+  }  
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 0;
+    margin-top: 36px;
+  }
+}
+
+.form__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+
+.form__group_full {
+  min-width: 100%;
+}
+
+.form__row + .form__row {
+  margin-top: 32px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-top: 1.7vw;
+  } 
+
+  @include media-breakpoint-down(xs) {
+    margin-top: 46px;
+  }
+}
+
+.contact-us-form {
+  .form__label {
+    font-family: $font-family-buttons;
+    font-size: 10px;
+    color: $white;
+    opacity: 0.5;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 0.63vw;
+    } 
+  }
+
+  .checkbox-label_desktop {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+
+  .form__input {
+    min-width: auto;
+    width: 100%;
+    background: none;
+    border: 2px solid $accent-color;
+    font-family: $font-family-buttons;
+    font-size: 14px;
+    color: $accent-color;
+    padding: 14px 20px;
+    margin-top: 12px;
+    transition: border-color 0.3s, color 0.3s;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 0.74vw;
+      margin-top: 0.87em;
+      padding: 1em 1.43em;
+    } 
+
+    @include media-breakpoint-down(lg) {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+
+  .form__error-message {
+    position: absolute;
+    top: 100%;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-regular;
+    font-size: 14px;
+    color: $red;
+    margin-top: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3;
+  }
+
+  .form__input.invalid {
+    border-color: $red;
+    color: $red;
+
+    + .form__error-message {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  .form__textarea {
+    width: 100%;
+    min-height: 160px;
+    resize: none;
+
+    @include media-breakpoint-up(xxl) {
+      height: 8.36vw;
+    } 
+  }
+
+  .checkbox-label {
+    font-size: 12px;
+    opacity: 1;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: 0.625vw;
+      margin-left: 3.17em;
+    } 
+
+    @include media-breakpoint-down(sm) {
+      font-size: 10px;
+    } 
+  }
+
+  .form__checkbox-row {
+    margin-top: 40px;
+
+    @include media-breakpoint-up(xxl) {
+      margin-top: 1.47vw;
+    } 
+
+    @include media-breakpoint-down(xs) {
+      flex-direction: row;
+      margin-top: 34px;
+    } 
+  }
+}
+
+.contact-us-form__button {
+  width: 130px;
+  padding: 0;
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 0.74vw;
+    width: 6.8vw;
+    height: 2.6vw;
+  } 
+
+  @include media-breakpoint-down(xs) {
+    width: 120px;
+    min-height: 46px;
+  } 
+
+  .button__background {
+    background: url("/images/pixel-button-white.svg") no-repeat center;
+    background-size: contain;
+  }
+}
+
+.form__checkbox-row {
+  justify-content: flex-start;
+
+  .form__group {
+    width: auto;
+  }
+
+  .form__group + .form__group {
+    margin-left: 30px;
+  }
+}
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 38px;
+  cursor: pointer;
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 14px;
+  } 
+}
+
+.checkbox-image {
+  position: relative;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border: 2px solid $accent-color;
+  margin-right: 16px;
+
+  @include media-breakpoint-up(xxl) {
+    width: 1.56vw;
+    height: 1.56vw;
+    margin-right: 0.78vw;
+  } 
+
+  @include media-breakpoint-down(xs) {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+  } 
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 19px;  
+    height: 14px;
+    background: url("/images/check-arrow.svg") no-repeat center;
+    background-size: contain;
+    transform: scale(0);
+    transition: transform 0.2s;
+
+    @include media-breakpoint-up(xxl) {
+      width: 0.99vw;
+      height: 0.73vw;
+    } 
+
+    @include media-breakpoint-down(xs) {
+      width: 14px;
+      height: 10px;
+    } 
+  }
+}
+
+.form__checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.form__checkbox:checked + .checkbox-image:before {
+  transform: scale(1);
+}

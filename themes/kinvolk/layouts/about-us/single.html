@@ -1,0 +1,84 @@
+{{ define "main" }}
+
+{{ with .Site.GetPage "/about-us" }}
+<main class="main">
+  <section class="inner-section-hero">
+    <div class="inner-section-hero__content">
+      <h1 class="inner-section-hero__title"><span>{{ .Params.header }}</span></h1>
+      <p class="inner-section-hero__description">{{ .Params.heroText }}</p>
+    </div>
+  </section>
+
+  <section class="section-about">
+    <div class="container">
+      <div class="section-about__logo">
+        <img src="/images/about-logo.svg" alt="">
+      </div>
+      <div class="section-about__description">{{ .Params.description }}</div>
+      <div class="section-about__overview">
+        {{ range .Params.overview }}
+        <div class="section-about__overview-block">
+          <div class="section-about__overview-icon">
+            <img src="/images/{{ .icon }}" alt="">
+          </div>
+          <h3 class="section-about__overview-title">{{ .title }}</h3>
+          <p class="section-about__overview-description">{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="team">
+        <div class="team__title">Kinvolk Team</div>
+        {{ range where $.Site.RegularPages "Section" "team" }}
+        <div class="team-card">
+          <img src="/images/team/{{ .Params.photo }}" class="team-card__image" alt="{{ .Title }}">
+          <div class="team-card__block">
+            <div class="team-card__header">
+              <h4 class="team-card__title">{{ .Title }}</h4>
+              <ul class="socials__list">
+
+                {{ range .Params.socials }}
+                <li class="socials__item">
+                  <a href="{{ .link }}" class="socials__link" target="_blank">
+                    <svg class="socials__icon {{ .title }}-icon">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#{{ .title }}-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                {{ end }}
+              </ul>
+            </div>
+            <p class="team-card__position">{{ .Params.position }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="team-join">
+      <div class="team-join__content">
+        <div class="team-join__image">
+          <img src="/images/team-join.svg" alt="">
+        </div>
+        <div class="team-join__description">
+          <div class="team-join__subtitle">Become part of the team?</div>
+          <div class="team-join__title">A new challenge, new friends, a new home</div>
+          <a href="#" class="team-join__link link">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "contact-us-form.html" . }}
+</main>
+{{ end }}
+{{ end }}
+
+{{ define "scripts" }}
+
+{{ $common := resources.Get "js/common.js" }}
+{{ $form := resources.Get "js/form.js" }}
+{{ $global := resources.Get "js/about.js" }}
+
+{{ $js := slice $common $form $global | resources.Concat "js/about-bundle.js" }}
+
+<script src="{{ $js.Permalink }}"></script>
+{{ end }}

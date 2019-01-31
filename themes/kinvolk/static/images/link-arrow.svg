@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="8px" viewBox="0 0 15 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Link" transform="translate(-110.000000, -11.000000)" fill="#17B838">
+            <g id="Group">
+                <g>
+                    <polygon id="Path" transform="translate(117.500000, 15.000000) scale(1, -1) translate(-117.500000, -15.000000) " points="125 14.0038911 125 15.9961089 122.85 15.9961089 122.85 17.0077821 120.716667 17.0077821 120.716667 18.0038911 118.566667 18.0038911 118.566667 19 116.433333 19 116.433333 15.9961089 110 15.9961089 110 14.0038911 116.433333 14.0038911 116.433333 11 118.566667 11 118.566667 11.9961089 120.716667 11.9961089 120.716667 12.9922179 122.85 12.9922179 122.85 14.0038911"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,13 +1,81 @@
 baseURL: '/'
 languageCode: en-us
 title: Kinvolk website
-theme: rejekts
+theme: kinvolk
+
+menu:
+  main:
+    - name: Products
+      url: /products
+      identifier: products
+      weight: -20
+      icon: svg
+    - name: Services
+      url: /services
+      weight: -15
+      icon: svg
+    - name: Company
+      url: /company
+      identifier: company
+      weight: -10
+      icon: svg
+    - name: About us
+      parent: company
+      title: Mg Shadow Computer Monitoring Software A Watchdog Protecting Your Interests
+      url: /about-us
+      weight: 1
+    - name: Careers
+      parent: company
+      title: Will The Democrats Be Able To Reverse The Online Gambling Ban
+      url: /
+      weight: 1
+    - name: Impressum
+      parent: company
+      title: Airport Hotels The Right Way To Start A Short Break Holiday
+      url: /
+      weight: 1
+    - name: Case Studies
+      url: /case-studies
+      weight: -5
+    - name: Blog
+      url: /blog
+      weight: 0
 
 params:
+  footer:
+    navlist:
+      - title: Products
+        quicklinks:
+          - text: Lokomotive
+            link: /products/lokomotive
+          - text: Flatcar Linux
+            link: /products/flatcar-linux
+      - title: Services
+        quicklinks:
+          - text: Engineering
+            link: /services/engineering
+          - text: Penetration testing
+            link: /services/penetration-testing
+          - text: Training
+            link: /services/training
+      - title: Company
+        quicklinks:
+          - text: About
+            link: /company/about
+          - text: Careers
+            link: /company/careers
+          - text: Imprint
+            link: /company/imprint
   social:
+  - title: Github
+    url: 'https://github.com/kinvolk'
+    image: 'github-icon'
+  - title: Facebook
+    url: 'https://www.facebook.com/kinvolk'
+    image: "facebook-icon"
   - title: Twitter
-    url: 'https://twitter.com/rejektsio'
+    url: 'https://twitter.com/kinvolkio'
     image: 'twitter-icon'
-  - title: Instagram
-    url: 'https://www.instagram.com/Rejektsio/'
-    image: 'instagram-icon'
+  - title: Linkedin
+    url: 'https://www.linkedin.com/company/kinvolk'
+    image: 'linkedin-icon'

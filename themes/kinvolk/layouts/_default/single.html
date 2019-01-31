@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body class="single">
+        {{- partial "header.html" . -}}
+        <div id="content">
+            <main class="main">
+                <section class="section-post-hero">
+                    <img src="/images/posts/{{ .Params.image }}" alt="">
+                </section>
+                <article class="post-article">
+                    <div class="container">
+                        <div class="post-article__header">
+                            <h2 class="post-title">{{ .Title }}</h2>
+                            <p class="post-description">{{ .Params.subtitle }}</p>
+                            <div class="post__info">
+                                <div class="post__author-image">
+                                    <img src="/images/posts/{{ .Params.authorImage }}" alt="">
+                                </div>
+                                <div class="post__author">by {{ .Params.author }}</div>
+                                <div class="post__date">{{ .Date.Format "Jan 2, 2006" }}</div>
+                            </div>
+                        </div>
+                        
+                        <div class="post-content">{{ .Content }}</div>
+
+                        <div class="post-footer">
+                            <div class="post-footer__info">
+                                <div class="post__author-image">
+                                    <img src="/images/posts/{{ .Params.authorImage }}" alt="">
+                                </div>
+                                <div class="post__author-info">
+                                    <div class="post-footer__title">Written by</div>
+                                    <div class="post__author">{{ .Params.author }}</div>
+                                    <div class="post__author-position">{{ .Params.authorPosition }}</div>
+                                    <ul class="socials__list">
+                                    {{ range .Params.socials }}
+                                        <li class="socials__item">
+                                        <a href="{{ .link }}" class="socials__link" target="_blank">
+                                            <svg class="socials__icon {{ .title }}-icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#{{ .title }}-icon"></use>
+                                            </svg>
+                                        </a>
+                                        </li>
+                                    {{ end }}
+                                    </ul>
+                                </div>
+                            </div>
+                            {{if .NextInSection}}
+                            
+                            <div class="post-footer__navigation">
+                                <div class="post-footer__title">Next post</div>
+                                <div class="post__info">
+                                    <a href="{{ .NextInSection.Permalink }}" class="post__title">by {{ .NextInSection.Title }}</a>
+                                    <div class="post__author">by {{ .NextInSection.Params.author }}</div>
+                                    <div class="post__date">{{ .NextInSection.Date.Format "Jan 2, 2006" }}</div>
+                                </div>
+                                {{ if .PrevInSection }}
+                                <div class="post-navigation post-navigation-prev">
+                                    <a href="{{ .PrevInSection.Permalink }}" class="post-navigation-link"><span>Last post</span></a>
+                                </div>
+                                {{ end }}
+                                <div class="post-navigation post-navigation-next">
+                                    <a href="{{ .NextInSection.Permalink }}" class="post-navigation-link"><span>Next post</span></a>
+                                </div>
+                            </div>
+                            {{end}}
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </div>
+        {{- partial "footer.html" . -}}
+
+
+    {{ $common := resources.Get "js/common.js" }}
+    {{ $global := resources.Get "js/article.js" }}
+
+    {{ $js := slice $common $global | resources.Concat "js/article-bundle.js" }}
+
+    <script src="{{ $js.Permalink }}"></script>
+
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="291px" height="291px" viewBox="0 0 291 291" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-page_UI" transform="translate(-790.000000, -190.000000)">
+            <g id="Hero-image" transform="translate(-80.000000, 20.000000)">
+                <g id="Group-2" transform="translate(870.000000, 170.000000)">
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="20" fill="#000000" x="10" y="10" width="271" height="271"></rect>
+                    <g id="Illustration" transform="translate(106.000000, 90.000000)" fill="#FFFFFF">
+                        <polygon id="Fill-5" points="0 48 16 48 16 0 0 0"></polygon>
+                        <polygon id="Fill-6" points="80 111 64.0035434 111 64.0035434 47.6827714 64.0035434 15.8984815 48.0007087 15.8984815 48.0007087 47.6827714 32 47.6827714 32 0 80 0 80 44.8524319"></polygon>
+                        <polygon id="Fill-6" points="80 111 64.0035434 111 64.0035434 47.6827714 64.0035434 15.8984815 48.0007087 15.8984815 48.0007087 47.6827714 32 47.6827714 32 0 80 0 80 44.8524319"></polygon>
+                        <path d="M0,112 L48,112 L48,64 L0,64 L0,112 Z M15.9992914,95.9964564 L31.9985828,95.9964564 L31.9985828,80.0014174 L15.9992914,80.0014174 L15.9992914,95.9964564 Z" id="Fill-10"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

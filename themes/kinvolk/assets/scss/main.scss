@@ -1,0 +1,36 @@
+@import "./bootstrap/functions";
+
+@import "./variables";
+
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins/breakpoints";
+@import "./bootstrap/mixins/hover";
+
+@import "./bootstrap/root";
+@import "./bootstrap/reboot";
+
+@import "./fonts";
+
+@import "./layouts.scss";
+@import "./common.scss";
+@import "./buttons.scss";
+
+@import "./partials/header.scss";
+@import "./partials/footer.scss";
+@import "./partials/navbar.scss";
+@import "./partials/select-dropdown.scss";
+
+@import "./sections/section-hero.scss";
+@import "./sections/section-services.scss";
+@import "./sections/section-products.scss";
+@import "./sections/section-events.scss";
+@import "./sections/section-feedback.scss";
+@import "./sections/section-contact-us.scss";
+
+@import "./pages/about-us/about-section-hero.scss";
+@import "./pages/about-us/section-about.scss";
+
+@import "./pages/blog/blog-section-hero.scss";
+@import "./pages/blog/section-blog.scss";
+
+@import "./pages/article/article.scss";

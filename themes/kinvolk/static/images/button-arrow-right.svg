@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="20px" viewBox="0 0 12 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Decktop-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page_v.7" transform="translate(-1077.000000, -6357.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Feedback" transform="translate(16.000000, 6328.000000)">
+                <g id="arrow" transform="translate(1042.000000, 16.000000)">
+                    <path d="M19,13 L23,13 L23,17 L19,17 L19,13 Z M23,17 L27,17 L27,21 L23,21 L23,17 Z M27,21 L31,21 L31,25 L27,25 L27,21 Z M23,25 L27,25 L27,29 L23,29 L23,25 Z M19,29 L23,29 L23,33 L19,33 L19,29 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

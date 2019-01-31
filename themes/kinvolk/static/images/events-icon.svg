@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="51px" viewBox="0 0 62 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Слой_3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Decktop-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page_v.7" transform="translate(-468.000000, -5118.000000)">
+            <g id="Events" transform="translate(24.000000, 4697.000000)">
+                <g id="Title" transform="translate(445.000000, 421.000000)">
+                    <g id="Events">
+                        <g id="Слой_3">
+                            <path d="M51.35,12.605 L51.35,43.105 C51.35,43.7014675 50.8664675,44.185 50.27,44.185 L3.77,44.185 C3.17271825,44.1850063 2.68775245,43.7022754 2.685,43.105 L2.685,12.905" id="Path" stroke="#000000" stroke-width="2" fill="#FFFFFF"></path>
+                            <rect id="Rectangle" stroke="#000000" stroke-width="2" fill="#FFFFFF" x="0.005" y="2.61" width="54.035" height="10.09" rx="0.805"></rect>
+                            <path d="M9.875,4.825 L9.875,0" id="Path" stroke="#000000" stroke-width="2"></path>
+                            <path d="M20.875,4.825 L20.875,0" id="Path" stroke="#000000" stroke-width="2"></path>
+                            <path d="M31.88,4.825 L31.88,0" id="Path" stroke="#000000" stroke-width="2"></path>
+                            <path d="M42.885,4.825 L42.885,0" id="Path" stroke="#000000" stroke-width="2"></path>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFE000" x="7.65" y="18.315" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFFFFF" x="18.445" y="18.315" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFFFFF" x="29.245" y="18.315" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFE000" x="40.045" y="18.315" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFFFFF" x="7.65" y="30.42" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFFFFF" x="18.445" y="30.42" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFE000" x="29.245" y="30.42" width="6.605" height="6.605" rx="0.665"></rect>
+                            <rect id="Rectangle" stroke="#000000" fill="#FFFFFF" x="40.045" y="30.42" width="6.605" height="6.605" rx="0.665"></rect>
+                            <path d="M58.57,6.82 L54,6.82 C54.1692394,7.30384955 54.2718475,7.80847946 54.305,8.32 C54.3527153,8.89707143 54.2475164,9.47652718 54,10 C53.8326501,10.5742993 53.513022,11.0926152 53.075,11.5 C52.8706733,11.7287095 52.6350024,11.9273464 52.375,12.09 C52.5053941,12.9916477 52.355272,13.9115825 51.945,14.725 C51.075,16.505 50.605,16.725 50.73,18.645 C50.855,20.565 50.88,22.595 50.85,24.58 C50.785,28.58 50.6,32.515 52.08,36.28 C52.492268,37.4585727 52.3057776,38.7640052 51.58,39.78 C51.73,42.05 50.37,44.48 47.44,44.615 C40.58,44.935 33.695,45.15 26.825,44.795 C20.325,44.46 13.41,42.89 6.935,43.905 L6.935,48.73 C6.93774766,49.7837237 7.79127635,50.6372523 8.845,50.64 L55.895,50.64 C56.9487237,50.6372523 57.8022523,49.7837237 57.805,48.73 L57.805,19.16 L58.58,19.16 C59.640862,19.1517795 60.4972905,18.2908904 60.5,17.23 L60.5,8.73 C60.4863465,7.67304928 59.6270356,6.82264318 58.57,6.82 Z" id="Path" fill="#000000"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>{{ .Title }}</title>
+
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/slimselect.min.css">
+
+    <!-- Custom CSS -->
+    {{ $options := (dict "targetPath" "/css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}
+
+    
+  
+    <link rel="stylesheet" href="{{ $style.Permalink }}" />
+</head>
+
+<body class="{{ if .IsHome }} home-page {{ end }}{{ .Type }} {{ .Kind }}">
