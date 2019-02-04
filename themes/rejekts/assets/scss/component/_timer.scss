@@ -1,6 +1,6 @@
 .timer {
   padding: 10px;
-  background-color: $bgRed;
+  background-color: $colorRed;
   @include media-breakpoint-up(lg){
     padding: 20px 80px;
   }
@@ -73,7 +73,7 @@
   font-size: 1.4rem;
   font-weight: $fontBold;
   text-transform: uppercase;
-  color: $timerGrey;
+  color: $colorGrey;
 }
 
 .timer__button {

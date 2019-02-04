@@ -4,7 +4,7 @@
     <header class="header">
       <div class="header__container">
         <div class="header__wrapper">
-          <a class="header__logo" href="index.html">
+          <a class="header__logo" href="{{ .Site.BaseURL }}">
             <img src="/images/logo.svg" width="200" height="47" alt="Cloud Native Rejekts logotype" draggable="false">
           </a>
           <div class="header__hamburger">
@@ -30,25 +30,30 @@
             </a>
           {{ end }}
         </div>
-        <a class="header__button button" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Register</a>
+        <a class="header__button button button--header" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Register</a>
       </div>
     </header>
     <main>
       <section class="hero">
           <div class="hero__wrapper">
-          {{ with .Site.GetPage "hero-event" }}
-            <div>
+          {{ with .Site.GetPage "event/hero-event" }}
+            <div class="hero__wrapper-inner">
               <p class="hero__data">{{ .Params.eventDate }}</p>
               <h1 class="hero__title">{{ .Title }}</h1>
               <p class="hero__hashtag">#{{ .Params.hashtag }}</p>
               <p class="hero__adress hero__adress--desktop">{{ .Params.eventPlace }}</p>
             </div>
             <div class="hero__image-wrapper">
-              <img class="hero__image" src="/images/{{ .Params.image }}" width="430" height="422" alt="photo Barcelona">
+              <img class="hero__image" src="/images/hero-image.png" width="430" height="422" alt="photo Barcelona">
+              <img class="hero__background-dots" src="/images/hero-bg-dots-desktop.svg" alt="background dots">
+              <picture>
+                <source srcset="/images/x-desktop-icon.svg" media="(min-width: 768px)">
+                <img class="hero__background-x" src="/images/x-mobile-icon.svg" alt="background x">
+              </picture>
             </div>
           </div>
           <p class="hero__adress hero__adress--mobile">{{ .Params.eventPlace }}</p>
-        {{ end }}
+  
       </section>
       <section class="timer">
         <div class="timer__wrapper">
@@ -81,6 +86,80 @@
           <a class="timer__button button button--black" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Get your ticket</a>
         </div>
       </section>
+
+      <section class="about">
+        <p class="about__description">{{ .Params.description }}</p>
+      </section>
+      {{ end }}
+      <section class="event-schedule">
+        <div class="event-schedule__container">
+          <div class="event-schedule__title-wrapper">
+            <h2 class="event-schedule__title">Event_Schedule</h2>
+            <img src="/images/schedule-title-decoration.svg" alt="title decoration">
+          </div>
+          <div class="event-schedule__cfp">
+          {{ with .Site.GetPage "event/participation" }}
+            <p><span>CFP opens</span> - {{ .Params.participation.opens }}</p>
+            <p><span>CFP closes</span> - {{ .Params.participation.closes }}*</p>
+          </div>
+          <p class="event-schedule__footnote">/*{{ .Params.participation.comment }}*/</p>
+          {{ end }}
+
+          {{ with .Site.GetPage "event/event-schedule" }}
+            {{ range .Params.events }}
+              <h3 class="event-schedule__date">{{.date}}</h3>
+              {{ range .event }}
+              <div class="event-schedule__card">
+                <span>{{ .title }}</span>
+                <span>{{ .time }}</span>
+              </div>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+
+      <section class="tickets">
+        <div class="tickets__container">
+          <h2 class="tickets__title">Tickets</h2>
+          {{ with .Site.GetPage "event/tickets" }}
+            {{ range .Params.tickets }}
+              <div class="tickets__card">
+                <div class="tickets__name">{{ .type }}</div>
+                <div class="tickets__price">{{ .price.early }} <span>Early</span></div>
+                <div class="tickets__price">{{ .price.standard }} <span>Standard</span></div>
+                <div class="tickets__price">{{ .price.late }} <span>Late</span></div>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </section>
+
+      <section class="morals">
+        <div class="morals__title-wrapper">
+          <h2 class="morals__title">Code_of_Conduct</h2>
+          <img src="/images/title-decoration.svg" alt="title decoration">
+        </div>
+        <div class="morals__wrapper">
+          <div class="morals__image-wrapper">
+            <div class="morals__picture">
+              <img class="" src="/images/photo-condact-desktop.jpg" width="820" height="1000" alt="man coding"
+                draggable="false">
+            </div>
+            <div class="morals__background-image">
+              <img src="/images/dots-desktop.svg" alt="background dots">
+            </div>
+          </div>
+          <div class="morals__text-wrapper">
+            <p class="morals__description">The Cloud Native Rejekts organizing team is dedicated to providing a
+              harassment-free conference experience for everyone. Our Code of Conduct defines guidelines and procedures
+              that all participants must follow in order to provide a great conference experience for everyone.
+            </p>
+            <a class="morals__link" href="https://docs.google.com/document/d/109xZL43kryI8dtvm0z_MKv-J4oOa76clXY_TQN1oIvs/edit#" target="_blank">Read
+              our code of conduct</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script
@@ -88,6 +167,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
       {{ $global := resources.Get "js/index.js" }}
 
       {{ $js := slice $global | resources.Concat "js/bundle.js" }}

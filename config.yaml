@@ -1,6 +1,6 @@
 baseURL: '/'
 languageCode: en-us
-title: Kinvolk website
+title: Cloud Native Rejekts
 theme: rejekts
 
 params:

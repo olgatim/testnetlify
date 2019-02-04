@@ -2,44 +2,33 @@
   display: none;
   width: 100%;
 
-  background-color: #ffffff;
+  background-color: $colorWhite;
   
 
   @include media-breakpoint-up(lg) {
+    width: 55%;
     display: block;
     height: auto;
-    margin-left: 40px;
-
-    width: auto;
-  }
-  @include media-breakpoint-up(xl) {
-    margin-left: 60px;
+    margin-left: auto;
   }
 }
 
 .header--open .menu {
-  @include media-breakpoint-down(md) {
-    display: block;
-    height: 100vh;
-  }
+  display: block;
+  height: 100vh;
 }
-
 
 .menu__list {
   display: flex;
   flex-direction: column;
   padding-top: 20vh;
-  white-space: nowrap;
 
   text-align: center;
 
   @include media-breakpoint-up(lg) {
     padding: 0;
     flex-direction: row;
-  }
-
-  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
-    padding-top: 8vh;
+    justify-content: space-between;
   }
 }
 
@@ -48,9 +37,10 @@
 
   font-weight: $fontBlack;
 
+  white-space: nowrap;
 
   @include media-breakpoint-up(lg) {
-    margin-right: 30px;
+    width: 100%;
     margin-bottom: 0;
 
     &--mobile {
@@ -61,10 +51,6 @@
   @include media-breakpoint-up(xl){
     margin-right: 60px;
   }
-
-  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
-    margin-bottom: 8px;
-  }
 }
 
 .menu__item:last-child {
@@ -73,7 +59,7 @@
 
 .menu__link {
   font-weight: $fontBlack;
-  font-size: 2rem; 
+  font-size: 2rem;
   line-height: 1.5em;
 
 
@@ -81,18 +67,19 @@
     position: relative;
     padding: 5px;
 
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-weight: $fontRegular;
 
     &::after {
       content: '';
       position: absolute;
       width: 100%; 
-      height: 3px;
+      height: 2px;
       display: block;
       left: 0;
       right: 0;
-      background: #FF0000;
+      bottom: -1px;
+      background: $colorRed;
       transform: scaleX(0);
       transform-origin: left;
       transition: transform .2s ease;
@@ -105,8 +92,5 @@
     &:hover {
       text-decoration: none;
     }
-  }
-  @include media-breakpoint-up(xl) {
-    font-size: 1.6rem;
   }
 }

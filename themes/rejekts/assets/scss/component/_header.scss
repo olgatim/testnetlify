@@ -3,10 +3,8 @@
   width: 100vw;
   top: 0;
   left: 0;
-
   z-index: 11;
-  
-  background-color: #ffffff;
+  background-color: $colorWhite;
 
   @include media-breakpoint-up(lg){
     z-index: 10;
@@ -18,18 +16,15 @@
 }
 
 .header__container {
-  max-width: 1280px;
-
+  max-width: 1240px;
   padding: 20px;
   margin: 0 auto;
-  
   text-align: center;
 
   @include media-breakpoint-up(lg){
     display:  flex;
-    padding: 25px 46px;
-    padding-right: 55px;
-
+    padding: 25px 40px;
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -55,13 +50,7 @@
   width: 20px;
   height: 16px;
   position: relative;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
   vertical-align: middle;
@@ -76,17 +65,11 @@
   position: absolute;
   height: 2px;
   width: 100%;
-  background: #000000;
+  background: $colorBlack;
   border-radius: 1px;
   opacity: 1;
   left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
 
@@ -105,7 +88,6 @@
 
 .header--open .header__hamburger span:nth-child(1) {
   top: 6px;
-
   transform: rotate(135deg);
 }
 
@@ -115,40 +97,24 @@
 
 .header--open .header__hamburger span:nth-child(3) {
   top: 6px;
-
   transform: rotate(-135deg);
 }
 
 .header__button {
   position: absolute;
   left: -100%;
-  opacity: 0;
-
-  transition: border-width 0.5s, padding-top 0.5s;
+  
 
   @include media-breakpoint-up(lg){
     position: relative;
     left: 0;
     margin-left: 30px;
-    opacity: 1;
   }
-}
-
-.header__button:hover {
-  padding-top: 15px;
-  border-width: 2px;
 }
 
 .header--open .header__button {
-  @include media-breakpoint-down(md) {
-    width: 280px;
-    top: 70vh;
-    left: calc(50% - 140px);
-    opacity: 1;
-  
-  }
-
-  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
-    top: 75vh;
-  }
+  width: 280px;
+  top: 70vh;
+  left: calc(50% - 140px);
+  opacity: 1;
 }
