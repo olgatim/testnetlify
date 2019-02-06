@@ -113,8 +113,14 @@
 }
 
 .header--open .header__button {
-  width: 280px;
-  top: 70vh;
-  left: calc(50% - 140px);
-  opacity: 1;
+  @include media-breakpoint-down(md) {
+    width: 280px;
+    top: 70vh;
+    left: calc(50% - 140px);
+    opacity: 1;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+    top: 75vh;
+  }
 }

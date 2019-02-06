@@ -1,58 +1,28 @@
 {{ partial "head.html" . }}
 
   <body>
-    <header class="header">
-      <div class="header__container">
-        <div class="header__wrapper">
-          <a class="header__logo" href="{{ .Site.BaseURL }}">
-            <img src="/images/logo.svg" width="200" height="47" alt="Cloud Native Rejekts logotype" draggable="false">
-          </a>
-          <div class="header__hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <nav class="header__menu menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" href="#">Schedule</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Sponsorship</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Speakers</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Code of Conduct</a></li>
-          </ul>
-        </nav>
-        <div class="header__social social">
-          {{ range .Site.Params.social }}
-            <a class="social__link" href="{{ .url }}" target="_blank">
-              <svg class="social__icon {{ .image }}">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#{{ .image }}"></use>
-              </svg>
-            </a>
-          {{ end }}
-        </div>
-        <a class="header__button button button--header" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Register</a>
-      </div>
-    </header>
+    {{ partial "header.html" . }}
+
     <main>
       <section class="hero">
-          <div class="hero__wrapper">
-          {{ with .Site.GetPage "event/hero-event" }}
-            <div class="hero__wrapper-inner">
-              <p class="hero__data">{{ .Params.eventDate }}</p>
-              <h1 class="hero__title">{{ .Title }}</h1>
-              <p class="hero__hashtag">#{{ .Params.hashtag }}</p>
-              <p class="hero__adress hero__adress--desktop">{{ .Params.eventPlace }}</p>
-            </div>
-            <div class="hero__image-wrapper">
-              <img class="hero__image" src="/images/hero-image.png" width="430" height="422" alt="photo Barcelona">
-              <img class="hero__background-dots" src="/images/hero-bg-dots-desktop.svg" alt="background dots">
-              <picture>
-                <source srcset="/images/x-desktop-icon.svg" media="(min-width: 768px)">
-                <img class="hero__background-x" src="/images/x-mobile-icon.svg" alt="background x">
-              </picture>
-            </div>
+        <div class="hero__wrapper">
+        {{ with .Site.GetPage "event/hero-event" }}
+          <div class="hero__wrapper-inner">
+            <p class="hero__data">{{ .Params.eventDate }}</p>
+            <h1 class="hero__title">{{ .Title }}</h1>
+            <p class="hero__hashtag">#{{ .Params.hashtag }}</p>
+            <p class="hero__adress hero__adress--desktop">{{ .Params.eventPlace }}</p>
           </div>
-          <p class="hero__adress hero__adress--mobile">{{ .Params.eventPlace }}</p>
+          <div class="hero__image-wrapper">
+            <img class="hero__image" src="/images/hero-image.png" width="430" height="422" alt="photo Barcelona">
+            <img class="hero__background-dots" src="/images/hero-bg-dots-desktop.svg" alt="background dots">
+            <picture>
+              <source srcset="/images/x-desktop-icon.svg" media="(min-width: 768px)">
+              <img class="hero__background-x" src="/images/x-mobile-icon.svg" alt="background x">
+            </picture>
+          </div>
+        </div>
+        <p class="hero__adress hero__adress--mobile">{{ .Params.eventPlace }}</p>
   
       </section>
       <section class="timer">
@@ -91,7 +61,7 @@
         <p class="about__description">{{ .Params.description }}</p>
       </section>
       {{ end }}
-      <section class="event-schedule">
+      <section class="event-schedule" id="schedule">
         <div class="event-schedule__container">
           <div class="event-schedule__title-wrapper">
             <h2 class="event-schedule__title">Event_Schedule</h2>
@@ -135,55 +105,104 @@
         </div>
       </section>
 
-      <section class="morals">
-        <div class="morals__title-wrapper">
-          <h2 class="morals__title">Code_of_Conduct</h2>
-          <img src="/images/title-decoration.svg" alt="title decoration">
-        </div>
-        <div class="morals__wrapper">
-          <div class="morals__image-wrapper">
-            <div class="morals__picture">
-              <img class="" src="/images/photo-condact-desktop.jpg" width="820" height="1000" alt="man coding"
+      <section class="morals" id="conduct">
+          <div class="morals__title-wrapper">
+            <h2 class="morals__title">Code_of_Conduct</h2>
+            <img src="/images/title-decoration.svg" alt="title decoration">
+          </div>
+          <div class="morals__wrapper">
+            <div class="morals__image-wrapper">
+              <div class="morals__picture">
+                <img class="" src="/images/photo-condact-desktop.jpg" width="820" height="1000" alt="man coding"
+                  draggable="false">
+              </div>
+              <div class="morals__background-image">
+                <img src="/images/dots-desktop.svg" alt="background dots" draggable="false">
+              </div>
+            </div>
+            <div class="morals__text-wrapper">
+              {{ with .Site.GetPage "event/code-of-conduct" }}
+                <p class="morals__description">{{ .Params.description }}</p>
+              {{ end }}
+              <a class="morals__link" href="https://docs.google.com/document/d/109xZL43kryI8dtvm0z_MKv-J4oOa76clXY_TQN1oIvs/edit#" target="_blank">Read
+                our code of conduct</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="participation">
+          <div class="participation__title-wrapper">
+            <h2 class="participation__title">call_for_participation</h2>
+            <picture>
+              <source srcset="/images/participation-decoration-desktop.svg" media="(min-width: 1024px)" > 
+              <img src="/images/participation-title-decoration.svg" width="280" height="50" alt="title decoration"
                 draggable="false">
+            </picture>
+          </div>
+          <div class="participation__wrapper">
+            <div class="participation__image-wrapper">
+              <div class="participation__picture">
+                <img src="/images/participation-photo.jpg" width="820" height="1000" alt="man coding"
+                  draggable="false">
+              </div>
+              <div class="participation__background-image">
+                  <img src="/images/dots-desktop.svg" width="280" height="50" alt="background dots" draggable="false">
+              </div>
+              <a class="participation__link participation__link--desktop" href="#" target="_blank">Submit your presentation</a>
             </div>
-            <div class="morals__background-image">
-              <img src="/images/dots-desktop.svg" alt="background dots">
+            <div class="participation__text-wrapper">
+              {{ with .Site.GetPage "event/participation" }}
+              <div class="participation__schelude">
+                <p class="participation__start-day">CFP opens - {{ .Params.participation.opens }}</p>
+                <p class="participation__end-day">CFP closes - {{ .Params.participation.closes }}*</p>
+                <p class="participation__footnote">/*{{ .Params.participation.comment }}*/</p>
+              </div>
+              <p class="participation__description">{{ .Params.description }}</p>
+              <ul class="participation__list">
+                {{ range .Params.topics }}
+                <li class="participation__item">{{ . }}</li>
+                {{ end }}
+              </ul>
+              {{ end }}
+              <a class="participation__link" href="#" target="_blank">Submit your presentation</a>
             </div>
           </div>
-          <div class="morals__text-wrapper">
-            <p class="morals__description">The Cloud Native Rejekts organizing team is dedicated to providing a
-              harassment-free conference experience for everyone. Our Code of Conduct defines guidelines and procedures
-              that all participants must follow in order to provide a great conference experience for everyone.
-            </p>
-            <a class="morals__link" href="https://docs.google.com/document/d/109xZL43kryI8dtvm0z_MKv-J4oOa76clXY_TQN1oIvs/edit#" target="_blank">Read
-              our code of conduct</a>
+        </section>
+
+        <section class="venue">
+          <div class="venue__wrapper">
+            <div class="venue__wrapper-text">
+              <h2 class="venue__title">The Venue</h2>
+              {{ with .Site.GetPage "event/venue" }}
+              <div class="venue__place">
+                <img src="/images/{{ .Params.logo }}" width="90" height="90" alt="CREC Logo">
+                <p>{{ .Params.place }}</p>
+                <a class="venue__button venue__button--desktop button button--red" href="{{ .Params.mapLink }}" target="_blank">get derection</a>
+              </div>
+            </div>
+            <div class="venue__image-wrapper">
+              <img class="venue__image venue__image--first" src="/images/venue-photo-first.png" width="231" height="155" alt="mens looking on task" draggable="false">
+              <img class="venue__image venue__image--second" src="/images/venue-photo-second.png" width="360" height="242" alt="meeting room" draggable="false">
+              <img class="venue__image venue__image--third" src="/images/venue-photo-third.png" width="360" height="241" alt="meeting room" draggable="false">
+            </div>
           </div>
-        </div>
-      </section>
+          <div class="venue__wrapper">
+            <div class="venue__map-wrapper">
+              <img class="venue__map" src="/images/map.png" width="460" height="344" alt="{{ .Params.address }} {{ .Params.city }}" draggable="false">
+              <p class="venue__adress">{{ .Params.address }} <span>{{ .Params.city }}</span></p>
+            </div>
+            {{ end }}
+            <a class="venue__button venue__button--mobile button button--red" href="{{ .Params.mapLink }}" target="_blank">get derection</a>
+            <form class="venue__form">
+              <label for="input">Sign up for newsletter</label>
+              <input type="email" id="input" placeholder="Enter your email address">
+              <button class="venue__form--button button button--submit" type="submit">Submit</button>
+            </form>
+          </div>
+        </section>
     </main>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-      {{ $global := resources.Get "js/index.js" }}
+    {{ partial "footer.html" . }}
 
-      {{ $js := slice $global | resources.Concat "js/bundle.js" }}
-      
-      <script src="{{ $js.Permalink }}"></script>
-
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none">
-        <symbol id="twitter-icon" width="20" height="18" viewBox="0 0 20 18">
-          <path d="M20 2.79875C19.2562 3.125 18.4637 3.34125 17.6375 3.44625C18.4875 2.93875 19.1363 2.14125 19.4413 1.18C18.6488 1.6525 17.7737 1.98625 16.8412 2.1725C16.0887 1.37125 15.0162 0.875 13.8462 0.875C11.5762 0.875 9.74875 2.7175 9.74875 4.97625C9.74875 5.30125 9.77625 5.61375 9.84375 5.91125C6.435 5.745 3.41875 4.11125 1.3925 1.6225C1.03875 2.23625 0.83125 2.93875 0.83125 3.695C0.83125 5.115 1.5625 6.37375 2.6525 7.1025C1.99375 7.09 1.3475 6.89875 0.8 6.5975C0.8 6.61 0.8 6.62625 0.8 6.6425C0.8 8.635 2.22125 10.29 4.085 10.6712C3.75125 10.7625 3.3875 10.8062 3.01 10.8062C2.7475 10.8062 2.4825 10.7912 2.23375 10.7362C2.765 12.36 4.2725 13.5537 6.065 13.5925C4.67 14.6837 2.89875 15.3412 0.98125 15.3412C0.645 15.3412 0.3225 15.3262 0 15.285C1.81625 16.4562 3.96875 17.125 6.29 17.125C13.835 17.125 17.96 10.875 17.96 5.4575C17.96 5.27625 17.9537 5.10125 17.945 4.9275C18.7587 4.35 19.4425 3.62875 20 2.79875Z" />
-        </symbol>
-
-        <symbol id="instagram-icon" width="20" height="20" viewBox="0 0 20 20">
-          <path d="M17.0703 0H2.92969C1.31439 0 0 1.31439 0 2.92969V17.0703C0 18.6856 1.31439 20 2.92969 20H17.0703C18.6856 20 20 18.6856 20 17.0703V2.92969C20 1.31439 18.6856 0 17.0703 0ZM10.0391 15.2344C7.1312 15.2344 4.76562 12.8688 4.76562 9.96094C4.76562 7.05307 7.1312 4.6875 10.0391 4.6875C12.9469 4.6875 15.3125 7.05307 15.3125 9.96094C15.3125 12.8688 12.9469 15.2344 10.0391 15.2344ZM15.8984 5.85938C14.9292 5.85938 14.1406 5.0708 14.1406 4.10156C14.1406 3.13232 14.9292 2.34375 15.8984 2.34375C16.8677 2.34375 17.6562 3.13232 17.6562 4.10156C17.6562 5.0708 16.8677 5.85938 15.8984 5.85938Z" />
-          <path d="M15.8984 3.51562C15.5751 3.51562 15.3125 3.77823 15.3125 4.10156C15.3125 4.4249 15.5751 4.6875 15.8984 4.6875C16.2218 4.6875 16.4844 4.4249 16.4844 4.10156C16.4844 3.77823 16.2218 3.51562 15.8984 3.51562Z" />
-          <path d="M10.0391 5.85938C7.77771 5.85938 5.9375 7.69958 5.9375 9.96094C5.9375 12.2223 7.77771 14.0625 10.0391 14.0625C12.3004 14.0625 14.1406 12.2223 14.1406 9.96094C14.1406 7.69958 12.3004 5.85938 10.0391 5.85938Z" />
-        </symbol>
-      </svg>
   </body>
 </html>

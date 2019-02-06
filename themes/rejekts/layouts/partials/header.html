@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="header__container">
+      <div class="header__wrapper">
+        <a class="header__logo" href="{{ .Site.BaseURL }}">
+          <img src="/images/logo.svg" width="200" height="47" alt="Cloud Native Rejekts logotype" draggable="false">
+        </a>
+        <div class="header__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link" href="#schedule">Schedule</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Sponsorship</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Speakers</a></li>
+          <li class="menu__item"><a class="menu__link" href="#conduct">Code of Conduct</a></li>
+        </ul>
+      </nav>
+      <div class="header__social social">
+        {{ partial "socials.html" . }}
+      </div>
+      <a class="header__button button button--header" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Register</a>
+    </div>
+  </header>

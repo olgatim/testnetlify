@@ -61,4 +61,54 @@
     });
   }
 
+  //ScrollMagic
+  
+
+  let controller = new ScrollMagic.Controller();
+
+  const sectionArray = document.querySelectorAll("#schedule, #conduct");
+
+  sectionArray.forEach( section => {
+    new ScrollMagic.Scene({
+      triggerElement: '#' + section.getAttribute('id'),
+      triggerHook: 0.5,
+      duration: section.offsetHeight
+    })
+      .setClassToggle('a[href="#' + section.getAttribute('id') + '"]', 'menu__link--active')
+      .addTo(controller);
+  })
+
+  //scrolling navigation onClick
+
+  const menuLinkArray = document.querySelectorAll(".menu__link");
+
+  menuLinkArray.forEach( link => {
+    link.addEventListener("click", function(event){
+      const id = this.getAttribute("href").slice(1);
+
+      const activeLink = document.querySelector('.menu__link--active');
+
+      if (activeLink) {
+        activeLink.classList.remove('menu__link--active');
+      }
+
+      this.classList.add('menu__link--active');
+
+      if( id.length > 0) {
+        event.preventDefault();
+
+        const headerHeight = 100;
+        const scrollingPosition = document.getElementById(id).offsetTop - headerHeight;;
+
+        $("body, html").animate({scrollTop:scrollingPosition}, 1000);
+
+        const DESKTOP_SCREEN_WIDTH = 1024;
+
+        if($(document).width() < DESKTOP_SCREEN_WIDTH ) {
+          document.querySelector('.header').classList.remove("header--open");
+        }
+      }
+    })
+  })
+
 })();

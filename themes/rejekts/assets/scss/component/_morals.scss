@@ -6,7 +6,6 @@
   @include media-breakpoint-up(lg) {
     padding: 150px 20px;
   }
-
 }
 
 .morals__title-wrapper {
@@ -187,7 +186,7 @@
     display: block;
     left: 0;
     right: 0;
-    bottom: -2px;
+    bottom: -5px;
     background: $colorRed;
     transform: scaleX(0);
     transform-origin: left;

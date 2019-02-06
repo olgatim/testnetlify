@@ -1,5 +1,6 @@
 .button {
   display: inline-flex;
+  position: relative;
   flex-shrink: 0;
   min-height: 50px;
   min-width: 120px;
@@ -58,6 +59,7 @@
 
 .button--black {
   position: relative;
+  min-height: 60px;
 
   top: 150px;
   right: calc(50% - 90px);
@@ -78,7 +80,7 @@
     height: 0;
     border-style: solid;
     border-width: 6px 12px 0 12px;
-    border-color: $colorWhite transparent transparent transparent;
+    border-color: #ffffff transparent transparent transparent;
   }
 
   &::after {
@@ -91,11 +93,123 @@
     height: 0;
     border-style: solid;
     border-width: 0 12px 6px 12px;
-    border-color: transparent transparent $colorWhite transparent;
+    border-color: transparent transparent #ffffff transparent;
   }
+
 }
 
 .button--black:hover{
   color: $colorWhite;
   transform: rotate(2deg);
- }
+}
+
+.button--red {
+  width: 280px;
+  min-height: 55px;
+  padding-left: 30px;
+
+  color: $colorWhite;
+
+  background-color: $colorRed;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: calc(50% - 6px);
+    left: 60px;
+
+    background-image: url("../../images/button-arrow-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: auto;
+    padding-left: 30px;
+    width: 190px;
+    align-self: flex-end;
+    
+    &::after{
+      left: 15px;
+    }
+
+  }
+}
+
+.button--red:hover{
+  color: $colorWhite;
+  transform: rotate(2deg);
+}
+
+.button--submit{
+  width: 280px;
+  min-height: 55px;
+  padding-left: 40px;
+
+  color: $colorWhite;
+  border: none;
+  background-color: $colorBlack;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    width: 14px;
+    height: 10px;
+    top: calc(50% - 4px);
+    left: 100px;
+
+    background-image: url("../../images/button-submit-icon.svg");
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    min-height: auto;
+    min-width: auto;
+
+    right: 0;
+    bottom: 31px;
+
+    border-radius: 50%;
+    background-color: $colorRed;
+    font-size: 0;
+
+    transition: transform 0.5s;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      border: solid $colorWhite;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 5px;
+
+      top: calc(50% - 5px);
+      left: calc(50% - 8px);
+
+      transform: rotate(-45deg);
+    }
+
+  }
+}
+
+.button--submit:hover{
+  transform: rotate(2deg);
+
+  @include media-breakpoint-up(md){
+    transform: rotate(0deg);
+    transform: scale(0.8);
+
+  }
+}

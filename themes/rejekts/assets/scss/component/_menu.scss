@@ -14,8 +14,10 @@
 }
 
 .header--open .menu {
-  display: block;
-  height: 100vh;
+  @include media-breakpoint-down(md) {
+    display: block;
+    height: 100vh;
+  }
 }
 
 .menu__list {
@@ -29,6 +31,10 @@
     padding: 0;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+    padding-top: 8vh;
   }
 }
 
@@ -50,6 +56,10 @@
 
   @include media-breakpoint-up(xl){
     margin-right: 60px;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+    margin-bottom: 8px;
   }
 }
 
