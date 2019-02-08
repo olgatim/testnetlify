@@ -186,6 +186,7 @@
 
   @include media-breakpoint-up(lg){
     font-size: 2rem;
+    padding-left: 40px;
 
     &::after{
       content: "";
@@ -194,7 +195,7 @@
       width: 8px;
       height: 22px;
       left: 5px;
-      top: calc(50% - px);
+      top: calc(50% - 11px);
   
       transform: skew(-30deg);
   
@@ -271,6 +272,7 @@
   color: $colorRed;
   line-height: 1.1em;
   text-transform: uppercase;
+  transition: color 0.3s;
 
   &::before {
     content: '';
@@ -283,21 +285,7 @@
     border-color: $colorRed;
     border-width: 0px 2px 2px 0px;
     transform: rotate(-45deg);
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%; 
-    height: 2px;
-    display: block;
-    left: 0;
-    right: 0;
-    bottom: -5px;
-    background: $colorRed;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .2s ease;
+    transition: right 0.3s;
   }
 
   @include media-breakpoint-up(lg) {
@@ -306,11 +294,11 @@
 }
 
 .participation__link:hover {
-  color: $colorRed;
+  color: $colorBlack;
 }
 
-.participation__link:hover::after{
-  transform: scaleX(1);
+.participation__link:hover::before{
+  right: -24px;
 }
 
 .participation__link--desktop {

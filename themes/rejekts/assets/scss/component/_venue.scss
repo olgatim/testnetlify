@@ -64,7 +64,7 @@
 }
 
 .venue__place {
-  width: 200px;
+  width: 21\0px;
   margin: 0 auto 30px;
   @include media-breakpoint-up(md) {
     width: 100%;
@@ -305,6 +305,10 @@
   }
 }
 
+.venue__form input:focus {
+  border-color: $colorRed;
+}
+
 .venue__form input::placeholder {
   font-size: 1.6rem;
   font-weight: $fontLight;
@@ -316,6 +320,10 @@
   @include media-breakpoint-up(md){
     position: absolute;
   }
+}
+
+.venue__form--button .disable {
+  background-color: $colorGrey;
 }
 
 .venue__wrapper {
@@ -342,5 +350,18 @@
 .venue__wrapper-text {
   @include media-breakpoint-up(md) {
     width: 40%;
+  }
+}
+
+.venue__form__result {
+  margin-bottom: 20px;
+
+  font-size: 1.2rem;
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+
+    left: 0;
+    top: 100%;
   }
 }

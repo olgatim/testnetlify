@@ -60,6 +60,8 @@
 .button--black {
   position: relative;
   min-height: 60px;
+  overflow: hidden;
+  opacity: 1;
 
   top: 150px;
   right: calc(50% - 90px);
@@ -68,7 +70,7 @@
   background-color: $colorBlack;
   color: $colorWhite;
 
-  transition: transform 0.2s linear;
+  transition: background-color 0.2s;
 
   &::before{
     content: "";
@@ -80,7 +82,8 @@
     height: 0;
     border-style: solid;
     border-width: 6px 12px 0 12px;
-    border-color: #ffffff transparent transparent transparent;
+    border-color: $colorWhite transparent transparent transparent;
+    z-index: 2;
   }
 
   &::after {
@@ -93,14 +96,15 @@
     height: 0;
     border-style: solid;
     border-width: 0 12px 6px 12px;
-    border-color: transparent transparent #ffffff transparent;
+    border-color: transparent transparent $colorWhite transparent;
+    z-index: 2;
   }
 
 }
 
 .button--black:hover{
   color: $colorWhite;
-  transform: rotate(2deg);
+  background-color: $colorRed;
 }
 
 .button--red {
@@ -111,6 +115,7 @@
   color: $colorWhite;
 
   background-color: $colorRed;
+  transition: background-color 0.2s;
 
   &::after {
     content: "";
@@ -140,7 +145,7 @@
 
 .button--red:hover{
   color: $colorWhite;
-  transform: rotate(2deg);
+  background-color: $colorBlack;
 }
 
 .button--submit{
@@ -174,7 +179,8 @@
     min-width: auto;
 
     right: 0;
-    bottom: 31px;
+    top: 40%;
+    bottom: 40%;
 
     border-radius: 50%;
     background-color: $colorRed;
@@ -204,12 +210,19 @@
   }
 }
 
+.button--submit:disabled {
+  background-color: $colorGrey;
+}
+
+.button--submit:disabled:hover {
+  background-color: $colorGrey;
+  transform: scale(1);
+}
+
 .button--submit:hover{
-  transform: rotate(2deg);
 
   @include media-breakpoint-up(md){
-    transform: rotate(0deg);
-    transform: scale(0.8);
 
+    transform: scale(0.93);
   }
 }

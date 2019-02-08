@@ -1,0 +1,26 @@
+.code-of-conduct {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 20px;
+
+  p, li {
+    font-size: 14px;
+  }
+
+  ul {
+    margin: 16px;
+    list-style: disc;
+  }
+
+  a {
+    color: $blue;
+  }
+
+  p + p {
+    margin-top: 10px;
+  }
+
+  h1 {
+    margin: 16px 0;
+  }
+}

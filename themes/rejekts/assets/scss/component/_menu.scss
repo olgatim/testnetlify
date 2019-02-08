@@ -88,7 +88,7 @@
       display: block;
       left: 0;
       right: 0;
-      bottom: -1px;
+      top: calc(50% + 1px);
       background: $colorRed;
       transform: scaleX(0);
       transform-origin: left;
