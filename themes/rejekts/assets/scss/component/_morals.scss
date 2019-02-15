@@ -6,6 +6,10 @@
   @include media-breakpoint-up(lg) {
     padding: 150px 20px;
   }
+
+  @media (min-width: 1920px){
+    max-width: 1300px;
+  }
 }
 
 .morals__title-wrapper {

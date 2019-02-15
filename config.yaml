@@ -4,6 +4,9 @@ title: Cloud Native Rejekts
 theme: rejekts
 
 params:
+  eventDate: May 18–19, 2019
+  eventPlace:  CREC Coworking Barcelona, Poble Sec Carrer de Blesa, 27, 08004 Barcelona, Spain
+
   social:
   - title: Twitter
     url: 'https://twitter.com/rejektsio'
@@ -11,3 +14,38 @@ params:
   - title: Instagram
     url: 'https://www.instagram.com/Rejektsio/'
     image: 'instagram-icon'
+
+  events:
+    - date: Saturday, May 18
+      event:
+        - title: Registration opens
+          time: 08:30 AM - 09:30 AM
+        - title: Conference Day 1
+          time: 09:30 AM - 06:30 PM
+    - date: Sunday, May 19
+      event:
+        - title: Social event
+          time: 09:30 AM - 11:00 PM
+        - title: Conference Day 2
+          time: 09:30 AM - 06:30 PM
+
+  participation:
+    opens: Friday, February 1
+    closes: Thursday, March 14
+
+  tickets:
+    - type: Individual Professional
+      price: 
+        early: N/A
+        standard: N/A
+        late: N/A
+    - type: Corporate
+      price: 
+        early: N/A
+        standard: N/A
+        late: N/A
+  
+  sponsors: ""
+
+
+

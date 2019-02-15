@@ -36,4 +36,8 @@
       background-repeat: repeat;
     }
   }
+
+  @media (min-width: 1920px){
+    max-width: 960px;
+  }
 }

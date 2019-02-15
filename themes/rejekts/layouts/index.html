@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
 {{ partial "head.html" . }}
 
-  <body>
-    {{ partial "header.html" . }}
+  {{ partial "frontpage_header.html" . }}
 
     <main>
       <section class="hero">
         <div class="hero__wrapper">
         {{ with .Site.GetPage "event/hero-event" }}
           <div class="hero__wrapper-inner">
-            <p class="hero__data">{{ .Params.eventDate }}</p>
+            <p class="hero__data">{{ .Site.Params.eventDate }}</p>
             <h1 class="hero__title">{{ .Title }}</h1>
             <p class="hero__hashtag">#{{ .Params.hashtag }}</p>
-            <p class="hero__adress hero__adress--desktop">{{ .Params.eventPlace }}</p>
+            <p class="hero__adress hero__adress--desktop">{{ .Site.Params.eventPlace }}</p>
           </div>
           <div class="hero__image-wrapper">
             <img class="hero__image" src="/images/hero-image.png" width="430" height="422" alt="photo Barcelona">
@@ -25,7 +21,7 @@
             </picture>
           </div>
         </div>
-        <p class="hero__adress hero__adress--mobile">{{ .Params.eventPlace }}</p>
+        <p class="hero__adress hero__adress--mobile">{{ .Site.Params.eventPlace }}</p>
   
       </section>
       <section class="timer">
@@ -72,21 +68,19 @@
           </div>
           <div class="event-schedule__cfp">
           {{ with .Site.GetPage "event/participation" }}
-            <p><span>CFP opens</span> - {{ .Params.participation.opens }}</p>
-            <p><span>CFP closes</span> - {{ .Params.participation.closes }}*</p>
+            <p><span>CFP opens</span> - {{ .Site.Params.participation.opens }}</p>
+            <p><span>CFP closes</span> - {{ .Site.Params.participation.closes }}*</p>
           </div>
           <p class="event-schedule__footnote">/*{{ .Params.participation.comment }}*/</p>
           {{ end }}
 
-          {{ with .Site.GetPage "event/event-schedule" }}
-            {{ range .Params.events }}
-              <h3 class="event-schedule__date">{{.date}}</h3>
-              {{ range .event }}
-              <div class="event-schedule__card">
-                <span>{{ .title }}</span>
-                <span>{{ .time }}</span>
-              </div>
-              {{ end }}
+          {{ range .Site.Params.events }}
+            <h3 class="event-schedule__date">{{.date}}</h3>
+            {{ range .event }}
+            <div class="event-schedule__card">
+              <span>{{ .title }}</span>
+              <span>{{ .time }}</span>
+            </div>
             {{ end }}
           {{ end }}
         </div>
@@ -95,16 +89,16 @@
       <section class="tickets">
         <div class="tickets__container">
           <h2 class="tickets__title">Tickets</h2>
-          {{ with .Site.GetPage "event/tickets" }}
-            {{ range .Params.tickets }}
-              <div class="tickets__card">
-                <div class="tickets__name">{{ .type }}</div>
-                <div class="tickets__price">{{ .price.early }} <span>Early</span></div>
-                <div class="tickets__price">{{ .price.standard }} <span>Standard</span></div>
-                <div class="tickets__price">{{ .price.late }} <span>Late</span></div>
-              </div>
-            {{ end }}
+       
+          {{ range .Site.Params.tickets }}
+            <div class="tickets__card">
+              <div class="tickets__name">{{ .type }}</div>
+              <div class="tickets__price">{{ .price.early }} <span>Early</span></div>
+              <div class="tickets__price">{{ .price.standard }} <span>Standard</span></div>
+              <div class="tickets__price">{{ .price.late }} <span>Late</span></div>
+            </div>
           {{ end }}
+        
         </div>
       </section>
 
@@ -156,8 +150,8 @@
             <div class="participation__text-wrapper">
               {{ with .Site.GetPage "event/participation" }}
               <div class="participation__schelude">
-                <p class="participation__start-day">CFP opens - {{ .Params.participation.opens }}</p>
-                <p class="participation__end-day">CFP closes - {{ .Params.participation.closes }}*</p>
+                <p class="participation__start-day">CFP opens - {{ .Site.Params.participation.opens }}</p>
+                <p class="participation__end-day">CFP closes - {{ .Site.Params.participation.closes }}*</p>
                 <p class="participation__footnote">/*{{ .Params.participation.comment }}*/</p>
               </div>
               <p class="participation__description">{{ .Params.description }}</p>
@@ -178,12 +172,22 @@
             <img src="/images/sponsor-title-decoration.svg" width="280" height="50" alt="title decoration"
                 draggable="false">
           </div>
-          <ul class="sponsor__list">
-            <li class="sponsor__item"></li>
-            <li class="sponsor__item"></li>
-            <li class="sponsor__item"></li>
-            <li class="sponsor__item"></li>
-          </ul>
+          {{ if and (isset .Site.Params "sponsors") (gt (len .Site.Params.sponsors) 0) }} 
+            {{ range .Site.Params.sponsors }}
+              <div class="sponsor_group">
+                <div class="sponsor__group-title">{{ .type }}</div>
+                <ul class="sponsor__list">
+                  {{ range .sponsor }}
+                    <li class="sponsor__item">
+                      <a href="{{ .link }}" class="sponsor__image-link">
+                        <img src="/images/sponsors/{{ .logo }}" alt="{{ .logo }}" class="sponsor__image">
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+          {{ end }}
           <a class="sponsor__link" href="#" target="_blank">Read our sponsorship opportunities</a>
         </section>
 
@@ -213,8 +217,9 @@
               </picture>
               <p class="venue__adress">{{ .Params.address }} <span>{{ .Params.city }}</span></p>
             </div>
-            {{ end }}
+            
             <a class="venue__button venue__button--mobile button button--red" href="{{ .Params.mapLink }}" target="_blank">get derection</a>
+            {{ end }}
             <form class="venue__form" action="https://kinvolk.us14.list-manage.com/subscribe/post?u=1357cb4149750098f861b3a0d&amp;id=5e68eeb067"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
               novalidate>

@@ -3,14 +3,14 @@
   padding: 0 20px 20px;
   margin: 0 auto;
   @include media-breakpoint-up(md) {
-    max-width: 610px;
-  }
-
-  @include media-breakpoint-up(lg) {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  @media (min-width: 1920px){
+    max-width: 1360px;
   }
 }
 
@@ -20,10 +20,6 @@
   margin-bottom: 30px;
 
   @include media-breakpoint-up(md) {
-    margin-bottom: 15px;
-  }
-
-  @include media-breakpoint-up(lg) {
     margin: 0;
     order: 1;
   }
@@ -55,9 +51,9 @@
   margin-right: 5px;
   color: $colorRed;
 
+  transition: color 0.3s;
 }
 
 .footer__link:hover {
-  color: $colorRed;
-  opacity: 0.8;
+  color: $colorBlack;
 }

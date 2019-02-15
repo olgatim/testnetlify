@@ -20,6 +20,12 @@
       font-weight: $fontBlack;
     }
   }
+
+  @media (min-width: 1920px){
+    max-width: 1400px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .venue__title {
@@ -97,9 +103,6 @@
   font-weight: $fontBold;
 
   vertical-align: middle;
-
-  @include media-breakpoint-up(md) {
-  }
   
 }
 
@@ -124,12 +127,10 @@
   width: 100%;
   max-width: 660px;
   margin:0 auto 30px;
-  padding-bottom: 71%;
   @include media-breakpoint-up(md) {
     margin: 0;
     margin-top: 10px;
     width: 60%;
-    padding-bottom: 40%;
   }
 }
 
@@ -145,10 +146,14 @@
 }
 
 .venue__image--second {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  padding-top: 14%;
+  padding-bottom: 25%;
   width: 55%;
+  max-width: 360px;
 
-  top: 10%;
-  right: 0;
   z-index: 2;
 }
 

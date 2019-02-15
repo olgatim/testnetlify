@@ -62,9 +62,10 @@
   min-height: 60px;
   overflow: hidden;
   opacity: 1;
-
+  white-space: nowrap;
   top: 150px;
-  right: calc(50% - 90px);
+  left: 50%;
+  transform: translateX(-50%);
 
   border: none;
   background-color: $colorBlack;

@@ -4,12 +4,12 @@ html {
   height: 100%;
 }
 body {
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   font-family: $fontCode;
   font-weight: $fontRegular;
-  color: $blackColor;
+  color: $colorBlack;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -108,10 +108,10 @@ p {
 }
 
 a {
-  color: $blackColor;
+  color: $colorBlack;
 }
 
 a:hover {
-  color: $blackColor;
+  color: $colorBlack;
   text-decoration: none;
 }

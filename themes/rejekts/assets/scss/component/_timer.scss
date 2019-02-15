@@ -16,6 +16,10 @@
   @include media-breakpoint-up(md) {
     padding-right: 260px;
   }
+
+  @media (min-width: 1920px){
+    max-width: 1160px;
+  }
 }
 
 .timer__list{
@@ -80,8 +84,10 @@
   position: absolute;
 
   @include media-breakpoint-up(md){
-    top: calc(50% - 25px);
+    top: 50%;
+    transform: translateY(-50%);
     right: 40px;
+    left: auto;
   }
 }
 

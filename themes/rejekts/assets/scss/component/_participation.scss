@@ -5,6 +5,10 @@
   @include media-breakpoint-up(md){
     padding-bottom: 150px;
   }
+
+  @media (min-width: 1920px){
+    max-width: 1300px;
+  }
 }
 
 .participation__title-wrapper {
