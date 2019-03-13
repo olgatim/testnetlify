@@ -3,9 +3,33 @@ languageCode: en-us
 title: Cloud Native Rejekts
 theme: rejekts
 
+menu:
+  main:
+    - identifer: schedule
+      name: Schedule
+      url: "#schedule"
+      weight: -110
+    - identifer: tickets
+      name: Tickets
+      url: "#tickets"
+      weight: -100
+    - identifer: conduct
+      name: Code of conduct
+      url: "#conduct"
+      weight: -90
+    - identifer: participation
+      name: CFP
+      url: "#participation"
+      weight: -85
+    - identifer: sponsorship
+      name: Sponsorship
+      url: "#sponsor"
+      weight: -80
+
 params:
-  eventDate: May 18–19, 2019
-  eventPlace:  CREC Coworking Barcelona, Poble Sec Carrer de Blesa, 27, 08004 Barcelona, Spain
+  event:
+    date: May 18–19, 2019
+    place:  CREC Coworking Barcelona, Poble Sec Carrer de Blesa, 27, 08004 Barcelona, Spain
 
   social:
   - title: Twitter
@@ -19,33 +43,63 @@ params:
     - date: Saturday, May 18
       event:
         - title: Registration opens
-          time: 08:30 AM - 09:30 AM
+          time: 09:00 AM - 09:45 AM
         - title: Conference Day 1
-          time: 09:30 AM - 06:30 PM
+          time: 09:45 AM - 06:30 PM
     - date: Sunday, May 19
       event:
-        - title: Social event
-          time: 09:30 AM - 11:00 PM
         - title: Conference Day 2
-          time: 09:30 AM - 06:30 PM
+          time: 08:30 AM - 06:45 PM
+
+  hero:
+    title: Recycle your KubeCon talk here!
+    hashtag: rejekts2019
+    image: hero-photo.jpg
+    description:  Cloud Native Rejekts offers attendees a weekend of ‘unaccepted’ talks leading into
+                  KubeCon. It provides a stage for some of the 85% of talks rejected by KubeCon.
 
   participation:
-    opens: Friday, February 1
-    closes: Thursday, March 14
+    opens: Mon, March 11
+    closes: Wed, March 20
+    notifications: Wed, March 27
+    schedule: Fri, March 29
+    comment: Opens the day KubeCon notications go out
+    description:  Cloud Native Rejekts welcomes the rejected proposals from KubeCon EU or new ones
+                  that cover super fresh topics. We offer slots for 30min full-length talks and 5min
+                  lightning talks. We welcome topics about...
+    link: https://cfp.cloud-native.rejekts.io/cloud-native-rejekts-eu-2019/
+    topics: [
+      "core concepts",
+      "open-source components + tooling",
+      "user experiences",
+      "security",
+      "new developments + experiments",
+      "etc."
+    ]
 
   tickets:
-    - type: Individual Professional
-      price: 
-        early: N/A
-        standard: N/A
-        late: N/A
+    - type: Individual
+      price:
+        early: €150
+        standard: €200
+        late: €250
     - type: Corporate
-      price: 
-        early: N/A
-        standard: N/A
-        late: N/A
-  
-  sponsors: ""
+      price:
+        early: €350
+        standard: €400
+        late: €450
 
+  venue:
+    place: CREC Coworking Barcelona
+    logo: venue-place-logo.png
+    address: Poble Sec Carrer de Blesa,27, 08004
+    city: Barcelona, Spain
+    maplink: https://goo.gl/maps/7df2xkf1Lux
 
+  sponsors:
+    - type: Champion
+      sponsors:
+      - name: Kinvolk
+        link: https://kinvolk.io
+        logo: kinvolk-logo.png
 

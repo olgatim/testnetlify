@@ -16,7 +16,7 @@
 .header--open .menu {
   @include media-breakpoint-down(md) {
     display: block;
-    height: 100vh;
+    height: auto;
   }
 }
 
@@ -33,7 +33,7 @@
     justify-content: space-between;
   }
 
-  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 991px) and (orientation: landscape) {
     padding-top: 8vh;
   }
 }
@@ -46,7 +46,7 @@
   white-space: nowrap;
 
   @include media-breakpoint-up(lg) {
-    width: 100%;
+    width: auto;
     margin-bottom: 0;
 
     &--mobile {
@@ -55,10 +55,10 @@
   }
 
   @include media-breakpoint-up(xl){
-    margin-right: 60px;
+    margin-right: 40px;
   }
 
-  @media only screen and (min-width: 320px) and (max-width: 992px) and (orientation: landscape) {
+  @media only screen and (min-width: 320px) and (max-width: 991px) and (orientation: landscape) {
     margin-bottom: 8px;
   }
 }

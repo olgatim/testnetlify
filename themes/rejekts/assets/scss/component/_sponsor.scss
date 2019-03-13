@@ -59,13 +59,8 @@
 .sponsor__list {
   margin:0 auto 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-
-  @include media-breakpoint-up(sm){
-    // max-width: 350px;
-
-  }
 
   @include media-breakpoint-up(md) {
     max-width: 900px;
@@ -106,6 +101,11 @@
   @include media-breakpoint-up(lg) {
     font-size: 1.8rem;
   }
+}
+
+.sponsor__image {
+  max-height: 80px;
+  width: auto;
 }
 
 .sponsor__link:hover {

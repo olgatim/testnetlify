@@ -5,12 +5,12 @@
     <main>
       <section class="hero">
         <div class="hero__wrapper">
-        {{ with .Site.GetPage "event/hero-event" }}
+        {{ with .Site.Params }}
           <div class="hero__wrapper-inner">
-            <p class="hero__data">{{ .Site.Params.eventDate }}</p>
-            <h1 class="hero__title">{{ .Title }}</h1>
-            <p class="hero__hashtag">#{{ .Params.hashtag }}</p>
-            <p class="hero__adress hero__adress--desktop">{{ .Site.Params.eventPlace }}</p>
+            <p class="hero__data">{{ .event.date }}</p>
+            <h1 class="hero__title">{{ .hero.title }}</h1>
+            <p class="hero__hashtag">#{{ .hero.hashtag }}</p>
+            <p class="hero__adress hero__adress--desktop">{{ .event.place }}</p>
           </div>
           <div class="hero__image-wrapper">
             <img class="hero__image" src="/images/hero-image.png" width="430" height="422" alt="photo Barcelona">
@@ -21,20 +21,12 @@
             </picture>
           </div>
         </div>
-        <p class="hero__adress hero__adress--mobile">{{ .Site.Params.eventPlace }}</p>
+        <p class="hero__adress hero__adress--mobile">{{ .event.place }}</p>
   
       </section>
       <section class="timer">
         <div class="timer__wrapper">
           <ul class="timer__list">
-            <li class="timer__item">
-                <div class="timer__month"></div> 
-                <span>months</span>
-            </li>
-            <li class="timer__item">
-                <div class="timer__week"></div> 
-                <span>weeks</span>
-            </li>
             <li class="timer__item">
                 <div class="timer__days"></div> 
                 <span>days</span>
@@ -49,7 +41,7 @@
             </li>
             <li class="timer__item">
                 <div class="timer__second"></div> 
-                <span>second</span>
+                <span>seconds</span>
             </li>
           </ul>
           <a class="timer__button button button--black" href="https://ti.to/cloud-native-rejekts/cloud-native-rejekts-eu-2019">Get your ticket</a>
@@ -57,7 +49,7 @@
       </section>
 
       <section class="about">
-        <p class="about__description">{{ .Params.description }}</p>
+        <p class="about__description">{{ .hero.description }}</p>
       </section>
       {{ end }}
       <section class="event-schedule" id="schedule">
@@ -67,11 +59,11 @@
             <img src="/images/schedule-title-decoration.svg" alt="title decoration">
           </div>
           <div class="event-schedule__cfp">
-          {{ with .Site.GetPage "event/participation" }}
-            <p><span>CFP opens</span> - {{ .Site.Params.participation.opens }}</p>
-            <p><span>CFP closes</span> - {{ .Site.Params.participation.closes }}*</p>
+          {{ with .Site.Params.participation }}
+            <p><span>CFP opens</span> - {{ .opens }}*</p>
+            <p><span>CFP closes</span> - {{ .closes }}</p>
           </div>
-          <p class="event-schedule__footnote">/*{{ .Params.participation.comment }}*/</p>
+          <p class="event-schedule__footnote">/*{{ .comment }}*/</p>
           {{ end }}
 
           {{ range .Site.Params.events }}
@@ -86,7 +78,7 @@
         </div>
       </section>
 
-      <section class="tickets">
+      <section class="tickets" id="tickets">
         <div class="tickets__container">
           <h2 class="tickets__title">Tickets</h2>
        
@@ -110,7 +102,7 @@
           <div class="morals__wrapper">
             <div class="morals__image-wrapper">
               <div class="morals__picture">
-                <img class="" src="/images/photo-condact-desktop.jpg" width="820" height="1000" alt="man coding"
+                <img class="" src="/images/photo-contact-desktop.jpg" width="820" height="1000" alt="man coding"
                   draggable="false">
               </div>
               <div class="morals__background-image">
@@ -127,7 +119,7 @@
           </div>
         </section>
 
-        <section class="participation">
+        <section id="participation" class="participation">
           <div class="participation__title-wrapper">
             <h2 class="participation__title">call_for_participation</h2>
             <picture>
@@ -144,24 +136,27 @@
               </div>
               <div class="participation__background-image">
                   <img src="/images/dots-desktop.svg" width="280" height="50" alt="background dots" draggable="false">
-              </div>
-              <a class="participation__link participation__link--desktop" href="#" target="_blank">Submit your presentation</a>
+              -</div>
+              {{ with .Site.Params.participation }}
+              <a class="participation__link participation__link--desktop" href="{{ .link }}" target="_blank">Submit your proposal!</a>
             </div>
             <div class="participation__text-wrapper">
-              {{ with .Site.GetPage "event/participation" }}
+              
               <div class="participation__schelude">
-                <p class="participation__start-day">CFP opens - {{ .Site.Params.participation.opens }}</p>
-                <p class="participation__end-day">CFP closes - {{ .Site.Params.participation.closes }}*</p>
-                <p class="participation__footnote">/*{{ .Params.participation.comment }}*/</p>
+                <p class="participation__start-day">CFP opens - {{ .opens }}*</p>
+                <p class="participation__start-day">CFP closes - {{ .closes }}</p>
+                <p class="participation__start-day">CFP notifications - {{ .notifications }}</p>
+                <p class="participation__end-day">CFP schedule - {{ .schedule }}</p>
               </div>
-              <p class="participation__description">{{ .Params.description }}</p>
+              <p class="participation__description">{{ .description }}</p>
               <ul class="participation__list">
-                {{ range .Params.topics }}
+                {{ range .topics }}
                 <li class="participation__item">{{ . }}</li>
                 {{ end }}
               </ul>
+              
+              <a class="participation__link" href="{{ .link }}" target="_blank">Submit your proposal!</a>
               {{ end }}
-              <a class="participation__link" href="#" target="_blank">Submit your presentation</a>
             </div>
           </div>
         </section>
@@ -177,7 +172,7 @@
               <div class="sponsor_group">
                 <div class="sponsor__group-title">{{ .type }}</div>
                 <ul class="sponsor__list">
-                  {{ range .sponsor }}
+                  {{ range .sponsors }}
                     <li class="sponsor__item">
                       <a href="{{ .link }}" class="sponsor__image-link">
                         <img src="/images/sponsors/{{ .logo }}" alt="{{ .logo }}" class="sponsor__image">
@@ -188,46 +183,51 @@
               </div>
             {{ end }}
           {{ end }}
-          <a class="sponsor__link" href="#" target="_blank">Read our sponsorship opportunities</a>
+          <a class="sponsor__link" href="Sponsorship%20Prospectus:%20Cloud%20Native%20Rejekts%202019.pdf" target="_blank">Learn how to become a sponsor!</a>
         </section>
 
         <section class="venue">
           <div class="venue__wrapper">
             <div class="venue__wrapper-text">
               <h2 class="venue__title">The Venue</h2>
-              {{ with .Site.GetPage "event/venue" }}
+              {{ with .Site.Params.venue }}
               <div class="venue__place">
-                <img src="/images/{{ .Params.logo }}" width="90" height="90" alt="CREC Logo">
-                <p>{{ .Params.place }}</p>
-                <a class="venue__button venue__button--desktop button button--red" href="{{ .Params.mapLink }}" target="_blank">get derection</a>
+                <img src="/images/{{ .logo }}" width="90" height="90" alt="CREC Logo">
+                <p>{{ .place }}</p>
+                <a class="venue__button venue__button--desktop button button--red" href="{{ .maplink }}" target="_blank">get directions</a>
               </div>
             </div>
             <div class="venue__image-wrapper">
-              <img class="venue__image venue__image--first" src="/images/venue-photo-first.png" width="231" height="155" alt="mens looking on task" draggable="false">
-              <img class="venue__image venue__image--second" src="/images/venue-photo-second.png" width="360" height="242" alt="meeting room" draggable="false">
-              <img class="venue__image venue__image--third" src="/images/venue-photo-third.png" width="360" height="241" alt="meeting room" draggable="false">
+              <img class="venue__image venue__image--first" src="/images/venue-photo-first.jpg" width="231" height="155" alt="mens looking on task" draggable="false">
+              <img class="venue__image venue__image--second" src="/images/venue-photo-second.jpg" width="360" height="242" alt="meeting room" draggable="false">
+              <img class="venue__image venue__image--third" src="/images/venue-photo-third.jpg" width="360" height="241" alt="meeting room" draggable="false">
             </div>
           </div>
           <div class="venue__wrapper">
             <div class="venue__map-wrapper">
               <picture>
                 <source srcset="/images/map@2x.png 2x" />
-                <img class="venue__map" src="/images/map.png" width="460" height="344" alt="{{ .Params.address }} {{ .Params.city }}"
+                <img class="venue__map" src="/images/map.png" width="460" height="344" alt="{{ .address }} {{ .city }}"
                   draggable="false">
               </picture>
-              <p class="venue__adress">{{ .Params.address }} <span>{{ .Params.city }}</span></p>
+              <p class="venue__adress">{{ .address }} <span>{{ .city }}</span></p>
             </div>
             
-            <a class="venue__button venue__button--mobile button button--red" href="{{ .Params.mapLink }}" target="_blank">get derection</a>
+            <a class="venue__button venue__button--mobile button button--red" href="{{ .mapLink }}" target="_blank">get derection</a>
             {{ end }}
             <form class="venue__form" action="https://kinvolk.us14.list-manage.com/subscribe/post?u=1357cb4149750098f861b3a0d&amp;id=5e68eeb067"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
               novalidate>
-              <label for="input">Sign up for newsletter</label>
+              <label for="input">Sign up for updates</label>
               <input class="required email" value="" type="email" id="input" name="EMAIL" placeholder="Enter your email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                 required>
               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1357cb4149750098f861b3a0d_5e68eeb067"
                   tabindex="-1" value=""></div>
+              <div id="mce-responses" class="clear">
+                <div class="response response-error" id="mce-error-response" style="display:none"></div>
+                <div class="response response-success" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->    
               <button class="venue__form--button button button--submit" type="submit" name="subscribe" id="mc-embedded-subscribe" disabled>Submit</button>
             </form>
           </div>

@@ -25,9 +25,17 @@
 .timer__list{
   display: flex;
   width: 100%;
-  padding: 20px;
+  max-width: 800px;
+  padding: 15px 20px;
 
   justify-content: space-between;
+  align-items: center;
+
+  @include media-breakpoint-up(sm){
+    justify-content: space-around;
+    padding: 20px;
+    justify-content: space-between;
+  }
 
   @include media-breakpoint-up(md){
     position: relative;
@@ -48,7 +56,7 @@
   }
 
   @include media-breakpoint-up(lg){
-    padding: 25px 40px 25px 60px;
+    padding: 27px 40px 26px 60px;
 
     &::after{
       right: 0;

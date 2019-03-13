@@ -8,6 +8,7 @@
 
   @media (min-width: 1920px){
     max-width: 1300px;
+    padding-left: 42px;
   }
 }
 
@@ -269,7 +270,6 @@
 }
 
 .participation__link {
-  display: none;
   position: relative;
   font-size: 1.3rem;
   font-weight: $fontBold;
@@ -308,7 +308,8 @@
 .participation__link--desktop {
   display: none;
   @include media-breakpoint-up(lg) {
-    display: none;
+    font-size: 1.8rem;
+    display: block;
     position: absolute;
 
     top: 530px;

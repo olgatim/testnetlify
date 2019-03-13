@@ -205,7 +205,7 @@
 
     position: absolute;
 
-    top: -9px;
+    bottom: 100%;
     left: 45px;
     width: 0;
     height: 0;
@@ -241,7 +241,6 @@
 
 
     &::after {
-      top: 67px;
       bottom: 0;
       left: -25px;
 
@@ -369,4 +368,19 @@
     left: 0;
     top: 100%;
   }
+}
+
+.response {
+  position: absolute;
+  font-size: 1.4rem;
+  @include media-breakpoint-down(sm){
+    position: relative;
+    margin-bottom: 10px;
+  }
+}
+.response-success {
+  color: #28a745;
+}
+.response-error {
+  color: #FF0000;
 }

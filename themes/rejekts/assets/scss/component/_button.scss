@@ -13,8 +13,6 @@
   line-height: 1em;
   text-transform: uppercase;
 
-  
-
   &:focus {
     outline: none;
   }
@@ -60,7 +58,6 @@
 .button--black {
   position: relative;
   min-height: 60px;
-  overflow: hidden;
   opacity: 1;
   white-space: nowrap;
   top: 150px;
@@ -77,12 +74,12 @@
     content: "";
 
     position: absolute;
-    top: -1px;
-    left: 14%;
+    top: -3px;
+    left: 13%;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 6px 12px 0 12px;
+    border-width: 8px 14px 0 14px;
     border-color: $colorWhite transparent transparent transparent;
     z-index: 2;
   }
@@ -91,12 +88,12 @@
     content: "";
 
     position: absolute;
-    bottom: -1px;
-    left: 14%;
+    bottom: -3px;
+    left: 13%;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 12px 6px 12px;
+    border-width: 0 14px 8px 14px;
     border-color: transparent transparent $colorWhite transparent;
     z-index: 2;
   }

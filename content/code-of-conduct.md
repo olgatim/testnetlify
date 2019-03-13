@@ -34,8 +34,8 @@ If you are being harassed, notice that someone else is being harassed, or have a
 
 If the matter is especially urgent, please call/contact any of these individuals:
 
-* Lexi Nadolski, lexi@kinvolk.io | +49 152 08739817
-* Alban Crequy, alban@kinvolk.io | +49 000 00000000
+* Lexi Nadolski, lexi@kinvolk.io | TBA
+* Alban Crequy, alban@kinvolk.io | TBA
 
 Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
 
@@ -65,8 +65,8 @@ The staff is well informed on how to deal with the incident and how to further p
 
 If at all possible, all reports should be made directly to one of the following contacts.
 
-* Lexi Nadolski, lexi@kinvolk.io | +49 152 08739817
-* Alban Crequy, alban@kinvolk.io | +49 000 00000000
+* Lexi Nadolski, lexi@kinvolk.io | TBA
+* Alban Crequy, alban@kinvolk.io | TBA
 
 # Staff Procedure for Incident Handling
 
@@ -132,8 +132,8 @@ If some attendees were angered by the incident, it is best to apologize to them 
 
 If at all possible, all reports should be made directly to one of the following contacts.
 
-* Lexi Nadolski, lexi@kinvolk.io | +49 152 08739817
-* Alban Crequy, alban@kinvolk.io | +49 000 00000000
+* Lexi Nadolski, lexi@kinvolk.io | TBA
+* Alban Crequy, alban@kinvolk.io | TBA
 
 # License
 
