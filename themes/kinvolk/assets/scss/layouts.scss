@@ -1,0 +1,44 @@
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+#content {
+  height: auto;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  background: $white;
+  font-family: $font-family-Montserrat;
+}
+
+.main {
+  @include media-breakpoint-up(xl) {
+    width: calc(1232px * 0.6 + 38.5vw);
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 76vw;
+    max-width: none;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1160px;
+
+  @include media-breakpoint-up(xxl) {
+    width: 60vw;
+    max-width: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 16px;
+  }
+}

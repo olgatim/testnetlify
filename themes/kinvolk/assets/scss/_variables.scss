@@ -1,0 +1,39 @@
+//Fonts
+
+
+$font-weight-extra-light: 200;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-extra-bold: 800;
+
+$font-family-Montserrat: "Montserrat", sans-serif;
+
+// Colors
+
+
+// Links
+
+$link-color:                #000000;
+$link-decoration:           none;
+$link-hover-color:          #000000;
+$link-hover-decoration:     none;
+
+// Paragraphs
+
+$paragraph-margin-bottom:   0;
+$headings-margin-bottom:    0;
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1920px
+);
+
+// Forms
+
+$label-margin-bottom: 0;
