@@ -1,0 +1,49 @@
+<nav class="navbar">
+    <ul class="navbar-list">
+      {{ $currentPage := . }}
+  
+      {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+              <li class="navbar__item">
+                  
+                <div class="navbar__link">
+                  {{ .Name }}
+                  <div class="navbar__link-icon"></div>
+                  <div class="navbar__link-underline"></div>
+                </div>
+  
+                  <div class="navbar-sub-menu-container">
+                    <ul class="navbar-sub-menu">
+        
+                      {{ range $index, $elem := .Children }}
+                      
+                          <li class="navbar-sub-menu__item">
+                              
+                              <a href="{{ $elem.URL }}" class="navbar__link navbar-sub-menu__link">
+                                
+                                <div class="navbar-sub-menu__link-icon">
+                                  {{ $elem.Pre }}
+                                </div>
+                                <div class="navbar-sub-menu__link-description">
+                                  <div class="navbar-sub-menu__link-title">{{ $elem.Name }}</div>
+                                  <p class="navbar-sub-menu__text">{{ $elem.Title }}</p>
+                                </div>
+                              </a>
+                          </li>
+                      {{ end }}
+                    </ul>
+                  </div>
+              </li>
+          {{ else }}
+              <li class="navbar__item">
+                  <a href="{{ .URL }}" class="navbar__link">
+                    {{ .Name }}
+                    <div class="navbar__link-underline"></div>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+    </ul>
+  
+    <a href="/" class="header__link link_black"></span> Contact us</a>
+  </nav>

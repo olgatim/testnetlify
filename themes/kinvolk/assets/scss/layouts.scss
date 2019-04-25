@@ -14,28 +14,15 @@ body {
   font-family: $font-family-Montserrat;
 }
 
-.main {
-  @include media-breakpoint-up(xl) {
-    width: calc(1232px * 0.6 + 38.5vw);
-    max-width: 1440px;
-    margin: auto;
-  }
-
-  @include media-breakpoint-up(xxl) {
-    width: 76vw;
-    max-width: none;
-  }
-}
-
 .container {
   display: flex;
   width: 100%;
   margin: 0 auto;
   max-width: 1160px;
 
-  @include media-breakpoint-up(xxl) {
-    width: 60vw;
+  @include media-breakpoint-up(xl) {
     max-width: none;
+    @include calcWidth (1440px, 1920px, 1160px, 1510px);
   }
 
   @include media-breakpoint-down(sm) {

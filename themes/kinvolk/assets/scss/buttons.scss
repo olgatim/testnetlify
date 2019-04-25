@@ -21,3 +21,40 @@
     font-size: 0.63vw;
   }
 }
+
+.link_black {
+  box-shadow: 0 0 0 3px $linkBlackColor;
+  color: $white;
+  transition: color 0.3s, background-color 0.3s;
+  background: $linkBlackColor;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $linkBlackColor;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 0.3s;
+    transform-origin: center;
+  }
+}
+
+.link_black:hover {
+  color: $black;
+  background: rgba($linkBlackColor, 0);
+}
+
+.link_black:active {
+  color: $white;
+  
+  &:before {
+    @include media-breakpoint-up(md) {
+      transform: scaleY(1);
+    }
+  }
+}

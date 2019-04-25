@@ -9,6 +9,9 @@
 @import "./bootstrap/root";
 @import "./bootstrap/reboot";
 
+@import "./mixins/mixins.scss";
+
+@import "./styles";
 @import "./fonts";
 
 @import "./layouts.scss";
@@ -16,3 +19,6 @@
 @import "./buttons.scss";
 
 @import "./partials/header.scss";
+@import "./partials/navbar.scss";
+
+@import "./sections/section-hero.scss";

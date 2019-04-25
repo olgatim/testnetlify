@@ -1,0 +1,309 @@
+.section-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .section-hero__banner {
+    padding-bottom: 130px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 270px;
+
+    @include media-breakpoint-up(xl) {
+      padding-top: 18.75vw;
+      padding-bottom: 9.02vw;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-top: 230px;
+      padding-bottom: 90px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 200px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 70px;
+    }
+  }
+
+  .section-hero__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 40px;
+    font-size: 36px;
+    padding-left: 1.11em;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-right: 0;
+    }
+  }
+
+  .section-hero__title {
+    position: relative;
+    font-weight: $font-weight-extra-bold;
+    font-size: 1em;
+    line-height: 1.47em;
+    text-transform: uppercase;
+    max-width: 17.8em;
+    width: 60%;
+    margin-bottom: 0.78em;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 36px, 44px);
+    }
+
+    @include media-breakpoint-down(lg) {
+      @include calcFontSize (1440px, 568px, 36px, 19px);
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      max-width: 400px;
+      font-size: 19px;
+    }
+    
+
+    .quotes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-100%, -100%);
+      width: 1.11em;
+      min-width: 40px;
+
+      @include media-breakpoint-down(md) {
+        transform: translate(0, -100%);
+        padding-bottom: 18px;
+      }
+    }
+
+    .quotes > svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      fill: $quotesColor;
+    }
+  }
+
+  .section-hero__text {
+    font-size: 0.56em;
+    font-weight: $font-weight-extra-light;
+    line-height: 1.8em;
+    max-width: 26em;
+    width: 50%;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 20px, 24px);
+    }
+
+    @include media-breakpoint-down(lg) {
+      @include calcFontSize (1440px, 568px, 20px, 16px);
+    }
+
+    @include media-breakpoint-down(xs) {
+      line-height: 1.44em;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      max-width: 360px;
+      font-size: 16px;
+    }
+  }
+
+  .section-hero__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    margin-right: -40px;
+    width: 41%;
+    min-width: 180px;
+
+    @media only screen and (max-width: 1280px) {
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      right: 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+
+    img {
+      transform: translateY(-5%);
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .section-companies {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: $companiesBackgroundColor;
+    padding: 20px 24px;
+
+    @include media-breakpoint-up(xl) {
+      padding: calc(10px + 2vw / 2.8) calc(10px + 2vw / 2.05);
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 20px 0;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 30px 0;
+    }
+  
+    > .container {
+      align-items: center;
+      justify-content: space-between;
+      max-width: 990px;
+
+      @include media-breakpoint-up(xl) {
+        max-width: none;
+        @include calcWidth (1440px, 1920px, 990px, 1290px);
+      }
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
+    }
+  }
+  
+  .section-companies__title {
+    position: relative;
+    font-weight: $font-weight-light;
+    font-size: 12px;
+    color: rgba($white, 0.8);
+    line-height: 1.67em;
+    max-width: 272px;
+    min-width: 200px;
+    flex-shrink: 0;
+    padding-left: 86px;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 12px, 14px);
+      padding-left: 7.17em;
+      max-width: 22.7em;
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 10px;
+      margin-bottom: 30px;
+      padding-left: 0;
+      padding-top: 60px;
+    }
+  
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 28px;
+      height: 28px;
+      background: $companiesSquareFrontColor;
+      transform: rotate(-45deg);
+      box-shadow: 18px 18px 0 0 $companiesSquareBackColor;
+
+      @include media-breakpoint-up(xl) {
+        width: 2.33em;
+        height: 2.33em;
+        box-shadow: 1.5em 1.5em 0 0 $companiesSquareBackColor;
+      }
+
+      @include media-breakpoint-down(xs) {
+        transform: rotate(-45deg) translateY(-100%);
+        right: 0;
+      }
+    }
+  }
+  
+  .section-companies__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .section-companies__item {
+    @include media-breakpoint-down(sm) {
+      width: 50%;
+      padding: 0px 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      text-align: center;
+      padding: 0;
+    }
+  }
+  
+  .section-companies__image {
+    width: 100%;
+    height: auto;
+    max-width: 140px;
+
+    @include media-breakpoint-up(xxl) {
+      width: 7.3vw;
+      max-width: 400px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: 120px;
+    }
+  }
+  
+  .section-companies__item + .section-companies__item {
+    margin-left: 70px;
+
+    @include media-breakpoint-up(xxl) {
+      margin-left: 3.64vw;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-left: 50px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
+
+    &:not(:nth-child(2)) {
+      @include media-breakpoint-down(sm) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
