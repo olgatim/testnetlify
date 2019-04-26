@@ -1,0 +1,45 @@
+.socials__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.socials__item {
+  display: flex;
+  align-items: center;
+  background: $white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 16px, 20px);
+  }
+}
+
+.socials__link {
+  color: $white;
+  display: flex;
+  align-items: baseline;
+  transition: color 0.3s;
+}
+
+.socials__link:hover {
+  .socials__icon {
+    @include media-breakpoint-up(md) {
+      fill: $socialsLinkHoverColor;
+    }
+  }
+}
+
+.socials__icon {
+  width: 1.31em;
+  height: 1.25em;
+  fill: $black;
+  transition: fill 0.3s;
+
+  @include media-breakpoint-down(xs) {
+    width: 15px;
+    height: 14px;
+  }
+}

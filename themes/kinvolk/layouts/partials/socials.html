@@ -1,0 +1,11 @@
+<ul class="socials__list">
+  {{ range .Site.Params.social }}
+  <li class="socials__item">
+    <a href="{{ .url }}" class="socials__link" target="_blank">
+      <svg class="socials__icon {{ .image }}" fill="none">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#{{ .image }}"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
+</ul>

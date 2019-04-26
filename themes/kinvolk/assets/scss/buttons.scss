@@ -28,6 +28,10 @@
   transition: color 0.3s, background-color 0.3s;
   background: $linkBlackColor;
 
+  @include media-breakpoint-down(sm) {
+    box-shadow: none;
+  }
+
   &:before {
     content: "";
     display: block;
@@ -45,8 +49,14 @@
 }
 
 .link_black:hover {
-  color: $black;
-  background: rgba($linkBlackColor, 0);
+  @include media-breakpoint-up(md) {
+    color: $black;
+    background: rgba($linkBlackColor, 0);
+  }
+
+  @include media-breakpoint-down(sm) {
+    color: $white;
+  }
 }
 
 .link_black:active {

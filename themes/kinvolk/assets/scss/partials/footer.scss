@@ -1,0 +1,237 @@
+.footer {
+  padding: 160px 24px 0;
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 8.33vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 120px 24px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 90px 0px 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 70px 0px 0;
+  }
+
+  > .container {
+    flex-direction: column;
+  }
+
+  .socials__item + .socials__item {
+    margin-left: 20px;
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 1.25em;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-left: 15px;
+    }
+  }
+  
+  .socilas_mobile {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  .socials_desktop {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
+  }
+}
+
+.footer__logo {
+  width: 64px;
+
+  > a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 60px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include calcWidth (1440px, 1920px, 64px, 80px);
+  }
+}
+
+.footer__navigation {
+  display: flex;
+  width: 100%;
+  margin-bottom: 145px;
+
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: 7.55vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 90px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 54px;
+  }
+}
+
+.footer-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
+}
+
+.footer-menu {
+  width: 66%;
+  max-width: 760px;
+  display: flex;
+  margin: auto;
+  margin-right: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  @include media-breakpoint-up(xl) {
+    max-width: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-right: 0;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-menu__list {
+  list-style: none;
+}
+
+.footer__column {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+
+  @include media-breakpoint-down(xs) {
+    width: 50%;
+  }
+
+  + .footer__column:not(:nth-child(2)) {
+    @include media-breakpoint-down(xs) {
+      margin-top: 70px;
+    }
+  }
+}
+
+.footer-column__title {
+  font-size: 18px;
+  line-height: 1.14em;
+  font-weight: $font-weight-semi-bold;
+  color: $black;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 18px, 22px);
+    margin-bottom: 1.67em;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-weight: $font-weight-extra-bold;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.footer-menu__item {
+  font-size: 14px;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 14px, 18px);
+  }
+}
+
+.footer-menu__item + .footer-menu__item {
+  margin-top: 15px;
+
+  @include media-breakpoint-up(xl) {
+    margin-top: 1.07em;
+  }
+}
+
+.footer-menu__link {
+  font-weight: $font-weight-regular;
+  line-height: 1.45em;
+  color: $footerLinkColor;
+  text-transform: capitalize;
+  transition: color 0.3s;
+
+  &:hover {
+    @include media-breakpoint-up(md) {
+      color: $footerLinkHoverColor;
+    }
+  }
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0;
+  margin-top: 70px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 0;
+  }
+}
+
+.footer__copy {
+  padding: 44px 0;
+  box-shadow: 0 -1px 0 0 $footerLineColor;
+
+  @include media-breakpoint-up(xxl) {
+    padding: 2.3vw 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 20px 0 34px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.57em;
+
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 14px, 18px);
+    }
+  }
+}
