@@ -68,3 +68,35 @@
     }
   }
 }
+
+.section__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: $font-weight-extra-bold;
+  text-transform: uppercase;
+  height: 3.75em;
+  padding: 0 1.81em;
+  letter-spacing: 1px;
+  z-index: 1;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 16px, 20px);
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 15px;
+    padding: 0 2em;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+    padding: 0 2.75em;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 13px;
+    padding: 0 3.51em;
+  }
+}

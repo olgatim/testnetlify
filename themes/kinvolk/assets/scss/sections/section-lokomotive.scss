@@ -1,0 +1,181 @@
+.section-lokomotive {
+  position: relative;
+  background: $lokomotiveBackgroundColor url("/images/products/bg_pattern.svg") no-repeat center;
+  background-size: cover;
+  padding: 96px 24px 92px;
+
+  @include media-breakpoint-up(xl) {
+    padding: 6.67vw 24px 6.39vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    background: $lokomotiveBackgroundColor url("/images/products/lokomotive-mobile-bg.svg") no-repeat center;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 990px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      @include calcWidth (1440px, 1920px, 990px, 1290px);
+    }
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 5.55vw;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 50px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .section-content {
+    max-width: 360px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      width: 36.5%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .section-image {
+    max-width: 460px;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      width: 46.5%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      @include calcWidth (768px, 1440px, 400px, 460px);
+      margin-left: 40px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+      width: 100%;
+      margin-bottom: 74px;
+      max-width: 70vw;
+    }
+
+    svg {
+      fill: $lokomotiveLogoColor;
+    }
+  }
+
+  .feature-slider__container {
+    overflow: visible;
+
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 40px;
+    }
+  }
+
+  .feature-slider__wrapper {
+    justify-content: space-between;
+  }
+
+  .feature-slider {
+    margin-bottom: 60px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 4.17vw;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 50px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      overflow: hidden;
+    }
+
+    .swiper-pagination-bullet {
+      background: $lokomotiveSliderPaginationColor;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $lokomotiveSliderPaginationActiveColor;
+    }
+  }
+
+  .feature-slider__item {
+    font-size: 16px;
+    max-width: 16.875em;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 16px, 20px);
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 27vw;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 28vw;
+    }
+
+    @include media-breakpoint-down(xs) {
+      max-width: none;
+    }
+  }
+
+  .feature-slider__item +  .feature-slider__item {
+    margin-left: 40px;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+    }
+  }
+
+  .feature-slider__index {
+    background: $lokomotiveSlideIndexBackground;
+    color: $lokomotiveSlideIndexColor;
+    margin-bottom: 1.25em;
+    font-size: 1.125em;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .feature-slider__title {
+    margin-bottom: 1.25em;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .section__button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}

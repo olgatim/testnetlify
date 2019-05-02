@@ -9,6 +9,8 @@
 
     <title>{{ .Title }}</title>
 
+    <link rel="stylesheet" href="/css/swiper.min.css">
+
     <!-- Custom CSS -->
     {{ $options := (dict "targetPath" "/css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options }}

@@ -15,33 +15,17 @@ menu:
       title: Linux distribution for container workloads
       url: /
       weight: 1
-      pre: <svg viewBox="0 0 66 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M37.6719 5.82031H35.7598V7.72849H37.6719V5.82031Z" />
-          <path d="M32.9282 22.0444H29.1025V23.9526H32.9282V22.0444Z" />
-          <path d="M50.1431 22.0444H46.3174V23.9526H50.1431V22.0444Z" />
-          <path d="M63.1158 34.356V22.904H61.2096V34.356H59.3033V15.2698H55.4659V0H9.56936V15.2698H5.7378V34.356H3.83155V22.904H1.90625V34.356H0V38.0977H3.82569V40H9.56349V38.0977H11.4697V40H17.2075V38.0977H47.8101V40H53.5479V38.0977H55.4542V40H61.192V38.0977H65.0177V34.356H63.1158ZM43.0005 1.94622H52.564V5.76404H49.7325V13.3997H45.9083V5.76404H43.0005V1.94622ZM12.3979 9.58185V1.94622H20.0493V4.7719H16.2236V6.67423H20.0493V9.58185H16.2236V13.3997H12.3979V9.58185ZM21.0494 21.9879V23.8902H15.3057V27.7081H21.0435V33.4341H9.56789V18.1701H21.0435L21.0494 21.9879ZM21.9673 13.3997V1.94622H25.793V9.58185H29.6201V13.3997H21.9614H21.9673ZM38.2569 21.9879V33.4399H32.5191V27.7139H28.6934V33.4399H22.9556V20.0798H24.8619V18.1774H36.3375V20.0798H38.2437L38.2569 21.9879ZM37.2627 13.3997V9.58185H35.3565V13.3997H31.5264V3.85586H33.4326V1.95354H39.1704V3.85586H41.0767V13.3997H37.2627ZM55.4703 21.9879V27.7139H53.5641V29.6162H55.4703V33.4341H49.7325V29.6221H47.8263V27.7198H45.92V33.4458H40.1778V18.1701H55.4703V21.9879Z" />
-          </svg>
+      pre: <svg class="flatcar-logo" viewBox="0 0 66 40">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/flatcar-logo.svg#flatcar-logo"></use>
+            </svg>
     - name: Lokomotive
       parent: products
       title: Linux distribution for container workloads
       url: /
       weight: 1
-      pre: <svg width="942" height="354" viewBox="0 0 942 354" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="587" y="204" width="50" height="150" />
-        <rect x="665" y="204" width="50" height="100" />
-        <rect x="765" y="204" width="50" height="100" />
-        <rect x="715" y="304" width="50" height="50" />
-        <path d="M305 150V0H355V100H405V150H305Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M433 0H585V150H433V0ZM483 100V50H535V100H483Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M790 0H942V150H790V0ZM840 100V50H892V100H840Z" />
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M232 204H384V354H232V204ZM282 304V254H334V304H282Z" />
-        <path d="M611 150V0H661V50H713V49V0H763V50H713V99.5V100H763V150H713V100H661V150H611Z" />
-        <path d="M1 354H51V254H77V305H127V254H153V354H203V204H1V354Z" />
-        <path d="M410 254H460V354H510V254H560V204H410V254Z" />
-        <path d="M942 354H843V204H942V254H893V267H919V292H893V304H942V354Z" />
-        <path d="M215.269 142.157L214.291 150H0L17.6129 60.7843H36.2043L42.5645 37.2549C50.3925 8.2353 73.8763 0 88.0645 0H264.194L262.237 7.84314H202.548L198.634 21.5686H273L271.043 31.3726H231.903L228.968 44.1176H244.624L243.645 49.0196H102.253C92.4555 49.0196 87.086 57.5163 86.1075 61.7647L76.5108 100.98H234.839L232.721 108.824H188.361L185.608 121.569H253.431L251.474 132.353H122.312L118.398 142.157H215.269Z" fill="white"/>
-        </svg>
-
+      pre:  <svg class="lokomotive-logo" viewBox="0 0 942 354">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/lokomotive-logo.svg#lokomotive-logo"></use>
+            </svg>
     - name: Services
       url: /services
       weight: -15
@@ -79,7 +63,7 @@ params:
             link: /
           - text: Partners
             link: /
-      - title: Suppport
+      - title: Support
         quicklinks:
           - text: Support Center
             link: /
