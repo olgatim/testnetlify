@@ -1,0 +1,228 @@
+.what-we-do-section {
+  padding: 230px 24px 158px;
+  background: $whatWeDoBackgroundColor;
+
+  @include media-breakpoint-up(xl) {
+    padding: 15.9vw 24px 10.9vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 200px 24px 120px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 170px 0px 100px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding: 140px 0px 70px;
+  }
+
+  .container {
+    max-width: 770px;
+    flex-direction: column;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      @include calcWidth (1440px, 1920px, 770px, 1000px);
+    }
+  }
+
+  .decorative-block {
+    position: absolute;
+  }
+
+  .section-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 2.2vw;
+    }
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 40px;
+    }
+
+    .decorative-block__top {
+      width: 51px;
+      height: 51px;
+      background: url("/images/tetris.svg") no-repeat center;
+      background-size: contain;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto 18px;
+
+      @include media-breakpoint-up(xxl) {
+        width: 2.65vw;
+        height: 2.65vw;
+        margin-bottom: 0.9vw;
+      }
+    }
+  }
+
+  .section-title {
+    line-height: 1.47em;
+    margin-bottom: 0.61em;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .services {
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 116px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 4.17vw;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding: 0 6.04vw;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 16px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding: 0;
+      margin-bottom: 50px;
+    }
+
+    .decorative-block__left {
+      width: 27px;
+      height: 27px;
+      background: url("/images/tetris2.svg") no-repeat center;
+      background-size: contain;
+      top: 35%;
+      left: 0;
+
+      @include media-breakpoint-up(xxl) {
+        width: 1.4vw;
+        height: 1.4vw;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    .decorative-block__right {
+      width: 40px;
+      height: 26px;
+      background: url("/images/tetris3.svg") no-repeat center;
+      background-size: contain;
+      top: 55%;
+      right: 0;
+
+      @include media-breakpoint-up(xxl) {
+        width: 2.08vw;
+        height: 1.35vw;
+      }
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .services__list-title {
+    font-size: 18px;
+    font-weight: $font-weight-semi-bold;
+    line-height: 1.52em;
+    margin-bottom: 1.89em;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      @include calcFontSize (1440px, 1920px, 18px, 22px);
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .services__item-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    font-size: 18px;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 18px, 22px);
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 50%;
+    }
+  }
+
+  .services__item:nth-child(3n + 1) {
+    @include media-breakpoint-up(sm) {
+      align-items: flex-start;
+    }
+  }
+
+  .services__item:nth-child(3n) {
+    @include media-breakpoint-up(sm) {
+      align-items: flex-end;
+    }
+  }
+
+  .services__item +  .services__item:not(:nth-child(2)):not(:nth-child(3)) {
+    @include media-breakpoint-up(sm) {
+      margin-top: 4.89em;
+    }
+  }
+
+  .services__item +  .services__item:not(:nth-child(2)) {
+    @include media-breakpoint-down(xs) {
+      margin-top: 30px;
+    }
+  }
+
+  .services__image-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4.78em;
+    height: 4.78em;
+
+    > img {
+      height: 2.22em;
+      width: auto;
+    }
+  }
+
+  .services__title {
+    font-size: 1em;
+    font-weight: $font-weight-regular;
+    line-height: 1.39em;
+    margin-top: 0.56em;
+  }
+
+  .section__link {
+    padding: 0 1.48em;
+  }
+}

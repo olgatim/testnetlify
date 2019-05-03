@@ -178,4 +178,21 @@
     display: flex;
     justify-content: center;
   }
+
+  .section__link {
+    @include media-breakpoint-down(md) {
+      font-size: 15px;
+      padding: 0 2em;
+    }
+  
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      padding: 0 2.75em;
+    }
+  
+    @include media-breakpoint-down(xs) {
+      font-size: 13px;
+      padding: 0 3.51em;
+    }
+  }
 }
