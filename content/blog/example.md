@@ -1,4 +1,0 @@
----
-title: Example
-draft: true
----
