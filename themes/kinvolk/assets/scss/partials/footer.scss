@@ -10,15 +10,19 @@
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 90px 0px 0;
+    padding: 90px 16px 0;
   }
 
   @include media-breakpoint-down(xs) {
-    padding: 70px 0px 0;
+    padding: 70px 16px 0;
   }
 
   > .container {
     flex-direction: column;
+  }
+
+  .socials__item {
+    margin-right: 0;
   }
 
   .socials__item + .socials__item {
@@ -69,7 +73,7 @@
 
 .footer__navigation {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
   margin-bottom: 145px;
 
   @include media-breakpoint-up(xxl) {
@@ -87,6 +91,11 @@
 
   @include media-breakpoint-down(xs) {
     margin-bottom: 54px;
+  }
+
+  > .row {
+    flex-wrap: nowrap;
+    width: 100%;
   }
 }
 
@@ -106,11 +115,7 @@
 }
 
 .footer-menu {
-  width: 66%;
   max-width: 760px;
-  display: flex;
-  margin: auto;
-  margin-right: 30px;
   display: flex;
   justify-content: space-between;
 

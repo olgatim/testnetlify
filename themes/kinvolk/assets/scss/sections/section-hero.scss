@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: column;
 
-  .container {
+  .container > .row {
     position: relative;
-    justify-content: space-between;
   }
 
   .section-hero__banner {
@@ -26,8 +25,8 @@
 
     @include media-breakpoint-down(sm) {
       padding-top: 200px;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: 16px;
+      padding-right: 16px;
     }
 
     @include media-breakpoint-down(xs) {
@@ -43,6 +42,10 @@
     margin-right: 40px;
     font-size: 36px;
     padding-left: 1.11em;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 36px, 44px);
+    }
 
     @include media-breakpoint-down(md) {
       padding-left: 0;
@@ -60,7 +63,6 @@
     line-height: 1.47em;
     text-transform: uppercase;
     max-width: 17.8em;
-    width: 60%;
     margin-bottom: 0.78em;
 
     @include media-breakpoint-up(xl) {
@@ -105,7 +107,6 @@
     font-weight: $font-weight-extra-light;
     line-height: 1.8em;
     max-width: 26em;
-    width: 50%;
 
     @include media-breakpoint-up(xl) {
       @include calcFontSize (1440px, 1920px, 20px, 24px);
@@ -133,17 +134,8 @@
     bottom: 0;
     display: flex;
     align-items: center;
-    margin-right: -40px;
-    width: 41%;
     min-width: 180px;
-
-    @media only screen and (max-width: 1280px) {
-      margin-right: 0;
-    }
-
-    @include media-breakpoint-down(sm) {
-      right: 16px;
-    }
+    padding-left: 40px;
 
     @include media-breakpoint-down(xs) {
       display: none;
@@ -168,7 +160,7 @@
     }
 
     @include media-breakpoint-down(sm) {
-      padding: 20px 0;
+      padding: 20px 16px;
     }
 
     @include media-breakpoint-down(xs) {
@@ -185,14 +177,21 @@
         @include calcWidth (1440px, 1920px, 990px, 1290px);
       }
 
-      @include media-breakpoint-down(xs) {
-        flex-direction: column;
+      .row {
+        flex-wrap: nowrap;
+
+        @include media-breakpoint-down(xs) {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
   }
   
   .section-companies__title {
     position: relative;
+    display: flex;
+    align-items: center;
     font-weight: $font-weight-light;
     font-size: 12px;
     color: rgba($white, 0.8);
@@ -213,6 +212,7 @@
       margin-bottom: 30px;
       padding-left: 0;
       padding-top: 60px;
+      justify-content: center;
     }
   
     &:before {
@@ -246,11 +246,15 @@
     display: flex;
     align-items: center;
     list-style: none;
-    margin-right: auto;
     margin-left: auto;
 
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+      margin-right: auto;
     }
   }
   
@@ -265,7 +269,17 @@
       padding: 0;
     }
   }
-  
+
+  .section-companies__item + .section-companies__item  {
+    @include media-breakpoint-up(md) {
+      margin-left: 15px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 0.78vw;
+    }
+  }
+
   .section-companies__image {
     width: 100%;
     height: auto;
@@ -286,20 +300,6 @@
   }
   
   .section-companies__item + .section-companies__item {
-    margin-left: 70px;
-
-    @include media-breakpoint-up(xxl) {
-      margin-left: 3.64vw;
-    }
-
-    @include media-breakpoint-down(md) {
-      margin-left: 50px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      margin-left: 0;
-    }
-
     &:not(:nth-child(2)) {
       @include media-breakpoint-down(sm) {
         margin-top: 20px;

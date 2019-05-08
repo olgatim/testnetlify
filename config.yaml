@@ -23,9 +23,10 @@ menu:
       title: Linux distribution for container workloads
       url: /
       weight: 1
-      pre:  <svg class="lokomotive-logo" viewBox="0 0 942 354">
+      pre: <svg class="lokomotive-logo" viewBox="0 0 942 354">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/lokomotive-logo.svg#lokomotive-logo"></use>
             </svg>
+
     - name: Services
       url: /services
       weight: -15

@@ -1,17 +1,21 @@
 <header class="header">
   <div class="container">
-      <div class="logo header__logo">
-        <a href="{{ .Site.BaseURL }}">
+    <div class="row">
+      <nav class="w-100 p-0 navbar navbar-expand-md justify-content-md-between">
+
+        <a href="{{ .Site.BaseURL }}" class="navbar-brand p-0">
             {{ partial "logo.html" . }}
         </a>
-      </div>
+
+        <button class="navbar-toggler p-0 mobile-menu" type="button" data-toggle="collapse" data-target="#navbarToggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbarToggler" class="collapse navbar-collapse justify-content-end header__navigation">
+            {{ partial "navbar.html" . }}
+        </div>
       
-      <div class="header__navigation">
-          {{ partial "navbar.html" . }}
-      </div>
-    
-      <div class="mobile-menu">
-        <div></div>
-      </div>
+      </nav>
+    </div>
   </div>
 </header>

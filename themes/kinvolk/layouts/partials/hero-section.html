@@ -1,36 +1,40 @@
+{{ with .Site.Data.sections.heroSection }}
 <section class="section-hero">
-    {{ with .Site.GetPage "/sections/section-hero.md" }}
     <div class="section-hero__banner">
         <div class="container">
-          <div class="section-hero__content">
-              <h2 class="section-hero__title">
-                {{ .Title }}
-                <div class="quotes">
-                  <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 29V0L10 12H17.5V29H0Z" />
-                    <path d="M23 29V0L33 12H40.5V29H23Z" />
-                  </svg>
-                </div>
-              </h2>
-              <p class="section-hero__text">{{ .Params.description }}</p>
-          </div>
-          <div class="section-hero__image">
-            <img src="/images/{{ .Params.image }}" alt="hero-image">
+          <div class="row">
+            <div class="col-sm-7 no-padding section-hero__content">
+                <h2 class="section-hero__title">
+                  {{ .title }}
+                  <div class="quotes">
+                    <svg width="41" height="29" viewBox="0 0 41 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 29V0L10 12H17.5V29H0Z" />
+                      <path d="M23 29V0L33 12H40.5V29H23Z" />
+                    </svg>
+                  </div>
+                </h2>
+                <p class="section-hero__text">{{ .description }}</p>
+            </div>
+            <div class="col-sm-5 no-padding section-hero__image">
+              <img src="/images/{{ .image }}" alt="hero-image">
+            </div>
           </div>
         </div>
       </div>
 
       <div class="section-companies">
           <div class="container">
-            <div class="section-companies__title">We provide our services to companies like:</div>
-            <ul class="section-companies__list">
-
-              {{ range .Params.companies }}
-                <li class="section-companies__item"><img src="/images/companies/{{ . }}" class="section-companies__image"
-                    alt=""></li>
-              {{ end }}
-            </ul>
+            <div class="row">
+              <div class="col-sm-3 section-companies__title">We provide our services to companies like:</div>
+              <ul class="col-sm-8 section-companies__list">
+  
+                {{ range .companies }}
+                  <li class="col-md-3 section-companies__item"><img src="/images/companies/{{ . }}" class="section-companies__image"
+                      alt=""></li>
+                {{ end }}
+              </ul>
+            </div>
           </div>
         </div>
-    {{ end }}
 </section>
+{{ end }}

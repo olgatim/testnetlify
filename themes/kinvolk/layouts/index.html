@@ -3,21 +3,14 @@
 
 <main class="main">
   {{ partial "hero-section.html" . }}
-
-  {{ partial "what-we-do-section.html" . }}
-
-  {{ partial "lokomotive-section.html" . }}
 </main>
 
 {{ partial "footer.html" . }}
 
-<script src="/js/swiper.min.js"></script>
-
 {{ $common := resources.Get "js/common.js" }}
-{{ $home := resources.Get "js/home.js" }}
 
 
-{{ $js := slice $common $home | resources.Concat "js/bundle.js" }}
+{{ $js := slice $common | resources.Concat "js/bundle.js" }}
 
 <script src="{{ $js.Permalink }}"></script>
 

@@ -1,32 +1,12 @@
-.button {
-  position: relative;
-  min-height: 50px;
-  width: 192px;
-  border: none;
-  color: $white;
-  font-family: $font-family-Montserrat;
-  font-size: 12px;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  cursor: pointer;
+.btn {
   text-transform: uppercase;
-  z-index: 2;
-
-  @include media-breakpoint-up(xxl) {
-    width: 10vw;
-    height: 2.6vw;
-    font-size: 0.63vw;
-  }
 }
 
-.link_black {
-  box-shadow: 0 0 0 3px $linkBlackColor;
+.btn-black {
+  position: relative;
+  background: $black;
   color: $white;
-  transition: color 0.3s, background-color 0.3s;
-  background: $linkBlackColor;
+  box-shadow: inset 0 0 0 3px $linkBlackColor;
 
   @include media-breakpoint-down(sm) {
     box-shadow: none;
@@ -40,7 +20,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $linkBlackColor;
+    background: $black;
     z-index: -1;
     transform: scaleY(0);
     transition: transform 0.3s;
@@ -48,10 +28,10 @@
   }
 }
 
-.link_black:hover {
+.btn-black:hover, .btn-black:focus {
   @include media-breakpoint-up(md) {
     color: $black;
-    background: rgba($linkBlackColor, 0);
+    background: rgba($black, 0);
   }
 
   @include media-breakpoint-down(sm) {
@@ -59,76 +39,12 @@
   }
 }
 
-.link_black:active {
+.btn-black:active {
   color: $white;
   
   &:before {
     @include media-breakpoint-up(md) {
       transform: scaleY(1);
     }
-  }
-}
-
-.link_green {
-  box-shadow: 0 0 0 3px $linkGreenColor;
-  color: $white;
-  transition: color 0.3s, background-color 0.3s;
-  background: $linkGreenColor;
-
-  @include media-breakpoint-down(sm) {
-    box-shadow: none;
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $linkGreenColor;
-    z-index: -1;
-    transform: scaleY(0);
-    transition: transform 0.3s;
-    transform-origin: center;
-  }
-}
-
-.link_green:hover {
-  @include media-breakpoint-up(md) {
-    color: $black;
-    background: rgba($linkGreenColor, 0);
-  }
-
-  @include media-breakpoint-down(sm) {
-    color: $white;
-  }
-}
-
-.link_green:active {
-  color: $white;
-  
-  &:before {
-    @include media-breakpoint-up(md) {
-      transform: scaleY(1);
-    }
-  }
-}
-
-.section__link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: $font-weight-extra-bold;
-  text-transform: uppercase;
-  height: 3.75em;
-  padding: 0 1.81em;
-  letter-spacing: 1px;
-  z-index: 1;
-
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize (1440px, 1920px, 16px, 20px);
   }
 }

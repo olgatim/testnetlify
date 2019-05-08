@@ -1,25 +1,24 @@
-<nav class="navbar">
-    <ul class="navbar-list">
+
+    <ul class="navbar-nav align-items-center">
       {{ $currentPage := . }}
   
       {{ range .Site.Menus.main }}
           {{ if .HasChildren }}
-              <li class="navbar__item">
+              <li class="nav-item dropdown">
                   
-                <div class="navbar__link">
+                <a href="/" class="nav-link dropdown-toggle">
                   {{ .Name }}
-                  <div class="navbar__link-icon"></div>
-                  <div class="navbar__link-underline"></div>
-                </div>
+                  <span class="navbar__link-underline"></span>
+                </a>
   
-                  <div class="navbar-sub-menu-container">
-                    <ul class="navbar-sub-menu">
+                  <ul class="dropdown-menu">
+                    
         
                       {{ range $index, $elem := .Children }}
                       
-                          <li class="navbar-sub-menu__item">
+                          <li class="dropdown-item p-0">
                               
-                              <a href="{{ $elem.URL }}" class="navbar__link navbar-sub-menu__link">
+                              <a href="{{ $elem.URL }}" class="dropdown-link">
                                 
                                 <div class="navbar-sub-menu__link-icon">
                                   {{ $elem.Pre }}
@@ -31,19 +30,18 @@
                               </a>
                           </li>
                       {{ end }}
-                    </ul>
-                  </div>
+               
+                  </ul>
               </li>
           {{ else }}
-              <li class="navbar__item">
-                  <a href="{{ .URL }}" class="navbar__link">
+              <li class="nav-item">
+                  <a href="{{ .URL }}" class="nav-link">
                     {{ .Name }}
-                    <div class="navbar__link-underline"></div>
+                    <span class="navbar__link-underline"></span>
                   </a>
               </li>
           {{ end }}
       {{ end }}
     </ul>
   
-    <a href="/" class="header__link link_black"></span> Contact us</a>
-  </nav>
+    <a href="/" class="header__link btn btn-black"></span> Contact us</a>
