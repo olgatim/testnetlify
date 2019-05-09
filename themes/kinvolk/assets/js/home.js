@@ -11,11 +11,12 @@ function initLokomotiveSlider() {
 
     on: {
       resize: function () {
+        this.update();
         if(window.innerWidth > 767) {
           this.destroy(false, true);
         }
 
-        this.update();
+        // this.update();
       },
     },
 
