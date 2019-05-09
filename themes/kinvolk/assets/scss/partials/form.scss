@@ -1,0 +1,62 @@
+.form {
+  .form__textarea {
+    resize: none;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(xxl) {
+      margin-bottom: 1.56vw;
+    }
+  }
+
+  .form-control {
+    height: auto;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 16px, 20px);
+    }
+
+    @include media-breakpoint-down(xs) {
+      font-size: 14px;
+      line-height: 2.14em;
+    }
+  }
+
+  .form__input {
+    font-weight: $font-weight-light;
+  }
+
+  .form__input::placeholder {
+    color: $black;
+  }
+
+  .form__error-message {
+    position: absolute;
+    top: 100%;
+    font-weight: $font-weight-regular;
+    font-size: 12px;
+    color: $formErrorColor;
+    margin-top: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3;
+
+    @include media-breakpoint-up(xl) {
+      @include calcFontSize (1440px, 1920px, 12px, 14px);
+      margin-top: 0.33em;
+    }
+  }
+
+  .form__input.invalid {
+    border-color: $formErrorColor;
+    color: $formErrorColor;
+
+    + .form__error-message {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

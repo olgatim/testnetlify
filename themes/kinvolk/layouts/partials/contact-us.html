@@ -1,0 +1,20 @@
+<section class="section-contact-us">
+  <div class="container">
+    <div class="row justify-content-md-end">
+      <div class="form__container section-title">
+          Contact us
+      </div>
+      <div class="form__container justify-content-md-between">
+          <div class="col-12 col-md-6 p-0 form__wrap">
+                {{ partial "form.html" . }}
+            </div>
+            <div class="col-12 col-md-6 map__wrap">
+                {{ with .Site.Data.sections.contact }}
+              <img src="/images/{{ .mapImage }}" alt="map">
+
+              {{ end }}
+            </div>
+      </div>
+    </div>
+  </div>
+</section>

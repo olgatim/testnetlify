@@ -58,10 +58,10 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-  sm: 1200px,
-  md: 1200px,
-  lg: 1200px,
-  xl: 1200px
+  sm: 1160px,
+  md: 1160px,
+  lg: 1160px,
+  xl: 1160px
 );
 
 
@@ -72,3 +72,19 @@ $grid-gutter-width: 40px;
 // Forms
 
 $label-margin-bottom: 0;
+
+// Forms
+
+$label-margin-bottom: 0;
+$input-padding-y: 0.625em;
+$input-padding-x: 1.25em;
+$input-font-size: 16px;
+$input-line-height: 1.875em;
+$input-color: #000000;
+$input-border-color:  #E5E5E5;
+$input-border-radius: 0;
+$input-focus-border-color: #CCCCCC;
+$input-focus-box-shadow: none;
+
+//Body 
+$body-color: #000000;

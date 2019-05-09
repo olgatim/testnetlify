@@ -9,7 +9,12 @@
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 50px 16px;
+    padding: 50px 24px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   @include media-breakpoint-down(xs) {
@@ -22,7 +27,7 @@
 
     @include media-breakpoint-up(xl) {
       max-width: none;
-      @include calcWidth (1440px, 1920px, 960px, 1290px);
+      @include calcWidth (1440px, 1920px, 960px, 1250px);
     }
   }
 

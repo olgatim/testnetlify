@@ -1,5 +1,9 @@
 .btn {
   text-transform: uppercase;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize(1440px, 1920px, 16px, 20px);
+  }
 }
 
 .btn-black {
@@ -43,4 +47,47 @@
 .btn-black:active {
   color: $white;
   background: rgba($black, 1);
+}
+
+.btn-green {
+  position: relative;
+  background: $linkGreenColor;
+  color: $white;
+  box-shadow: inset 0 0 0 3px $linkGreenColor;
+  z-index: 1;
+
+  @include media-breakpoint-down(sm) {
+    box-shadow: none;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $linkGreenColor;
+    z-index: -1;
+    transform: scaleY(0);
+    transition: transform 0.3s;
+    transform-origin: center;
+  }
+}
+
+.btn-green:hover, .btn-black:focus {
+  @include media-breakpoint-up(md) {
+    color: $black;
+    background: rgba($linkGreenColor, 0);
+  }
+
+  @include media-breakpoint-down(sm) {
+    color: $white;
+  }
+}
+
+.btn-green:active {
+  color: $white;
+  background: rgba($linkGreenColor, 1);
 }

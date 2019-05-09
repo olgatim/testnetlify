@@ -25,12 +25,13 @@
 
     @include media-breakpoint-down(sm) {
       padding-top: 200px;
-      padding-left: 16px;
-      padding-right: 16px;
+
     }
 
     @include media-breakpoint-down(xs) {
       padding-bottom: 70px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
@@ -160,21 +161,21 @@
     }
 
     @include media-breakpoint-down(sm) {
-      padding: 20px 16px;
+      padding: 20px 24px;
     }
 
     @include media-breakpoint-down(xs) {
-      padding: 30px 0;
+      padding: 30px 16px;
     }
   
     > .container {
       align-items: center;
       justify-content: space-between;
-      max-width: 990px;
+      max-width: 960px;
 
       @include media-breakpoint-up(xl) {
         max-width: none;
-        @include calcWidth (1440px, 1920px, 990px, 1290px);
+        @include calcWidth (1440px, 1920px, 960px, 1250px);
       }
 
       .row {
@@ -197,21 +198,21 @@
     color: rgba($white, 0.8);
     line-height: 1.67em;
     max-width: 272px;
-    min-width: 200px;
+    min-width: 230px;
     flex-shrink: 0;
-    padding-left: 86px;
+    padding-left: 86px !important;
 
     @include media-breakpoint-up(xl) {
       @include calcFontSize (1440px, 1920px, 12px, 14px);
-      padding-left: 7.17em;
+      padding-left: 7.17em !important;
       max-width: 22.7em;
     }
 
     @include media-breakpoint-down(xs) {
       font-size: 10px;
       margin-bottom: 30px;
-      padding-left: 0;
-      padding-top: 60px;
+      padding-left: 0 !important;
+      padding-top: 60px !important;
       justify-content: center;
     }
   

@@ -1,0 +1,128 @@
+.section-contact-us {
+  padding: 224px 24px 0px;
+
+  @include media-breakpoint-up(xxl) {
+    padding: 11.67vw 24px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 148px 24px 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .form__container {
+    width: 100%;
+    max-width: 1060px;
+    display: flex;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      @include calcWidth (1440px, 1920px, 1060px, 1380px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  .section-title {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.5em;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      @include calcWidth (1440px, 1920px, 1060px, 1380px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      margin-bottom: 0.33em;
+      width: 1.59em;
+      height: 1.59em;
+      background: url("/images/title-decoration.svg") no-repeat center;
+      background-size: contain;
+
+      @include media-breakpoint-down(xl) {
+        width: 51px;
+        height: 51px;
+      }
+
+    }
+  }
+
+  .form__wrap {
+    padding-right: 0;
+    max-width: 460px;
+    margin-right: 40px;
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      flex-basis: auto;
+      @include calcWidth (1440px, 1920px, 460px, 600px);
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-right: 20px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 70px;
+      margin-right: 0;
+      max-width: none;
+    }
+  }
+
+  .map__wrap {
+    padding-right: 40px;
+    padding-left: 0;
+    max-width: 460px;
+    transform: translateY(-30px);
+
+    @include media-breakpoint-up(xl) {
+      max-width: none;
+      flex-basis: auto;
+      @include calcWidth (1440px, 1920px, 460px, 600px);
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-right: 40px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      transform: translateY(0);
+      max-width: none;
+      padding-right: 20px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      padding-right: 0;
+    }
+
+    > img {
+      width: 100%;
+      height: auto;
+      box-shadow: 40px 40px 0 0 $mapShadowColor;
+
+      @include media-breakpoint-down(md) {
+        box-shadow: 20px 20px 0 0 $mapShadowColor;
+      }
+    }
+  }
+
+  .btn {
+    padding: 1.08em 1.58em;
+  }
+}

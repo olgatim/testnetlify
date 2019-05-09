@@ -15,7 +15,12 @@
   }
 
   @include media-breakpoint-down(sm) {
-    padding: 30px 16px 0;
+    padding: 30px 24px 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
