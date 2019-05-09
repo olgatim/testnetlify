@@ -41,14 +41,14 @@
     justify-content: center;
     margin-right: 40px;
     font-size: 36px;
-    padding-left: 1.11em;
+    padding-left: 1.11em !important;
 
     @include media-breakpoint-up(xl) {
       @include calcFontSize (1440px, 1920px, 36px, 44px);
     }
 
     @include media-breakpoint-down(md) {
-      padding-left: 0;
+      padding-left: 0 !important;
     }
 
     @include media-breakpoint-down(xs) {
@@ -135,7 +135,7 @@
     display: flex;
     align-items: center;
     min-width: 180px;
-    padding-left: 40px;
+    padding-left: 40px !important;
 
     @include media-breakpoint-down(xs) {
       display: none;

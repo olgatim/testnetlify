@@ -7,6 +7,7 @@
   background: $black;
   color: $white;
   box-shadow: inset 0 0 0 3px $linkBlackColor;
+  z-index: 1;
 
   @include media-breakpoint-down(sm) {
     box-shadow: none;
@@ -41,10 +42,5 @@
 
 .btn-black:active {
   color: $white;
-  
-  &:before {
-    @include media-breakpoint-up(md) {
-      transform: scaleY(1);
-    }
-  }
+  background: rgba($black, 1);
 }

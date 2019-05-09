@@ -1,0 +1,39 @@
+{{ with .Site.Data.sections.lokomotive }}
+<section class="section-lokomotive">
+  <div class="container">
+      <div class="row flex-nowrap section-header">
+        <div class="col-12 col-sm-6 col-md-5 p-0 section-content">
+          <div class="section-title">{{ .title }}</div>
+          <p class="section-description">{{ .description }}</p>
+        </div>
+        <div class="col-12 col-sm-6 p-0 section-image">
+            <svg class="lokomotive-logo" viewBox="0 0 942 354">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/lokomotive-logo.svg#lokomotive-logo"></use>
+              </svg>
+        </div>
+      </div>
+
+      <div class="row flex-nowrap section-feature">
+        <div class="feature-slider">
+          <div id="lokomotive-slider" class="swiper-container feature-slider__container">
+            <div class="row swiper-wrapper feature-slider__wrapper">
+              {{ range .features }}
+              <div class="col-md-4 swiper-slide feature-slider__item">
+                <div class="feature-slider__index">{{ .index }}</div>
+                <div class="feature-slider__title">{{ .title }}</div>
+                <div class="feature-slider__description">{{ .description }}</div>
+              </div>
+              {{ end }}
+            </div>
+  
+            <div id="lokomotive-slider__pagination" class="swiper-pagination feature-slider__pagination"></div>
+          </div>
+        </div>
+        
+        <div class="row no-gutters w-100 justify-content-center">
+          <a href="/" class="btn btn-black"></span>Read more about</a>
+        </div>
+      </div>
+  </div>
+</section>
+{{ end }}

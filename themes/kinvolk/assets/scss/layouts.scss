@@ -25,6 +25,115 @@ body {
   }
 }
 
-.no-padding {
-  padding: 0;
+.section-title {
+  font-size: 36px;
+  font-weight: $font-weight-extra-bold;
+  line-height: 0.9em;
+  margin-bottom: 0.83em;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 36px, 44px);
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.section-description {
+  font-size: 20px;
+  font-weight: $font-weight-extra-light;
+  line-height: 1.75em;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 20px, 24px);
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+    line-height: 1.86em;
+  }
+}
+
+.feature-slider {
+  .feature-slider__index {
+    width: 1.6em;
+    height: 1.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    font-size: 1.125em;
+    font-weight: $font-weight-semi-bold;
+
+    @include media-breakpoint-down(xl) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .feature-slider__container {
+    @include media-breakpoint-up(sm) {
+      cursor: auto !important;
+    }
+  }
+
+  .feature-slider__title {
+    font-size: 1.125em;
+    font-weight: $font-weight-semi-bold;
+    line-height: 1.5em;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1em;
+    }
+  }
+
+  .feature-slider__description {
+    font-size: 1em;
+    font-weight: $font-weight-light;
+    line-height: 1.75em;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 0.875em;
+    }
+  }
+
+  .feature-slider__pagination {
+    bottom: 0;
+    font-size: 0;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 0;
+      margin: 0;
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet + .swiper-pagination-bullet {
+      margin-left: 10px;
+    }
+  }
 }
