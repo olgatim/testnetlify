@@ -1,7 +1,7 @@
 function initLokomotiveSlider() {
   return new Swiper ('#lokomotive-slider', {
     slidesPerView: 2,
-    spaceBetween: 20,
+    spaceBetween: 30,
 
     pagination: {
       el: '#lokomotive-slider__pagination',

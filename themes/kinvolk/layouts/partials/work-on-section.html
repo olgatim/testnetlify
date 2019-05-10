@@ -1,0 +1,36 @@
+{{ with .Site.Data.sections.sectionWorkOn }}
+<section class="section-work-on">
+  <div class="container">
+    <div class="row section-header">
+      <div class="col-12 col-md-10 col-lg-8 p-0">
+        <div class="section-title">{{ .title }}</div>
+        <p class="section-description">{{ .description }}</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center section-content">
+      <div class="col-12 col-md-10 col-lg-8 p-0 section-header">
+        <div class="section-title">{{ .contentTitle }}</div>
+        <p class="section-description">{{ .contentDescription }}</p>
+      </div>
+  
+      <ul class="row no-gutters col-md-12 col-lg-10 p-0 section-content__list">
+        {{ range .content }}
+          <li class="col-md-6 p-0 section-content__item">
+            <div class="col-md-9 p-0">
+              <div class="section-content__icon">
+                  <img src="/images/{{ .icon }}" alt="icon">
+                </div>
+                <div class="section-content__title">{{ .title }}</div>
+                <p class="section-content__description">{{ .description }}</p>
+                <div class="section-button">
+                  <a href="{{ .link }}" class="btn btn-green">LET'S GO!</a>
+                </div>
+            </div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}

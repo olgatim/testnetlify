@@ -71,7 +71,7 @@
 
     @include media-breakpoint-down(lg) {
       @include calcWidth (768px, 1440px, 400px, 460px);
-      padding-left: 20px !important;
+      padding-left: 30px !important;
     }
 
     @include media-breakpoint-down(xs) {

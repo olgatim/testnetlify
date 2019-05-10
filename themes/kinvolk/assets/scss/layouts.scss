@@ -29,7 +29,7 @@ body {
   font-size: 36px;
   font-weight: $font-weight-extra-bold;
   line-height: 1.47em;
-  margin-bottom: 0.44em;
+  margin-bottom: 0.61em;
   text-transform: uppercase;
 
   @include media-breakpoint-up(xl) {
@@ -46,7 +46,8 @@ body {
 
   @include media-breakpoint-down(xs) {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+    line-height: 1.5em;
   }
 }
 

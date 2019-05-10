@@ -1,0 +1,14 @@
+  title: WHAT WE WORK ON
+  draft: false
+  description: "Our client work focuses on improving upstream projects that clients depend on and working on client projects that require expert knowledge of the underlying system. Our background working on a wide variety of challenging projects, ensures that Kinvolk’s team has an immediate impact."
+  contentTitle: The Universe Through A Child Eyes
+  contentDescription: Buying Used Electronic Test Equipment What S The Difference Between Used Refurbished Remarketed And Rebuilt
+  content: 
+    - title: "Connected With Your Drive"
+      description: "Let’s look at just what we’re counting here. Gartner lumps in detachable devices like Microsoft’s Surface in with traditional PCs"
+      icon: drive-icon.svg
+      link: "/"
+    - title: "Easy Integrate With Hangouts"
+      description: "Let’s look at just what we’re counting here. Gartner lumps in detachable devices like Microsoft’s Surface in with traditional PCs"
+      icon: hangouts-icon.svg
+      link: "/"
