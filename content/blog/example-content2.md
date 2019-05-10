@@ -1,5 +1,5 @@
 ---
-title: "What We are Crazy About"
+title: "What’s new in Kubernetes 1.14?"
 description: Deliver the ultimate guest experience using the robust interface of Splash, featuring... 
 date: 2018-10-26T03:51:27+02:00
 draft: false

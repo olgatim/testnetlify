@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <main class="main blog-page"> 
+          <div class="container">
+            <div class="row">
+              {{ range where .Data.Pages "Type" "blog" }}
+              <div class="col-12 col-sm-6 col-md-4 post__item">
+                  <a href="{{ .Permalink }}" class="post__title">
+                    <span>{{ .Title }}</span>
+                  </a>
+                  <div class="post__description">{{ .Params.description }}</div>
+                  <img src="/images/blog/{{ .Params.heroImage }}" alt="post image">
+              </div>
+              {{ end }}
+            </div>
+          </div>
+
+
+        </main>
+    </body>
+
+    {{- partial "footer.html" . -}}
+</html>

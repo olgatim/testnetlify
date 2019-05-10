@@ -1,5 +1,5 @@
 ---
-title: "What We are Crazy About"
+title: "Google Summer of Code with Falco."
 description: Deliver the ultimate guest experience using the robust interface of Splash, featuring... 
 date: 2018-10-26T03:51:27+02:00
 draft: false

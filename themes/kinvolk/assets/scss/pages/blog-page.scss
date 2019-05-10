@@ -1,0 +1,20 @@
+.blog-page {
+  padding-top: 270px;
+
+  .post__item {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .post__title {
+    font-size: 24px;
+    font-weight: $font-weight-semi-bold;
+    margin-bottom: 12px;
+  }
+
+  .post__description {
+    margin-bottom: 32px;
+  }
+}
