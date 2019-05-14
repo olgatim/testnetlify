@@ -10,3 +10,39 @@ h1, h2, h3, h4, h5, h6 {
 p {
   margin-bottom: 0;
 }
+
+h1 {
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 40px, 48px);
+  }
+}
+
+h2 {
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 36px, 44px);
+  }
+}
+
+h3 {
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 28px, 36px);
+  }
+}
+
+h4 {
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 24px, 30px);
+  }
+}
+
+h5 {
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 20px, 26px);
+  }
+}
+
+h6 {
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 16px, 20px);
+  }
+}

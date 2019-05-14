@@ -1,0 +1,11 @@
+baseURL: '/'
+languageCode: en-us
+title: Kinvolk website
+theme: kinvolk
+canonifyurls: true
+
+metaDataFormat: "yaml"
+pluralizelisttitles: "false"
+paginate: 12
+permalinks:
+  blog: "/blog/:year/:month/:title/"

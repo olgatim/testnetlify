@@ -1,0 +1,56 @@
+footer:
+  navlist:
+    - title: Products
+      quicklinks:
+        - text: Flatcar Linux
+          link: 'https://flatcar-linux.org'
+        - text: Lokomotive
+          link: '#lokomotive'
+        - text: Inspektor Gadget
+          link: '#inspektor-gadget'
+        - text: Documentation
+          link: 'https://docs.kinvolk.io'
+    - title: Services
+      quicklinks:
+        - text: Open Source Engineering
+          link: /
+        - text: Kubernetes Security Assessment
+          link: /
+        - text: Consulting
+          link: /
+        - text: Training
+          link: /
+    - title: Events
+      quicklinks:
+        - text: All Systems Go!
+          link: https://all-systems-go.io/
+        - text: Cloud Native Rejekts
+          link: 'https://cloud-native.rejekts.io/'
+        - text: CNCF Meetup Berlin
+          link: 'https://www.meetup.com/Cloud-Native-Computing-Berlin/'
+    - title: Company
+      quicklinks:
+        - text: Blog
+          link: /blog
+        - text: Careers
+          link: /careers
+        - text: About
+          link: /about
+        - text: Imprint
+          link: /impressum
+social:
+- title: Facebook
+  url: 'https://www.facebook.com/kinvolk'
+  image: "facebook-icon"
+- title: Twitter
+  url: 'https://twitter.com/kinvolkio'
+  image: 'twitter-icon'
+- title: Youtube
+  url: 'https://www.youtube.com/channel/UCfUyOoIxN2vBVegHfkkegdA'
+  image: 'youtube-icon'
+- title: Linkedin
+  url: 'https://www.linkedin.com/company/kinvolk'
+  image: 'linkedin-icon'
+- title: Github
+  url: 'https://github.com/kinvolk'
+  image: 'github-icon'

@@ -1,53 +1,94 @@
 <article class="article">
   <div class="container">
-    <div class="row">
-      <div class="article__header">
-        <div class="article__subheader">Latest rom the blog</div>
-        <div class="article__title">{{ .Title }}</div>
 
-        <div class="article__hero-image">
-          <img src="/images/blog/{{ .Params.heroImage }}" alt="article image">
-        </div>
+
+      <div class="row align-items-center page-header">
+          <div class="page-subtitle">Latest rom the blog</div>
+          <div class="section-title">{{ .Title }}</div>
       </div>
 
-      <div class="col-md-4 aside">
-        <div class="article__author">
-          <div class="aside__title">AUTHOR</div>
-          <div class="article__author-name">{{ .Params.author }}</div>
-          <div class="article__author-position">{{ .Params.authorPosition }}</div>
+      <div class="row article__hero-image">
+          <img src="/images/blog/{{ .Params.postImage }}" alt="article image">
         </div>
 
-        <div class="article__product">
-          <div class="aside__title">our product</div>
-          <a href="{{ .Params.productLink }}">
-            <img src="/images/blog/{{ .Params.productImage }}" alt="product image">
-            <span>{{ .Params.productTitle }}</span>
-          </a>
+        <div class="row article__wrap">
+            <div class="col-md-4 aside">
+                <div class="row no-gutters col-12 col-sm-8 col-md-12 p-0 article__product">
+                  <div class="col-12 aside__title">our product</div>
+                  <a href="/" class="col-12 article__product-link">
+                    <img src="/images/blog/product-image.jpg" alt="product image">
+                    <span class="article__product-title">See Flatcar Linux
+                        <svg class="btn-arrow__icon" viewBox="0 0 12 20">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/arrow-big.svg#arrow-big"></use>
+                          </svg>
+                    </span>
+                  </a>
+                </div>
+        
+                <div class="row col-12 p-0  article__related">
+                  <div class="col-12 aside__title">relateD ARTICLES </div>
+
+                  {{ $page_link := .Permalink }}
+                  {{ $tags := .Params.tags }}
+                  {{ range .Site.Pages.ByDate.Reverse }}
+                    {{ $page := . }}
+                    {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+                    {{ if and $has_common_tags (ne $page_link $page.Permalink) (lt ($.Scratch.Get "$i") 2)}}
+                      {{ $.Scratch.Add "$i" 1 }}
+                      <div class="col-12 col-sm-6 col-md-9 article__related-item">
+                          <img src="/images/blog/{{ $page.Params.postImage }}" alt="post image">
+                          <a href="{{ $page.RelPermalink }}" class="article__related-title">{{ $page.Title | markdownify }}</a>
+                          <div class="article__related-author">
+                            {{ range $page.Params.authors }}
+                              <span>{{ . }}</span>
+                            {{ end }}
+                          </div>
+                        </div>
+                    {{ end }}
+                  {{ end }}
+        
+
+                </div>
+              </div>
+              <div class="col-md-8 article__content">
+                  {{ .Content }}
+        
+                  <div class="article__author">
+                    <div class="aside__title">AUTHOR</div>
+                    <div class="article__author-name">
+                      {{ range .Params.authors }}
+                        <span>{{ . }}</span>
+                      {{ end }}
+                    </div>
+                  </div>
+
+                  <div class="row no-gutters justify-content-between article__navigation">
+
+                      <div class="article__navigation-item article__navigation-back">
+                          <a href="{{ if .NextInSection }}{{ .NextInSection.Permalink }}{{ end }}" class="article__navigation-link {{ if not .NextInSection }}disabled{{ end }}">
+                              <div class="article__navigation-icon">
+                                  <svg class="btn-arrow__icon" viewBox="0 0 12 20">
+                                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/arrow-big.svg#arrow-big"></use>
+                                    </svg>
+                              </div>
+                            <span>back</span>
+
+                          </a>
+                        </div>
+                    <div class="article__navigation-item article__navigation-next">
+                      <a href="{{ if .PrevInSection }}{{ .PrevInSection.Permalink }}{{ end }}" class="article__navigation-link {{ if not .PrevInSection }}disabled{{ end }}">
+                        <span>next</span>
+                        <div class="article__navigation-icon">
+                            <svg class="btn-arrow__icon" viewBox="0 0 12 20">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/arrow-big.svg#arrow-big"></use>
+                              </svg>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+      
+              </div>
         </div>
-
-        <div class="article__related">
-          <div class="aside__title">relateD ARTICLES </div>
-
-          <div class="article__related-item">
-            <img src="/images/blog/related-image1.jpg" alt="post image">
-            <div class="article__related-title">We believe all of these tools fit well in a system</div>
-            <div class="article__related-author">by Chris</div>
-          </div>
-
-          <div class="article__related-item">
-            <img src="/images/blog/related-image2.jpg" alt="post image">
-            <div class="article__related-title">Kubernetes Monitoring: Fundamentals</div>
-            <div class="article__related-author">by Chris</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-8 article__content">
-          {{ .Content }}
-
-          {{if .NextInSection}}
-            next
-          {{ end }}
-      </div>
-    </div>
   </div>
 </article>

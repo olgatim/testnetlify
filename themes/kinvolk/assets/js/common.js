@@ -2,7 +2,7 @@ $('.mobile-menu').on('click', function(e) {
   $('body').toggleClass("mobile-menu_open");
 });
 
-  document.querySelectorAll(".nav-link").forEach(function(item) {
+  document.querySelectorAll(".nav-item.dropdown .nav-link").forEach(function(item) {
     item.addEventListener("click", function(e) {
       if($("body").hasClass("mobile-menu_open")) {
         e.preventDefault();
@@ -17,5 +17,3 @@ $('.mobile-menu').on('click', function(e) {
       }
     })
   });
-
-

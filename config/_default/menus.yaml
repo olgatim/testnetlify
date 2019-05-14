@@ -1,0 +1,37 @@
+main:
+  - name: Products
+    url: /products
+    identifier: products
+    weight: -20
+    icon: svg
+  - name: Flatcar Linux
+    parent: products
+    title: Linux for container
+    url: /
+    weight: 1
+    pre: <svg class="flatcar-logo" viewBox="0 0 66 40">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/flatcar-logo.svg#flatcar-logo"></use>
+          </svg>
+  - name: Lokomotive
+    parent: products
+    title: Drive Kuberenes forward
+    url: /
+    weight: 1
+    pre: <svg class="lokomotive-logo" viewBox="0 0 942 354">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/lokomotive-logo.svg#lokomotive-logo"></use>
+          </svg>
+  - name: Services
+    url: /services
+    weight: -15
+    icon: svg
+  - name: Company
+    url: /company
+    identifier: company
+    weight: -10
+    icon: svg
+  - name: Case Studies
+    url: /case-studies
+    weight: -5
+  - name: Blog
+    url: /blog
+    weight: 0

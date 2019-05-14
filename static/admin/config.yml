@@ -1,0 +1,37 @@
+backend:
+  name: github
+  repo: kinvolk/website # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/media"
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Tags", name: "tags", widget: "string"}
+      - {label: "Topics", name: "tags", widget: "string"}
+      - {label: "Authors", name: "authors", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "author"
+    label: "Author"
+    folder: "data/authors"
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Position", name: "position", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Currently at Kinvolk?", name: "current", widget: "boolean", default: true}
+      - {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - {label: "Twitter", name: "twitter", widget: "string"}
+      - {label: "Github", name: "github", widget: "string"}
+      - {label: "LinkedIn", name: "linkedin", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

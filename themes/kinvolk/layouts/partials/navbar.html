@@ -1,7 +1,5 @@
-
     <ul class="navbar-nav align-items-center">
-      {{ $currentPage := . }}
-  
+      {{ $currentPage := . }}  
       {{ range .Site.Menus.main }}
           {{ if .HasChildren }}
               <li class="nav-item dropdown">

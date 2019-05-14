@@ -20,8 +20,12 @@ body {
     @include calcWidth (1440px, 1920px, 1160px, 1510px);
   }
 
-  @include media-breakpoint-down(sm) {
-    padding: 0 16px;
+  @include media-breakpoint-down(lg) {
+    width: calc(100vw - 48px);
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: calc(100vw - 32px);
   }
 }
 
@@ -136,5 +140,58 @@ body {
     .swiper-pagination-bullet + .swiper-pagination-bullet {
       margin-left: 10px;
     }
+  }
+}
+.page-header {
+  flex-direction: column;
+  font-size: 18px;
+  margin-bottom: 5.56em;
+
+  @include media-breakpoint-up(xl) {
+    @include calcFontSize (1440px, 1920px, 18px, 22px);
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.page-subtitle {
+  font-weight: $font-weight-extra-bold;
+  text-transform: uppercase;
+  color: $headerSubtitleColor;
+  line-height: 1em;
+  margin-bottom: 1.1em;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+body:not(.home-page) main {
+  padding-top: 270px;
+
+  @include media-breakpoint-up(xxl) {
+    padding-top: 14.06vw;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 220px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 186px;
   }
 }

@@ -1,4 +1,5 @@
 .btn {
+  position: relative;
   text-transform: uppercase;
 
   @include media-breakpoint-up(xl) {
@@ -90,4 +91,16 @@
 .btn-green:active {
   color: $white;
   background: rgba($linkGreenColor, 1);
+}
+
+.btn-arrow__icon {
+  position: absolute;
+  right: 1.25em;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  fill: currentColor;
+  width: 0.67em;
+  margin-left: 22px;
 }
