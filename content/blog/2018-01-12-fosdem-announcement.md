@@ -6,12 +6,8 @@ draft = false
 tags = ["FOSDEM", "conference", "announcement"]
 title = "Join the Kinvolk team at FOSDEM 2018!"
 topics = ["open source", "events", "conference"]
-postImage =  "article-hero.jpg"
+postImage =  "FOSDEM_Blog1.png"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/FOSDEM_Blog1.png" class="img-fluid">
-</figure>
 
 FOSDEM, the premier European open source event that takes place in Brussels, is right around the corner! Most of the Kinvolk team is heading there for a collaborative weekend, with three of our engineers giving talks.
 

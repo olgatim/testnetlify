@@ -6,12 +6,8 @@ description = "Learn how to automatically build and stage app containers and use
 draft = false
 tags = ["habitat", "builder", "containers", "kubernetes"]
 topics = ["Containers", "Kubernetes", "Habitat"]
-postImage =  "article-hero.jpg"
+postImage =  "automated-build-to-kubernetes-with-habitat-builder.png"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/automated-build-to-kubernetes-with-habitat-builder.png" class="img-fluid">
-</figure>
 
 ## Introduction
 

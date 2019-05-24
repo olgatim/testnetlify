@@ -6,10 +6,8 @@ draft = false
 tags = ["linux", "containers", "service", "flatcar"]
 title = "Announcing the Flatcar Linux project"
 topics = ["blog", "announcement"]
-postImage =  "article-hero.jpg"
+postImage =  "flatcar-logo-text.svg"
 +++
-
-{{< figure src="/media/flatcar-logo-text.svg" class="img-fluid">}}
 
 Today Kinvolk announces [Flatcar Linux](https://flatcar-linux.org), an immutable Linux distribution for containers. With this announcement, Kinvolk is opening the Flatcar Linux project to early testers.
 If you are interested in becoming a tester and willing to provide feedback, please [let us know](https://docs.google.com/forms/d/1zferjzZGXN5p0B5tqUy19ye2Igwrgm-sS7Dly8jhb18/).

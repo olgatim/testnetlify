@@ -2,6 +2,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 270px;
+
+  @include media-breakpoint-up(xl) {
+    padding-top: 18.75vw;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 230px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 200px;
+  }
 
   .container > .row {
     position: relative;
@@ -9,44 +22,24 @@
 
   .section-hero__banner {
     padding-bottom: 130px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 270px;
+
 
     @include media-breakpoint-up(xl) {
-      padding-top: 18.75vw;
       padding-bottom: 9.02vw;
     }
 
     @include media-breakpoint-down(md) {
-      padding-top: 230px;
       padding-bottom: 90px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      padding-top: 200px;
-
     }
 
     @include media-breakpoint-down(xs) {
       padding-bottom: 70px;
-      padding-left: 16px;
-      padding-right: 16px;
     }
   }
 
   .section-hero__content {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 40px;
-    font-size: 36px;
-    padding-left: 1.11em !important;
-
-    @include media-breakpoint-up(xl) {
-      @include calcFontSize (1440px, 1920px, 36px, 44px);
-    }
+    padding-left: 40px !important;
+    padding-right: 10px !important;
 
     @include media-breakpoint-down(md) {
       padding-left: 0 !important;
@@ -59,34 +52,19 @@
 
   .section-hero__title {
     position: relative;
-    font-weight: $font-weight-extra-bold;
-    font-size: 1em;
-    line-height: 1.47em;
     text-transform: uppercase;
-    max-width: 17.8em;
-    margin-bottom: 0.78em;
-
-    @include media-breakpoint-up(xl) {
-      @include calcFontSize (1440px, 1920px, 36px, 44px);
-    }
-
-    @include media-breakpoint-down(lg) {
-      @include calcFontSize (1440px, 568px, 36px, 19px);
-    }
+    margin-bottom: 0.72em;    
 
     @include media-breakpoint-down(xs) {
-      width: 100%;
-      max-width: 400px;
-      font-size: 19px;
+      text-transform: inherit;
     }
-    
 
     .quotes {
       position: absolute;
       top: 0;
       left: 0;
       transform: translate(-100%, -100%);
-      width: 1.11em;
+      width: 40px;
       min-width: 40px;
 
       @include media-breakpoint-down(md) {
@@ -99,78 +77,44 @@
       display: block;
       width: 100%;
       height: auto;
-      fill: $quotesColor;
+      fill: $green;
     }
   }
 
   .section-hero__text {
-    font-size: 0.56em;
-    font-weight: $font-weight-extra-light;
-    line-height: 1.8em;
-    max-width: 26em;
-
-    @include media-breakpoint-up(xl) {
-      @include calcFontSize (1440px, 1920px, 20px, 24px);
-    }
-
-    @include media-breakpoint-down(lg) {
-      @include calcFontSize (1440px, 568px, 20px, 16px);
-    }
-
-    @include media-breakpoint-down(xs) {
-      line-height: 1.44em;
-    }
-
-    @include media-breakpoint-down(xs) {
-      width: 100%;
-      max-width: 360px;
-      font-size: 16px;
-    }
+    opacity: 0.8;
   }
 
   .section-hero__image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
+    position: relative;
     min-width: 180px;
-    padding-left: 40px !important;
 
     @include media-breakpoint-down(xs) {
       display: none;
     }
 
     img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
       transform: translateY(-5%);
       width: 100%;
       height: auto;
+      padding-left: 40px !important;
     }
   }
 
   .section-companies {
     position: relative;
-    display: flex;
-    align-items: center;
-    background: $companiesBackgroundColor;
-    padding: 20px 24px;
-
-    @include media-breakpoint-up(xl) {
-      padding: calc(10px + 2vw / 2.8) calc(10px + 2vw / 2.05);
-    }
-
-    @include media-breakpoint-down(sm) {
-      padding: 20px 24px;
-    }
+    background: $black;
+    padding: 20px 0px;
 
     @include media-breakpoint-down(xs) {
-      padding: 30px 16px;
+      padding: 30px 0;
     }
   
     > .container {
-      align-items: center;
-      justify-content: space-between;
       max-width: 960px;
 
       @include media-breakpoint-up(xl) {
@@ -178,12 +122,11 @@
         @include calcWidth (1440px, 1920px, 960px, 1250px);
       }
 
-      .row {
+      > .row {
         flex-wrap: nowrap;
 
         @include media-breakpoint-down(xs) {
-          flex-direction: column;
-          align-items: center;
+          flex-wrap: wrap;
         }
       }
     }
@@ -196,24 +139,16 @@
     font-weight: $font-weight-light;
     font-size: 12px;
     color: rgba($white, 0.8);
-    line-height: 1.67em;
-    max-width: 272px;
     min-width: 230px;
     flex-shrink: 0;
     padding-left: 86px !important;
 
-    @include media-breakpoint-up(xl) {
-      @include calcFontSize (1440px, 1920px, 12px, 14px);
-      padding-left: 7.17em !important;
-      max-width: 22.7em;
-    }
-
     @include media-breakpoint-down(xs) {
-      font-size: 10px;
       margin-bottom: 30px;
       padding-left: 0 !important;
       padding-top: 60px !important;
       justify-content: center;
+      text-align: center;
     }
   
     &:before {
@@ -226,14 +161,14 @@
       margin: auto;
       width: 28px;
       height: 28px;
-      background: $companiesSquareFrontColor;
+      background: $green;
       transform: rotate(-45deg);
-      box-shadow: 18px 18px 0 0 $companiesSquareBackColor;
+      box-shadow: 18px 18px 0 0 $white;
 
       @include media-breakpoint-up(xl) {
         width: 2.33em;
         height: 2.33em;
-        box-shadow: 1.5em 1.5em 0 0 $companiesSquareBackColor;
+        box-shadow: 1.5em 1.5em 0 0 $white;
       }
 
       @include media-breakpoint-down(xs) {
@@ -244,67 +179,25 @@
   }
   
   .section-companies__list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-left: auto;
+    margin-bottom: 0;
+    flex-wrap: nowrap !important;
 
     @include media-breakpoint-down(sm) {
-      flex-wrap: wrap;
+      flex-wrap: wrap !important;
     }
 
     @include media-breakpoint-down(xs) {
       flex-wrap: wrap;
-      margin-right: auto;
     }
   }
   
   .section-companies__item {
-    @include media-breakpoint-down(sm) {
-      width: 50%;
-      padding: 0px 20px;
-    }
+    display: flex;
+    align-items: center;
 
-    @include media-breakpoint-down(xs) {
-      text-align: center;
-      padding: 0;
-    }
-  }
-
-  .section-companies__item + .section-companies__item  {
-    @include media-breakpoint-up(md) {
-      margin-left: 15px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      margin-left: 0.78vw;
-    }
-  }
-
-  .section-companies__image {
-    width: 100%;
-    height: auto;
-    max-width: 140px;
-
-    @include media-breakpoint-up(xxl) {
-      width: 7.3vw;
-      max-width: 400px;
-    }
-
-    @include media-breakpoint-down(sm) {
-      max-width: 100px;
-    }
-
-    @include media-breakpoint-down(xs) {
-      max-width: 120px;
-    }
-  }
-  
-  .section-companies__item + .section-companies__item {
-    &:not(:nth-child(2)) {
-      @include media-breakpoint-down(sm) {
-        margin-top: 20px;
-      }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

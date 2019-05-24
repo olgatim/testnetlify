@@ -9,3 +9,7 @@ pluralizelisttitles: "false"
 paginate: 12
 permalinks:
   blog: "/blog/:year/:month/:title/"
+
+pygmentsCodefences: true
+pygmentsCodefencesGuessSyntax: true
+pygmentsStyle: "friendly"

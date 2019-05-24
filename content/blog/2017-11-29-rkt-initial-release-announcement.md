@@ -6,12 +6,8 @@ description = ""
 draft = false
 tags = ["rktlet", "kubernetes", "systemd", "rkt", "containers", "cri"]
 topics = ["Containers", "Kubernetes", "Project"]
-postImage =  "article-hero.jpg"
+postImage =  "rktlet-logo.svg"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/rktlet-logo.svg" class="img-fluid">
-</figure>
 
 We are happy to announce the initial release of [rktlet](https://github.com/kubernetes-incubator/rktlet), the [rkt](https://github.com/rkt/rkt/) implementation of the [Kubernetes Container Runtime Interface](http://blog.kubernetes.io/2016/12/container-runtime-interface-cri-in-kubernetes.html). This is a preview release, and is not meant for production workloads.
 

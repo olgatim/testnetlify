@@ -6,13 +6,9 @@ draft = false
 tags = ["ci", "habitat", "kubernetes", "minikube"]
 title = "Running Kubernetes on Travis CI with minikube"
 topics = ["Habitat", "Testing", "Kubernetes"]
-postImage =  "article-hero.jpg"
+postImage =  "minikube-on-travis-blog.png"
 
 +++
-
-<figure class="img-fluid">
-	<img src="/media/minikube-on-travis-blog.png" class="img-fluid">
-</figure>
 
 It is not easily possible to run Kubernetes on [Travis CI](https://travis-ci.com/), as most methods of setting up a cluster need to create resources on AWS, or another cloud provider. And setting up VMs is also not possible as Travis CI doesn't allow nested virtualization. This post explains how to use minikube without additional resources, with a few simple steps.
 

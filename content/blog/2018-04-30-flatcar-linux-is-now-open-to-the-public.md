@@ -6,12 +6,8 @@ draft = false
 tags = ["linux", "containers", "service", "flatcar"]
 title = "Flatcar Linux is now open to the public"
 topics = ["blog", "announcement"]
-postImage =  "article-hero.jpg"
+postImage =  "flatcar-linux-public-release.png"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/flatcar-linux-public-release.png" class="img-fluid">
-</figure>
 
 A few weeks ago [we announced Flatcar Linux](https://kinvolk.io/blog/2018/03/announcing-the-flatcar-linux-project/), our effort to create a commercially supported fork of [CoreOS' container Linux](https://coreos.com/why/). You can find the reasoning for the fork in our [FAQ](https://www.flatcar-linux.org/faq/).
 

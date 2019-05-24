@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: kinvolk/website # Branch to update (optional; defaults to master)
+  name: git-gateway
+  branch: next-master-test # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "static/images/uploads"
 public_folder: "/media"

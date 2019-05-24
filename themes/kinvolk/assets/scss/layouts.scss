@@ -9,9 +9,20 @@ html, body {
 
 body {
   position: relative;
+}
+
+ul, ol {
+  padding: 0;
   margin: 0;
-  background: $white;
-  font-family: $font-family-Montserrat;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .container {
@@ -29,40 +40,33 @@ body {
   }
 }
 
-.section-title {
-  font-size: 36px;
-  font-weight: $font-weight-extra-bold;
-  line-height: 1.47em;
-  margin-bottom: 0.61em;
-  text-transform: uppercase;
-
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize (1440px, 1920px, 36px, 44px);
-  }
-
-  @include media-breakpoint-down(md) {
-    font-size: 32px;
-  }
+section {
+  padding-top: 160px;
 
   @include media-breakpoint-down(sm) {
-    font-size: 26px;
+    padding-top: 110px;
   }
 
   @include media-breakpoint-down(xs) {
-    font-size: 20px;
-    margin-bottom: 12px;
-    line-height: 1.5em;
+    padding-top: 70px;
   }
 }
 
-.section-description {
-  font-size: 20px;
-  font-weight: $font-weight-extra-light;
-  line-height: 1.75em;
+// .section-product, .section-work-on {
+//   .container {
+//     max-width: 960px;
 
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize (1440px, 1920px, 20px, 24px);
-  }
+//     @include media-breakpoint-up(xl) {
+//       max-width: none;
+//       @include calcWidth (1440px, 1920px, 960px, 1250px);
+//     }
+//   }
+// }
+
+section p {
+  font-size: 20px;
+  line-height: 1.75em;
+  font-weight: $font-weight-extra-light;
 
   @include media-breakpoint-down(md) {
     font-size: 18px;
@@ -71,117 +75,22 @@ body {
   @include media-breakpoint-down(sm) {
     font-size: 16px;
   }
-
-  @include media-breakpoint-down(xs) {
-    font-size: 14px;
-    line-height: 1.86em;
-  }
 }
 
-.feature-slider {
-  .feature-slider__index {
-    width: 1.6em;
-    height: 1.6em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 0;
-    font-size: 1.125em;
-    font-weight: $font-weight-semi-bold;
-
-    @include media-breakpoint-down(xl) {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  .feature-slider__container {
-    @include media-breakpoint-up(sm) {
-      cursor: auto !important;
-    }
-  }
-
-  .feature-slider__title {
-    font-size: 1.125em;
-    font-weight: $font-weight-semi-bold;
-    line-height: 1.5em;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 1em;
-    }
-  }
-
-  .feature-slider__description {
-    font-size: 1em;
-    font-weight: $font-weight-light;
-    line-height: 1.75em;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 0.875em;
-    }
-  }
-
-  .feature-slider__pagination {
-    bottom: 0;
-    font-size: 0;
-
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
-
-    .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      border-radius: 0;
-      margin: 0;
-      opacity: 1;
-    }
-
-    .swiper-pagination-bullet + .swiper-pagination-bullet {
-      margin-left: 10px;
-    }
-  }
-}
-.page-header {
-  flex-direction: column;
-  font-size: 18px;
-  margin-bottom: 5.56em;
-
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize (1440px, 1920px, 18px, 22px);
-  }
-
-  @include media-breakpoint-down(sm) {
-    font-size: 16px;
-    margin-bottom: 40px;
-  }
-
-  @include media-breakpoint-down(xs) {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  .section-title {
-    margin-bottom: 0;
-    text-align: center;
-  }
-}
-
-.page-subtitle {
-  font-weight: $font-weight-extra-bold;
+section h2 {
   text-transform: uppercase;
-  color: $headerSubtitleColor;
-  line-height: 1em;
-  margin-bottom: 1.1em;
+
+  @include media-breakpoint-down(md) {
+      font-size: 28px;
+  }
 
   @include media-breakpoint-down(sm) {
-    margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 
 body:not(.home-page) main {
-  padding-top: 270px;
+  padding-top: 170px;
 
   @include media-breakpoint-up(xxl) {
     padding-top: 14.06vw;

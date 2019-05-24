@@ -6,14 +6,9 @@ draft = false
 tags = ["ebpf", "gobpf", "golang"]
 title = "Introducing gobpf - Using eBPF from Go"
 topics = ["ebpf", "gobpf", "golang"]
-postImage =  "article-hero.jpg"
+postImage =  "gopher-plus-bcc.svg"
 
 +++
-
-<figure class="img-fluid">
-	<img src="/media/gopher-plus-bcc.svg" class="img-fluid">
-    <figcaption class="figure-caption">Gopher by <a href="https://twitter.com/tenntenn">Takuya Ueda</a> - <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></figcaption>
-</figure>
 
 ## What is eBPF?
 

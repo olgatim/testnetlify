@@ -6,12 +6,8 @@ description = ""
 draft = false
 tags = ["kube-spawn", "kubernetes", "systemd", "nspawn", "containers", "machinectl", "kubeadm"]
 topics = ["Containers", "Kubernetes", "Tools", "Project"]
-postImage =  "article-hero.jpg"
+postImage =  "kubespawn-logo.svg"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/kubespawn-logo.svg" class="img-fluid">
-</figure>
 
 There’s been a number of changes in kube-spawn [kube-spawn](https://github.com/kinvolk/kube-spawn/releases) since [we announced it](https://kinvolk.io/blog/2017/08/introducing-kube-spawn-a-tool-to-create-local-multi-node-kubernetes-clusters/).
 

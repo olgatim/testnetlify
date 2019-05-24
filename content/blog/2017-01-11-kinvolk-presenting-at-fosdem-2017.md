@@ -6,12 +6,9 @@ description = ""
 authors = ["Kinvolk"]
 date = "2017-01-11T17:26:54+01:00"
 title = "Kinvolk Presenting at FOSDEM 2017"
-postImage =  "article-hero.jpg"
+postImage =  "FOSDEM_logo.png"
 
 +++
-
-{{< figure src="/media/FOSDEM_logo.png" >}}
-
 
 _The same procedure as last year, Miss Sophie?_  
 _The same procedure as every year, James!_

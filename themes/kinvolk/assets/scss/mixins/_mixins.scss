@@ -2,10 +2,6 @@
   @return $value / ($value * 0 + 1);
 }
 
-@mixin calcFontSize ($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-}
-
 @mixin calcWidth ($min-vw, $max-vw, $min-maxwidth, $max-maxwidth) {
   width: calc(#{$min-maxwidth} + #{strip-unit($max-maxwidth - $min-maxwidth)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
 }

@@ -6,12 +6,8 @@ description = ""
 draft = false
 tags = ["habitat", "containers", "kubernetes"]
 topics = ["Containers", "Kubernetes", "Habitat"]
-postImage =  "article-hero.jpg"
+postImage =  "get-started-with-habitat-on-Kubernetes.png"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/get-started-with-habitat-on-Kubernetes.png" class="img-fluid">
-</figure>
 
 [Habitat](https://www.habitat.sh/) is a project that aims to solve the problem of building, deploying and managing services. We at Kinvolk have been working on Kubernetes integration for Habitat in cooperation with Chef. This integration comes in the form of a Kubernetes controller called Habitat operator. The Habitat operator allows cluster administrators to fully utilize Habitat features inside their Kubernetes clusters, all the while maintaining high compatibility with the “Kubernetes way” of doing things. For more details about Habitat and the Habitat operator have a look at [our introductory blog post](https://kinvolk.io/blog/2017/10/habitat-operator---running-habitat-services-with-kubernetes/).
 

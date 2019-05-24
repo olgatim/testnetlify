@@ -3,30 +3,18 @@
 
 
       <div class="row align-items-center page-header">
-          <div class="page-subtitle">Latest rom the blog</div>
           <div class="section-title">{{ .Title }}</div>
       </div>
 
       <div class="row article__hero-image">
-          <img src="/images/blog/{{ .Params.postImage }}" alt="article image">
+          <img src="/media/{{ .Params.postImage }}" alt="article image">
         </div>
 
         <div class="row article__wrap">
             <div class="col-md-4 aside">
-                <div class="row no-gutters col-12 col-sm-8 col-md-12 p-0 article__product">
-                  <div class="col-12 aside__title">our product</div>
-                  <a href="/" class="col-12 article__product-link">
-                    <img src="/images/blog/product-image.jpg" alt="product image">
-                    <span class="article__product-title">See Flatcar Linux
-                        <svg class="btn-arrow__icon" viewBox="0 0 12 20">
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/arrow-big.svg#arrow-big"></use>
-                          </svg>
-                    </span>
-                  </a>
-                </div>
-        
+              
                 <div class="row col-12 p-0  article__related">
-                  <div class="col-12 aside__title">relateD ARTICLES </div>
+                  <div class="col-12 aside__title">RELATED ARTICLES </div>
 
                   {{ $page_link := .Permalink }}
                   {{ $tags := .Params.tags }}
@@ -36,7 +24,7 @@
                     {{ if and $has_common_tags (ne $page_link $page.Permalink) (lt ($.Scratch.Get "$i") 2)}}
                       {{ $.Scratch.Add "$i" 1 }}
                       <div class="col-12 col-sm-6 col-md-9 article__related-item">
-                          <img src="/images/blog/{{ $page.Params.postImage }}" alt="post image">
+                          <img src="/media/{{ $page.Params.postImage }}" alt="post image">
                           <a href="{{ $page.RelPermalink }}" class="article__related-title">{{ $page.Title | markdownify }}</a>
                           <div class="article__related-author">
                             {{ range $page.Params.authors }}
@@ -65,7 +53,7 @@
                   <div class="row no-gutters justify-content-between article__navigation">
 
                       <div class="article__navigation-item article__navigation-back">
-                          <a href="{{ if .NextInSection }}{{ .NextInSection.Permalink }}{{ end }}" class="article__navigation-link {{ if not .NextInSection }}disabled{{ end }}">
+                          <a href="{{ if .PrevInSection }}{{ .PrevInSection.Permalink }}{{ end }}" class="article__navigation-link {{ if not .PrevInSection }}disabled{{ end }}">
                               <div class="article__navigation-icon">
                                   <svg class="btn-arrow__icon" viewBox="0 0 12 20">
                                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/arrow-big.svg#arrow-big"></use>
@@ -76,7 +64,7 @@
                           </a>
                         </div>
                     <div class="article__navigation-item article__navigation-next">
-                      <a href="{{ if .PrevInSection }}{{ .PrevInSection.Permalink }}{{ end }}" class="article__navigation-link {{ if not .PrevInSection }}disabled{{ end }}">
+                      <a href="{{ if .NextInSection }}{{ .NextInSection.Permalink }}{{ end }}" class="article__navigation-link {{ if not .NextInSection }}disabled{{ end }}">
                         <span>next</span>
                         <div class="article__navigation-icon">
                             <svg class="btn-arrow__icon" viewBox="0 0 12 20">

@@ -1,14 +1,14 @@
-@import "./variables";
-
-@import "./bootstrap/bootstrap.scss";
-
+// This file is the main entry point for the Kinvolk theme.
+// brings in the bootstrap theme customizations + all the
+// theme specific files.
 @import "./mixins/mixins.scss";
 
-@import "./styles";
+// Bring in our bootstrap customizations
+@import "./custom";
+
 @import "./fonts";
 
 @import "./layouts.scss";
-@import "./common.scss";
 @import "./buttons.scss";
 
 @import "./partials/header.scss";
@@ -17,8 +17,9 @@
 @import "./partials/footer.scss";
 @import "./partials/form.scss";
 
-
+// Front page sections
 @import "./sections/section-hero.scss";
+@import "./sections/section-product.scss";
 @import "./sections/section-lokomotive.scss";
 @import "./sections/section-work-on.scss";
 @import "./sections/section-contact-us.scss";

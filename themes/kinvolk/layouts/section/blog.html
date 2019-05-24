@@ -7,14 +7,14 @@
           <div class="container">
 
             <div class="row align-items-center page-header">
-              <div class="page-subtitle">Latest from the Blog</div>
               <div class="section-title">What We are Crazy About</div>
+              <div class="page-subtitle">Latest from the Blog</div>
             </div>
             <div class="row post-hero post__item">
               {{ $posts := (where .Data.Pages "Type" "blog").ByDate.Reverse }}
               {{ range first 1 $posts }}
               <div class="col-sm-12 col-md-8 p-0 post-hero__image">
-                <img src="/images/blog/{{ .Params.postImage }}" alt="post image">
+                <img src="/media/{{ .Params.postImage }}" alt="post image">
               </div>
               <div class="col-sm-12 col-md-4 p-0 post-hero__content">
                   <a href="{{ .Permalink }}" class="post__title">
@@ -35,9 +35,9 @@
               <div class="row blog-posts">
                   {{ range after 1 $posts }}
                   <div class="col-12 col-sm-6 col-md-4 post__item">
+                    <img src="/media/{{ .Params.postImage }}" alt="post image">
                     <a href="{{ .Permalink }}" class="post__title">{{ .Title }}</a>
                     <div class="post__description">{{ .Params.description }}</div>
-                    <img src="/images/blog/{{ .Params.postImage }}" alt="post image">
                   </div>
                   {{ end }}
               </div>
@@ -47,7 +47,6 @@
 
 
         </main>
-    </body>
 
     {{- partial "footer.html" . -}}
 
@@ -56,4 +55,5 @@
     {{ $js := slice $common | resources.Concat "js/bundle.js" }}
 
     <script src="{{ $js.Permalink }}"></script>
+    </body>
 </html>

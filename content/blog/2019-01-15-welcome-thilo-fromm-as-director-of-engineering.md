@@ -6,12 +6,8 @@ description = "Kinvolk is welcoming Thilo Fromm as Director of Engineering to ov
 draft = false
 title = "Kinvolk welcomes Thilo Fromm as Director of Engineering"
 date = "2019-01-15T12:00:00+02:00"
-postImage =  "article-hero.jpg"
+postImage =  "presenting-thilo.jpg"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/presenting-thilo.jpg" class="img-fluid">
-</figure>
 
 Today we are pleased to announce Thilo Fromm has joined Kinvolk as Director of Engineering.
 He comes to us via Amazon Web Services where he we was a Technical Project Manager on the EC2 team.

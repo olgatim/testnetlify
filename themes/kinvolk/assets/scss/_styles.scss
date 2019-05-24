@@ -1,58 +1,221 @@
-//BUTTONS
-$linkBlackColor: #000000;
-$linkGreenColor: #17B838;
+// Buttons
 
-// HEADER
+.btn-md {
+  @include button-size($btn-padding-y-md, $btn-padding-x-md, $btn-font-size-md, $btn-line-height-md, $btn-border-radius-md);
+  letter-spacing: 1px;
+}
 
-$menuLinkHoverColor: #FFF200;
+// Navbar
 
-$subMenuFirstColor: #23ECFA;
-$subMenuSecondColor: #FFF200;
+.navbar-toggler {
+  position: relative;
+  border: none;
+  width: 20px;
+  height: 18px;
+  outline: none !important;
 
-$headerButtonMobileColor: #17B838;
+  > span {
+    background: black;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s;
 
-// HERO SECTION
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      transition: all 0.3s;
+    }
 
-$quotesColor: #17B838;
+    &:before {
+      box-shadow: 0 8px black;
+      backface-visibility: hidden;
+    }
 
-$companiesBackgroundColor: #000000;
-$companiesSquareFrontColor: #17B838;
-$companiesSquareBackColor: #ffffff;
+    &:after {
+      box-shadow: 0 16px black;
+    }
+  }
+}
 
-//FOOTER
+// Dropdown
 
-$footerLinkColor: #000000;
-$footerLineColor: #C4C4C4;
-$footerLinkHoverColor: #17B838;
-$socialsLinkHoverColor: #17B838;
+.dropdown-menu {
+  border-top: 2em solid rgba($white, 0);
+  font-size: 1.17em;
+  min-width: 9.3em;
 
-//LOKOMOTIVE SECTION
+  @include media-breakpoint-down(sm) {
+    font-size: 0.875em;
+    border: none;
+  }
+}
 
-$lokomotiveBackgroundColor: #FFE000;
-$lokomotiveLogoColor: #000000;
-$lokomotiveSlideIndexBackground: #17B838;
-$lokomotiveSlideIndexColor: #ffffff;
-$lokomotiveSliderPaginationActiveColor: #ffffff;
-$lokomotiveSliderPaginationColor: #BE8900;
+.dropdown-item {
+  font-weight: $font-weight-extra-bold;
+  transition: color 0.3s, background-color 0.3s;
 
-//WORK ON SECTION
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    line-height: 1.71em;
+  }
+}
 
-$workOnBackgroundColor: #ffffff;
+.dropdown-menu_lg {
+  padding: $dropdown-padding-y-lg 0;
 
-//CONTACT US
+  @include media-breakpoint-down(sm) {
+    padding: 0px 16px;
+    font-size: 1em;
+  }
 
-$mapShadowColor: #FFF200;
-$formErrorColor: #FF0101;
+  .dropdown-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0 $dropdown-item-padding-x-lg;
 
-//BLOG PAGE
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+      align-items: center;
+      padding: 26px 10px;
+    }
+  }
 
-$headerSubtitleColor: #F72E5C;
-$postLinkHoverColor: #17B838;
+  .dropdown-item + .dropdown-item {
+    @include media-breakpoint-down(sm) {
+      box-shadow: 0 -1px 0 0 $white;;
+    }
+  }
 
-//ARTICLE PAGE
+  .dropdown-item__icon {
+    width: 4.64em;
+    margin-right: 2.07em;
 
-$asideLinkColor: #17B838;
-$asideLinkHoverColor: #FFF200;
-$navigationLinkColor: #17B838;
-$navigationLinkDisabledColor: #6E6D6D;
-$navigationIconDisabledColor: #C4C4C4;
+    @include media-breakpoint-down(xs) {
+      margin-right: 20px;
+    }
+  }
+
+  .dropdown-item__title {
+    font-size: 1.43em;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 0.25em;
+    transition: color 0.3s;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1em;
+      margin-bottom: 0;
+    }
+  }
+
+  .dropdown-item__text {
+    font-size: 1em;
+    line-height: 1.43em;
+    font-weight: $font-weight-normal;
+    transition: color 0.3s;
+  }
+
+  .dropdown-item__icon {
+    transition: fill 0.3s;
+  }
+
+  .dropdown-item:nth-child(1) {
+    .dropdown-item__title {
+      color: $cyan;
+    }
+
+    .dropdown-item__icon {
+      fill: $cyan;
+    }
+  }
+
+  .dropdown-item:nth-child(2) {
+    .dropdown-item__title {
+      color: $yellow;
+    }
+
+    .dropdown-item__icon {
+      fill: $yellow;
+    }
+  }
+
+  .dropdown-item:hover {
+    @include media-breakpoint-up(md) {
+      color: $dropdown-link-hover-color-lg;
+      background: $dropdown-link-hover-bg-lg;
+  
+      .dropdown-item__title {
+        color: $dropdown-link-hover-color-lg;
+      }
+  
+      .dropdown-item__icon {
+        fill: $dropdown-link-hover-color-lg;
+      }
+    }
+  }
+}
+
+.nav-item.dropdown:hover>.dropdown-menu.dropdown-menu_lg {
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+
+// Form
+
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+  box-shadow: none;
+}
+
+// Cards
+
+.card-header {
+  padding: 0;
+}
+
+.card-body {
+  padding: $card-spacer-y $card-spacer-x 0;
+
+  @include media-breakpoint-down(xs) {
+    padding: $card-spacer-y-sm $card-spacer-x-sm 0;
+  }
+}
+
+.card-title {
+  @include media-breakpoint-down(xs) {
+    margin-bottom: $card-spacer-y-sm;
+  }
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card-header {
+  font-size: 18px;
+}
+
+// Carousel 
+
+.carousel-inner {
+  padding-bottom: 40px;
+}
+
+.carousel-indicators li {
+  background: $carousel-indicator-bg;
+  opacity: 1;
+
+  &.active {
+    background: $carousel-indicator-active-bg;
+  }
+}

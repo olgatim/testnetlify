@@ -6,12 +6,8 @@ description = ""
 draft = false
 tags = ["kube-spawn", "kubernetes", "systemd", "nspawn", "containers", "machinectl", "kubeadm"]
 topics = ["Containers", "Kubernetes", "Tools", "Project"]
-postImage =  "article-hero.jpg"
+postImage =  "kubernetes-the-hab-way.png"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/kubernetes-the-hab-way.png" class="img-fluid">
-</figure>
 
 How does a Kubernetes setup the Hab(itat) way look? In this blog post we will explore how to use [Habitat’s](https://www.habitat.sh) application automation to set up and run a Kubernetes cluster from scratch, based on the well-known “[Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)” manual by [Kelsey Hightower](https://github.com/kelseyhightower).
 

@@ -25,6 +25,10 @@
 }
 
 .header__navigation {
+  margin-top: -8px;
+}
+
+.header__navigation {
   @include media-breakpoint-down(sm) {
     text-align: center;
     margin-top: 60px;
@@ -36,19 +40,14 @@
 }
 
 .header__link {
-  font-size: 12px;
   margin-left: 72px;
-
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize(1440px, 1920px, 12px, 16px);
-  }
 
   @include media-breakpoint-up(xxl) {
     margin-left: 3.75vw;
   }
 
   @include media-breakpoint-down(lg) {
-    margin-left: 68px;
+    margin-left: 60px;
   }
 
   @include media-breakpoint-down(md) {
@@ -56,90 +55,51 @@
   }
 
   @include media-breakpoint-down(sm) {
-    font-size: 16px;
     margin-left: 0;
     margin-top: 78px;
     padding: 1.38em 5.58em;
-    background: $headerButtonMobileColor;
+    background: $green;
+    font-size: 16px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    width: 100%;
   }
 }
+@include media-breakpoint-down(sm) {
+  body.mobile-menu_open {
+    .header {
+      position: fixed;
+      height: 100%;
+      background: $white;
+      overflow: hidden auto;
+    }
 
-body.mobile-menu_open {
-  .header {
-    position: fixed;
-    height: 100%;
-    background: $white;
-    overflow: hidden auto;
-  }
+    .dropdown-menu {
+      transition: all 0s;
+    }
 
-  .dropdown-menu {
-    transition: all 0s;
-  }
+    .mobile-menu {
+      background: $white;
+      height: 20px;
 
-  .mobile-menu {
-    background: $white;
-    height: 20px;
-
-    > span {
-      width: 24px;
-      transform: rotate(45deg) translate(-2px, 0px);
-      top: 50%;
-      background: $black;
-
-      &:before {
-        transform: scaleX(0);
-      }
-
-      &:after {
-        transform: rotate(90deg) translate(-1px, 0px);
+      > span {
+        width: 24px;
+        transform: rotate(45deg) translate(-2px, 0px);
         top: 50%;
         background: $black;
-        box-shadow: none;
+
+        &:before {
+          transform: scaleX(0);
+        }
+
+        &:after {
+          transform: rotate(90deg) translate(-1px, 0px);
+          top: 50%;
+          background: $black;
+          box-shadow: none;
+        }
       }
-    }
-  }
-}
-
-.navbar-toggler {
-  position: relative;
-  border: none;
-  width: 20px;
-  height: 18px;
-  outline: none !important;
-
-  @include media-breakpoint-down(sm) {
-    top: 22px;
-  }
-
-  > span {
-    background: black;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    transition: all 0.3s;
-
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 2px;
-      transition: all 0.3s;
-    }
-
-    &:before {
-      box-shadow: 0 8px black;
-      backface-visibility: hidden;
-    }
-
-    &:after {
-      box-shadow: 0 16px black;
     }
   }
 }

@@ -6,13 +6,9 @@ draft = false
 tags = ["habitat", "kubernetes"]
 title = "Habitat Operator - Running Habitat Services with Kubernetes"
 topics = ["Habitat", "Containers", "Kubernetes"]
-postImage =  "article-hero.jpg"
+postImage =  "habitat-loves-kubernetes.jpg"
 
 +++
-
-<figure class="img-fluid">
-	<img src="/media/habitat-loves-kubernetes.jpg" class="img-fluid">
-</figure>
 
 For the last few months, we’ve been working with the Habitat team at [Chef](https://www.chef.io/) to make Habitat-packaged applications run well in [Kubernetes](https://kubernetes.io/). The result of this collaboration is the [Habitat Operator](https://github.com/kinvolk/habitat-operator), a Kubernetes controller used to deploy, configure and manage applications packaged with Habitat inside of Kubernetes. This article will give an overview of that work — particularly the issues to address, solutions to those issues, and future work.
 

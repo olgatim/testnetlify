@@ -6,12 +6,8 @@ draft = false
 tags = ["linux", "containers", "build", "rootless", "unprivileged"]
 title = "Towards unprivileged container builds"
 topics = ["linux", "containers"]
-postImage =  "article-hero.jpg"
+postImage =  "thomas-peham-435981-unsplash.jpg"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/thomas-peham-435981-unsplash.jpg" class="img-fluid">
-</figure>
 
 Once upon a time, software was built and installed with the classic triptych `./configure`, `make`, `make install`. The build part with `make` didn’t need to be run as root, which was, in fact, discouraged.
 

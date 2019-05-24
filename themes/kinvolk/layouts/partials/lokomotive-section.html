@@ -1,39 +1,71 @@
 {{ with .Site.Data.sections.lokomotive }}
-<section class="section-lokomotive">
+<section class="section-product section-lokomotive">
   <div class="container">
-      <div class="row flex-nowrap section-header">
-        <div class="col-12 col-sm-6 col-md-5 p-0 section-content">
-          <div class="section-title">{{ .title }}</div>
-          <p class="section-description">{{ .description }}</p>
-        </div>
-        <div class="col-12 col-sm-6 p-0 section-image">
+    <div class="row justify-content-center">
+
+      <div class="col-lg-10 p-0">
+        <div class="row justify-content-between">
+          <div class="col-12 col-sm-6 col-lg-6 offset-lg-1 section-image">
             <svg class="lokomotive-logo" viewBox="0 0 942 354">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/lokomotive-logo.svg#lokomotive-logo"></use>
-              </svg>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/products/lokomotive-logo.svg#lokomotive-logo"></use>
+            </svg>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-5 order-sm-first section-content">
+            <h2>{{ .title }}</h2>
+            <p>{{ .description }}</p>
+          </div>
         </div>
       </div>
 
-      <div class="row flex-nowrap section-feature">
-        <div class="feature-slider">
-          <div id="lokomotive-slider" class="swiper-container feature-slider__container">
-            <div class="row swiper-wrapper feature-slider__wrapper">
-              {{ range .features }}
-              <div class="col-md-4 swiper-slide feature-slider__item">
-                <div class="feature-slider__index">{{ .index }}</div>
-                <div class="feature-slider__title">{{ .title }}</div>
-                <div class="feature-slider__description">{{ .description }}</div>
+    </div>
+
+    <div class="row section-feature justify-content-center">
+      <div class="col-lg-10 p-0">
+        <div class="row justify-content-between d-none d-md-flex mt-6">
+            {{ range .features }}
+            <div class="col-12 col-md-4">
+              <div class="card">
+                <div class="card-header">
+                    <div class="card__index">{{ .index }}</div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ .title }}</h5>
+                    <p class="card-description">{{ .description }}</p>
+                </div>
               </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="row no-gutters d-none d-block d-md-none mt-5">
+          <div id="lokomotiveCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              {{ range $index,$item := .features }}
+                <li data-target="#lokomotiveCarousel" data-slide-to="{{ $index }}" class="{{ if eq $index 0 }}active{{ end }}"></li>
+              {{ end }}
+            </ol>
+            <div class="carousel-inner">
+              {{ range $index,$item := .features }}
+                <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+                  <div class="card">
+                    <div class="card-header">
+                        <div class="card__index">{{ $item.index }}</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $item.title }}</h5>
+                        <p class="card-description">{{ $item.description }}</p>
+                    </div>
+                  </div>
+                </div>
               {{ end }}
             </div>
-  
-            <div id="lokomotive-slider__pagination" class="swiper-pagination feature-slider__pagination"></div>
           </div>
         </div>
-        
-        <div class="row no-gutters w-100 justify-content-center">
-          <a href="{{ .link }}" class="btn btn-black"></span>Read more about</a>
-        </div>
       </div>
+    </div>  
+    <div class="row no-gutters w-100 mt-5 justify-content-center">
+      <a href="{{ .link }}" class="btn btn-md btn-black"></span>Read more about</a>
+    </div>
   </div>
 </section>
 {{ end }}

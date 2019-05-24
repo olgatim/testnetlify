@@ -1,17 +1,13 @@
 .btn {
   position: relative;
   text-transform: uppercase;
-
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize(1440px, 1920px, 16px, 20px);
-  }
 }
 
 .btn-black {
   position: relative;
   background: $black;
   color: $white;
-  box-shadow: inset 0 0 0 3px $linkBlackColor;
+  box-shadow: inset 0 0 0 3px $black;
   z-index: 1;
 
   @include media-breakpoint-down(sm) {
@@ -38,6 +34,7 @@
   @include media-breakpoint-up(md) {
     color: $black;
     background: rgba($black, 0);
+    box-shadow: inset 0 0 0 3px $black;
   }
 
   @include media-breakpoint-down(sm) {
@@ -52,9 +49,9 @@
 
 .btn-green {
   position: relative;
-  background: $linkGreenColor;
+  background: $green;
   color: $white;
-  box-shadow: inset 0 0 0 3px $linkGreenColor;
+  box-shadow: inset 0 0 0 3px $green;
   z-index: 1;
 
   @include media-breakpoint-down(sm) {
@@ -69,7 +66,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $linkGreenColor;
+    background: $green;
     z-index: -1;
     transform: scaleY(0);
     transition: transform 0.3s;
@@ -77,10 +74,10 @@
   }
 }
 
-.btn-green:hover, .btn-black:focus {
+.btn-green:hover, .btn-green:focus {
   @include media-breakpoint-up(md) {
     color: $black;
-    background: rgba($linkGreenColor, 0);
+    background: rgba($green, 0);
   }
 
   @include media-breakpoint-down(sm) {
@@ -90,7 +87,7 @@
 
 .btn-green:active {
   color: $white;
-  background: rgba($linkGreenColor, 1);
+  background: rgba($green, 1);
 }
 
 .btn-arrow__icon {

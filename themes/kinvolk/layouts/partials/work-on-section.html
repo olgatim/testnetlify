@@ -1,36 +1,49 @@
 {{ with .Site.Data.sections.sectionWorkOn }}
 <section class="section-work-on">
   <div class="container">
-    <div class="row section-header">
-      <div class="col-12 col-md-10 col-lg-8 p-0">
-        <div class="section-title">{{ .title }}</div>
-        <p class="section-description">{{ .description }}</p>
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-8 p-0">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 text-center section-header">
+                <h2 class="section-title">{{ .title }}</h2>
+                <p class="section-description">{{ .description }}</p>
+              </div>
+        </div>
       </div>
     </div>
 
-    <div class="row justify-content-center section-content">
-      <div class="col-12 col-md-10 col-lg-8 p-0 section-header">
-        <div class="section-title">{{ .contentTitle }}</div>
-        <p class="section-description">{{ .contentDescription }}</p>
-      </div>
-  
-      <ul class="row no-gutters col-md-12 col-lg-10 p-0 section-content__list">
-        {{ range .content }}
-          <li class="col-md-6 p-0 section-content__item">
-            <div class="col-md-9 p-0">
-              <div class="section-content__icon">
-                  <img src="/images/{{ .icon }}" alt="icon">
-                </div>
-                <div class="section-content__title">{{ .title }}</div>
-                <p class="section-content__description">{{ .description }}</p>
-                <div class="section-button">
-                  <a href="{{ .link }}" class="btn btn-green">LET'S GO!</a>
-                </div>
+    <section class="section-content">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center p-0">
+                <h2 class="section-title">{{ .contentTitle }}</h2>
+                <p class="col-md-9 p-0 ml-auto mr-auto section-description">{{ .contentDescription }}</p>
             </div>
-          </li>
-        {{ end }}
-      </ul>
-    </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-10">
+          <div class="row justify-content-between section-content__list">
+              {{ range .content }}
+              <div class="col-md-6 col-lg-5 section-content__item">
+                <div class="card content-card text-center">
+                  <img src="/images/{{ .icon }}" class="card-img-top card__icon" alt="icon">
+    
+                  <div class="card-body">
+                    <h5 class="card-title">{{ .title }}</h5>
+                    <p class="card-text">{{ .description }}</p>
+                    <a href="{{ .link }}" class="btn btn-lg btn-green">LET'S GO!</a>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </section>
 {{ end }}

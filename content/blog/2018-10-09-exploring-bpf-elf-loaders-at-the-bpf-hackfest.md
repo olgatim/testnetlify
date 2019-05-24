@@ -6,14 +6,10 @@ draft = false
 tags = ["ebpf", "hackfest"]
 title = "Exploring BPF ELF Loaders at the BPF Hackfest"
 topics = ["blog", "ebpf", "hackfest"]
-postImage =  "article-hero.jpg"
+postImage =  "bpf-hackfest-photo.jpg"
 +++
 
 Just before the All Systems Go! conference, we had a BPF Hackfest at the Kinvolk office and one of the topics of discussion was to document different BPF ELF loaders. This blog post is the result of it.
-
-<figure class="img-fluid">
-	<img src="/media/bpf-hackfest-photo.jpg" class="img-fluid" width="70%">
-</figure>
 
 BPF is a new technology in the Linux kernel, which allows running custom code
 attached to kernel functions, network cards, or sockets amongst others. Since

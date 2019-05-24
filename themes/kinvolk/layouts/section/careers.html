@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <main class="main careers-page">
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                        <h2> Join us! </h2>
+
+                        <p>
+        Joining Kinvolk means becoming part of a supportive, knowledgeable and international team in Europe’s most vibrant city, working to build upon and improve technologies fundamental to modern Linux systems.
+                        </p>
+                        <h3> Current openings </h3>
+                        <p>Here are the positions we’re currently hiring for.
+                        </p>
+
+                        <ul>
+                        {{ range .Data.Pages }}
+                            {{ .Render "li"}}
+                        {{ end }}
+                        </ul>
+                        <p>
+        If you don’t find a position you feel matches your profile but are interested in working with us, we encourage you to contact us anyway.
+                        </p>
+                        <h4> What we offer </h4>
+
+                        <p>
+        We’re always looking for ways to make Kinvolk a friendly and motivating work environment. Here are some of the things we already offer to full-time employees.
+                            <ul>
+                                {{ range $.Site.Data.careers }}
+                                    {{ range .perks }}
+                                <li>{{ .perk }} </li>
+                                    {{ end }}
+                                {{ end }}
+                            </ul>
+                            <h3> Contact </h3>
+                        </p>
+                        <p>
+                            If you're interested, let us know at <a href="mailto:careers@kinvolk.io">careers@kinvolk.io</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

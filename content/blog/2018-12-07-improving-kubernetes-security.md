@@ -6,12 +6,8 @@ draft = false
 tags = ["kubernetes", "security", "gardener"]
 title = "Improving Kubernetes Security"
 topics = ["blog", "kubernetes", "security"]
-postImage =  "article-hero.jpg"
+postImage =  "k8s-security-esther-jiao-638890-unsplash.jpg"
 +++
-
-<figure class="img-fluid">
-	<img src="/media/k8s-security-esther-jiao-638890-unsplash.jpg" class="img-fluid">
-</figure>
 
 In summer 2018, the Gardener project team asked Kinvolk to execute several
 penetration tests in its role as a third-party contractor. We applied our

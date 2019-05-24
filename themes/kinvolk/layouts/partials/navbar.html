@@ -8,28 +8,31 @@
                   {{ .Name }}
                   <span class="navbar__link-underline"></span>
                 </a>
+
+                {{ $scratch := newScratch }}
+                {{ range .Children }}
+                  {{ $scratch.Add "itemLogo" .Pre }}
+                {{ end }}
   
-                  <ul class="dropdown-menu">
+                  <div class="dropdown-menu {{ if (gt (len ($scratch.Get "itemLogo")) 0) }}dropdown-menu_lg{{ end }}">
                     
         
                       {{ range $index, $elem := .Children }}
-                      
-                          <li class="dropdown-item p-0">
-                              
-                              <a href="{{ $elem.URL }}" class="dropdown-link">
-                                
-                                <div class="navbar-sub-menu__link-icon">
-                                  {{ $elem.Pre }}
-                                </div>
-                                <div class="navbar-sub-menu__link-description">
-                                  <div class="navbar-sub-menu__link-title">{{ $elem.Name }}</div>
-                                  <p class="navbar-sub-menu__text">{{ $elem.Title }}</p>
-                                </div>
-                              </a>
-                          </li>
+                      <a href="{{ $elem.URL }}" class="dropdown-item">
+                        {{ if gt (len .Pre) 0 }}
+                        <div class="dropdown-item__icon">
+                          {{ $elem.Pre }}
+                        </div>
+                        {{ end }}
+                        <div class="dropdown-item__description">
+                          <div class="dropdown-item__title">{{ $elem.Name }}</div>
+                          {{ with  $elem.Title }}
+                          <p class="dropdown-item__text">{{ $elem.Title }}</p>
+                          {{ end }}
+                        </div>
+                      </a>
                       {{ end }}
-               
-                  </ul>
+                  </div>
               </li>
           {{ else }}
               <li class="nav-item">
@@ -42,4 +45,4 @@
       {{ end }}
     </ul>
   
-    <a href="/" class="header__link btn btn-black"></span> Contact us</a>
+    <a href="/" class="header__link btn btn-sm btn-black"></span> Contact us</a>

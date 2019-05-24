@@ -29,6 +29,18 @@ main:
     identifier: company
     weight: -10
     icon: svg
+  - name: Careers
+    parent: company
+    url: /
+    weight: -20
+  - name: About
+    parent: company
+    url: /
+    weight: -10
+  - name: Imprint
+    parent: company
+    url: /
+    weight: 0
   - name: Case Studies
     url: /case-studies
     weight: -5

@@ -6,14 +6,10 @@ draft = false
 tags = ["bpf", "ebpf", "gobpf", "golang"]
 title = "An update on gobpf - ELF loading, uprobes, more program types"
 topics = ["ebpf", "gobpf", "golang"]
-postImage =  "article-hero.jpg"
+postImage =  "gopher-bpf-ninjas.png"
 
 +++
 
-<figure class="img-fluid">
-	<img src="/media/gopher-bpf-ninjas.png" class="img-fluid">
-    <figcaption class="figure-caption"><a href="https://github.com/ashleymcnamara/gophers">Gophers</a> by <a href="https://twitter.com/ashleymcnamara">Ashley McNamara</a>, Ponies by <a href="https://twitter.com/DeirdreS">Deirdré Straughan</a> - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></figcaption>
-</figure>
 
 Almost a year ago we [introduced gobpf](https://kinvolk.io/blog/2016/11/introducing-gobpf---using-ebpf-from-go/), a Go library to load and use eBPF programs from Go applications. Today we would like to give you a quick update on the changes and features added since then (i.e. the highlights of `git log --oneline --no-merges --since="November 30th 2016" master`).
                                         

@@ -1,39 +1,26 @@
 .socials__list {
-  display: flex;
-  align-items: center;
-  list-style: none;
+  font-size: 0;
 }
 
 .socials__item {
-  display: flex;
-  align-items: center;
-  background: $white;
   font-size: 16px;
-  transition: background-color 0.3s;
-  cursor: pointer;
+  line-height: 0;
 
-  @include media-breakpoint-up(xl) {
-    @include calcFontSize (1440px, 1920px, 16px, 20px);
+  a {
+    display: block;
   }
-}
-
-.socials__link {
-  color: $white;
-  display: flex;
-  align-items: baseline;
-  transition: color 0.3s;
 }
 
 .socials__link:hover {
   .socials__icon {
     @include media-breakpoint-up(md) {
-      fill: $socialsLinkHoverColor;
+      fill: $green;
     }
   }
 }
 
 .socials__icon {
-  width: 1.31em;
+  width: 1.25em;
   height: 1.25em;
   fill: $black;
   transition: fill 0.3s;

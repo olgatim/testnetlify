@@ -4,8 +4,8 @@ $('.mobile-menu').on('click', function(e) {
 
   document.querySelectorAll(".nav-item.dropdown .nav-link").forEach(function(item) {
     item.addEventListener("click", function(e) {
+      e.preventDefault();
       if($("body").hasClass("mobile-menu_open")) {
-        e.preventDefault();
         if(!this.classList.contains("nav-link_selected")) {
           document.querySelectorAll(".nav-link").forEach(function(elem) {
             elem.classList.remove("nav-link_selected");

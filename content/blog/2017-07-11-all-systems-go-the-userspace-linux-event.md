@@ -6,13 +6,9 @@ draft = false
 tags = ["linux", "conference", "all-systems-go"]
 title = "All Systems Go! - The Userspace Linux Conference"
 topics = ["linux", "events", "conference"]
-postImage =  "article-hero.jpg"
+postImage =  "all-systems-go-banner.svg"
 
 +++
-
-<figure class="img-fluid">
-	<img src="/media/all-systems-go-banner.svg" class="img-fluid">
-</figure>
 
 At Kinvolk we spend a lot of time working on and talking about the Linux userspace. We can regularly be found presenting our work at various events and discussing the details of our work with those who are interested. These events are usually either very generally about open source, or focused on a very specific technology, like [containers](https://kubecon.io), [systemd](https://conf.systemd.io), or [ebpf](https://qmonnet.github.io/whirl-offload/2017/03/03/iovisor-summit-summary/). While these events are often awesome, and absolutely essential, they simply have a focus that is either too broad, or too specific.
 

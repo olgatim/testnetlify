@@ -13,7 +13,7 @@
                     </svg>
                   </div>
                 </h2>
-                <p class="section-hero__text">{{ .description }}</p>
+                <p class="col-sm-10 p-0 section-hero__text">{{ .description }}</p>
             </div>
             <div class="col-sm-5 p-0 section-hero__image">
               <img src="/images/{{ .image }}" alt="hero-image">
@@ -24,15 +24,18 @@
 
       <div class="section-companies">
           <div class="container">
-            <div class="row">
+            <div class="row justify-content-between">
               <div class="col-sm-3 p-0 section-companies__title">We provide our services to companies like:</div>
-              <ul class="col-sm-8 section-companies__list">
+              <div class="col-12 col-sm-7 col-md-8">
+                <ul class="row section-companies__list">
   
-                {{ range .companies }}
-                  <li class="col-md-3 section-companies__item"><img src="/images/companies/{{ . }}" class="section-companies__image"
-                      alt=""></li>
-                {{ end }}
-              </ul>
+                  {{ range .companies }}
+                    <li class="col-6 col-md-3 section-companies__item"><img src="/images/companies/{{ . }}" class="section-companies__image"
+                        alt=""></li>
+                  {{ end }}
+                </ul>
+              </div>
+
             </div>
           </div>
         </div>

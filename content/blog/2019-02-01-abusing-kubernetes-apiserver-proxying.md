@@ -68,7 +68,7 @@ populated from the pod’s [status](https://kubernetes.io/docs/reference/generat
 which contains the `podIP` field as reported by the kubelet. So what happens if
 we send our own pod status for a nginx pod as shown in the following script?
 
-```
+```bash
 #!/bin/bash
 
 set -euo pipefail
@@ -97,7 +97,7 @@ From the apiserver’s perspective, the pod now has IP address 172.217.19.78.
 When we try to connect to the pod via kubectl proxy, the apiserver will in fact
 establish a HTTP connection to 172.217.19.78, our target IP.
 
-```
+```bash
 curl localhost:8001/api/v1/namespaces/default/pods/nginx-7db75b8b78-r7p79/proxy/
 …
 <a href="//www.google.com/"/><span id="logo" aria-label="Google"></span></a>
